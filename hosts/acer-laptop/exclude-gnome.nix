@@ -8,10 +8,10 @@
     geary
     gnome-disk-utility
     # seahorse
-    # sushi
+    sushi
     # sysprof
     #
-    # gnome-shell-extensions
+    gnome-shell-extensions
     #
     # adwaita-icon-theme
     # nixos-background-info
@@ -19,7 +19,6 @@
     gnome-bluetooth
     # gnome-color-manager
     # gnome-control-center
-    # gnome-shell-extensions
     gnome-tour # GNOME Shell detects the .desktop file on first log-in.
     gnome-user-docs
     # glib # for gsettings program
@@ -34,7 +33,7 @@
     gnome-calculator
     gnome-calendar
     gnome-characters
-    # gnome-clocks
+    gnome-clocks
     gnome-console
     gnome-contacts
     gnome-font-viewer
@@ -43,8 +42,8 @@
     gnome-music
     # gnome-system-monitor
     gnome-weather
-    # loupe
-    # nautilus
+    loupe
+    nautilus
     gnome-connections
     simple-scan
     snapshot

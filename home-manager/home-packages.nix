@@ -5,8 +5,12 @@
 
     # Desktop apps
     kitty
+    librewolf
+    solaar
+    easyeffects
     
     # CLI tools
+    spotify-player
     nnn
     btop
     coreutils
