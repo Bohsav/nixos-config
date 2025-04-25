@@ -39,6 +39,7 @@
         enable = true;
         wayland = true;
       };
+    };
     desktopMananager.gnome.enable = true;
   };
 
