@@ -40,7 +40,7 @@
         wayland = true;
       };
     };
-    desktopMananager.gnome.enable = true;
+    desktopManager.gnome.enable = true;
   };
 
   # Configure keymap in X11
