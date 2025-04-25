@@ -3,20 +3,20 @@
 {
   environment.gnome.excludePackages = with pkgs; [
     orca
-    evince
+    # evince
     # file-roller
     geary
-    gnome-disk-utility
+    # gnome-disk-utility
     # seahorse
-    sushi
+    # sushi
     # sysprof
     #
-    gnome-shell-extensions
+    # gnome-shell-extensions
     #
     # adwaita-icon-theme
     # nixos-background-info
-    gnome-backgrounds
-    gnome-bluetooth
+    # gnome-backgrounds
+    # gnome-bluetooth
     # gnome-color-manager
     # gnome-control-center
     gnome-tour # GNOME Shell detects the .desktop file on first log-in.
@@ -27,26 +27,26 @@
     # xdg-user-dirs # Update user dirs as described in https://freedesktop.org/wiki/Software/xdg-user-dirs/
     # xdg-user-dirs-gtk # Used to create the default bookmarks
     #
-    baobab
+    # baobab
     epiphany
     gnome-text-editor
-    gnome-calculator
-    gnome-calendar
+    # gnome-calculator
+    # gnome-calendar
     gnome-characters
-    gnome-clocks
+    # gnome-clocks
     gnome-console
     gnome-contacts
     gnome-font-viewer
-    gnome-logs
+    # gnome-logs
     gnome-maps
     gnome-music
     # gnome-system-monitor
-    gnome-weather
-    loupe
-    nautilus
+    # gnome-weather
+    # loupe
+    # nautilus
     gnome-connections
-    simple-scan
-    snapshot
+    # simple-scan
+    # snapshot
     totem
     yelp
     gnome-software
