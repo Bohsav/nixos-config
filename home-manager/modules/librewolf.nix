@@ -10,4 +10,4 @@
       "network.cookie.lifetimePolicy" = 0;
     };
   };
-};
+}
