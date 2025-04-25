@@ -5,7 +5,6 @@
 
     # Desktop apps
     kitty
-    librewolf
     solaar
     easyeffects
     
