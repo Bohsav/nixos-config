@@ -1,4 +1,4 @@
-{ pkgs, ...}:
+{ pkgs, ... }:
 
 {
   environment.gnome.excludePackages = with pkgs; [
@@ -14,9 +14,9 @@
     # gnome-shell-extensions
     #
     # adwaita-icon-theme
-    # nixos-background-info
+    nixos-background-info
     gnome-backgrounds
-    # gnome-bluetooth
+    gnome-bluetooth
     # gnome-color-manager
     # gnome-control-center
     # gnome-shell-extensions

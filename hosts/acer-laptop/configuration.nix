@@ -4,7 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ./local-packages.nix
-    ./exclude-gnome-pkgs.nix
+    ./exclude-gnome.nix
   ];
 
   networking.hostName = hostname;
