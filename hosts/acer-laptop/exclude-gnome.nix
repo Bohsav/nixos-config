@@ -14,7 +14,7 @@
     # gnome-shell-extensions
     #
     # adwaita-icon-theme
-    nixos-background-info
+    # nixos-background-info
     gnome-backgrounds
     gnome-bluetooth
     # gnome-color-manager
