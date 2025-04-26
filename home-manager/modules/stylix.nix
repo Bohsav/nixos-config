@@ -28,7 +28,8 @@
 #    };
 
     targets = {
-       kitty.enable = true;
+      kitty.enable = true;
+      nixvim.enable = false;
     };
 
     cursor = {
