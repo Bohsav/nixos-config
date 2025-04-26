@@ -22,7 +22,7 @@
 
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, nixvim, ... }@inputs: let
     system = "x86_64-linux";
     user = "sleepyfox";
     homeStateVersion = "24.11";
