@@ -112,7 +112,7 @@
         statusline = {
           lualine = {
             enable = true;
-            theme = "catppuccin";
+            theme = "tokyonight";
           };
         };
 
