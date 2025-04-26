@@ -15,9 +15,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixvim = {
+      url = "github:nix-community/nixvim/nixos-24.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, nixvim ... }@inputs: let
     system = "x86_64-linux";
     user = "sleepyfox";
     homeStateVersion = "24.11";
@@ -51,6 +56,7 @@
 
       modules = [
         ./home-manager/home.nix
+        nixvim.homeManagerModules.nixvim
       ];
     };
   };

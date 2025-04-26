@@ -1,7 +1,7 @@
 { homeStateVersion, user, ...}:
 
 {
-  imports = [ ./home-packages.nix ./modules ];
+  imports = [ ./home-packages.nix ./modules ./nixvim ];
 
   home = {
     username = user;
