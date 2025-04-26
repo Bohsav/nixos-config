@@ -7,7 +7,7 @@
 
     colorschemes.nightfox = {
       enable = true;
-      flavor = "duskfox"
+      flavor = "duskfox";
     };    
 
     opts = {
