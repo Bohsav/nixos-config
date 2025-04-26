@@ -69,9 +69,6 @@
       light = "Papirus-Light";
     };
 
-    image = pkgs.fetchurl {
-      url = "https://img2.joyreactor.cc/pics/post/full/gracile-%D0%BA%D1%80%D0%B0%D1%81%D0%B8%D0%B2%D1%8B%D0%B5-%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8-art-8856071.jpeg";
-      sha256 = "49b40d7c22dd826a6b378e89804f7c14667329b3d871f4baff6cfa30c10f0e5a";
-    };
+    image = ./assets/wallpaper.jpeg;
   };
 }
