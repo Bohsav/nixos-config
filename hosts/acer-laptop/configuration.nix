@@ -1,10 +1,15 @@
-{ pkgs, user, stateVersion, hostname, ...}:
-
 {
+  pkgs,
+  user,
+  stateVersion,
+  hostname,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ./local-packages.nix
     ./exclude-gnome.nix
+    ./triple-buffering-47.nix
   ];
 
   networking.hostName = hostname;
@@ -41,7 +46,7 @@
       };
     };
     desktopManager.gnome.enable = true;
-    
+
     # Configure keymap in X11
     xkb = {
       layout = "us";
@@ -97,12 +102,12 @@
         };
         ExtensionSettings = {
           "jid1-ZAdIEUB7XOzOJw@jetpack" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/duckduckgo-for-firefox/latest.xpi";
-          installation_mode = "force_installed";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/duckduckgo-for-firefox/latest.xpi";
+            installation_mode = "force_installed";
           };
           "uBlock0@raymondhill.net" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
-          installation_mode = "force_installed";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+            installation_mode = "force_installed";
           };
         };
       };
@@ -114,7 +119,7 @@
     defaultUserShell = pkgs.zsh;
     users.${user} = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "networkmanager" ];
+      extraGroups = ["wheel" "networkmanager"];
     };
   };
 
@@ -141,5 +146,4 @@
   # networking.firewall.enable = false;
 
   system.stateVersion = stateVersion;
-
 }

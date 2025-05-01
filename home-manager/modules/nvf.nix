@@ -172,6 +172,7 @@
         };
 
         utility = {
+          sleuth.enable = true;
           ccc.enable = false;
           vim-wakatime.enable = false;
           diffview-nvim.enable = true;
