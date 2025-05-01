@@ -9,7 +9,6 @@
     ./hardware-configuration.nix
     ./local-packages.nix
     ./exclude-gnome.nix
-    ./triple-buffering-47.nix
   ];
 
   networking.hostName = hostname;
