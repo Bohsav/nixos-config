@@ -8,10 +8,10 @@
         # Also https://gitlab.gnome.org/vanvugt/mutter/-/tree/triple-buffering-v4-47
         src = final.fetchFromGitLab {
           domain = "gitlab.gnome.org";
-          owner = "vanvugt";
+          owner = "GNOME";
           repo = "mutter";
-          rev = "triple-buffering-v4-47";
-          hash = "sha256-Jlhzt2Cc44epkBcz3PA6I5aTnVEqMsHBOE8aEmvANWw=";
+          rev = "gnome-47";
+          hash = "sha256-68f5337c57a7421ebcc4b7e72141ec896c33d9f7";
         };
 
         # GNOME 47 requires the gvdb subproject which is not included in the triple-buffering branch
@@ -21,8 +21,8 @@
             domain = "gitlab.gnome.org";
             owner = "GNOME";
             repo = "gvdb";
-            rev = "2b42fc75f09dbe1cd1057580b5782b08f2dcb400";
-            hash = "sha256-CIdEwRbtxWCwgTb5HYHrixXi+G+qeE1APRaUeka3NWk=";
+            rev = "main";
+            hash = "sha256-4758f6fb7f889e074e13df3f914328f3eecb1fd3";
           };
         in ''
           cp -a "${gvdb}" ./subprojects/gvdb
