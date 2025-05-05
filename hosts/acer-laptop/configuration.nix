@@ -7,8 +7,8 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./local-packages.nix
-    ./exclude-gnome.nix
+    ./system-packages.nix
+    ./exclude-gnome-apps.nix
   ];
 
   networking.hostName = hostname;
