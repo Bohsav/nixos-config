@@ -10,8 +10,8 @@
         open-bar.extensionUuid
         rounded-window-corners-reborn.extensionUuid
         transparent-window-moving.extensionUuid
-        user-themes
-        system-monitor
+        user-themes.extensionUuid
+        system-monitor.extensionUuid
       ];
     };
     # "org/gnome/shell/extensions/openbar" = {
