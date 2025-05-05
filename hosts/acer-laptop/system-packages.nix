@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = let
     default-list = with pkgs; [home-manager vim git];
-    get-gnome-extensions = import ./get-gnome-extensions.nix;
+    gnome-extensions = import ./get-gnome-extensions.nix {inherit pkgs;};
   in
-    default-list ++ get-gnome-extensions {inherit pkgs;};
+    default-list ++ gnome-extensions;
 }
