@@ -1,13 +1,13 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-
     # Desktop apps
     kitty
     solaar
     easyeffects
-    
+    dconf-editor
+
     # CLI tools
     spotify-player
     nnn
