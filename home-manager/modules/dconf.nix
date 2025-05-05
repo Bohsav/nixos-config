@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   dconf.settings = {
-    "/org/gnome/shell" = {
+    "org/gnome/shell" = {
       disable-user-extensions = false;
       enabled-extensions = with pkgs.gnomeExtensions; [
         x11-gestures.extensionUuid
