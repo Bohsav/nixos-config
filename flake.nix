@@ -28,6 +28,7 @@
     homeStateVersion = "24.11";
     hosts = [
       { hostname = "acer-laptop"; stateVersion = "24.11"; }
+      { hostname = "dell-laptop"; stateVersion = "24.11"; }
     ];
 
     makeSystem = { hostname, stateVersion }: nixpkgs.lib.nixosSystem {
