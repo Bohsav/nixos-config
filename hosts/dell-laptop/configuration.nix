@@ -14,9 +14,19 @@
 
   networking.hostName = hostname;
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # boot loader
+  boot.loader = {
+    systemd-boot.enable = false;
+
+    efi.canTouchEfiVariables = true;
+    grub = {
+      enable = true;
+      useOSProber = true;
+      copyKernels = true;
+      device = "nodev";
+      efiSupport = true;
+    };
+  };
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
