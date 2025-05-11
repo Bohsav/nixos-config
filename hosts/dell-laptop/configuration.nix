@@ -48,7 +48,6 @@
   # Enable the X11 windowing system.
   # Set GNOME environment
   services = {
-    flatpak.enable = true;
     xserver = {
       # Load nvidia driver for Xorg and Wayland
       videoDrivers = ["nvidia"];
