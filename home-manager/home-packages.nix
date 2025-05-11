@@ -7,7 +7,6 @@
     solaar
     easyeffects
     dconf-editor
-    discord
 
     # CLI tools
     spotify-player
