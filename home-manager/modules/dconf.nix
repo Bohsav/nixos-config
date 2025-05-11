@@ -4,7 +4,6 @@
     "org/gnome/shell" = {
       disable-user-extensions = false;
       enabled-extensions = with pkgs.gnomeExtensions; [
-        # x11-gestures.extensionUuid
         blur-my-shell.extensionUuid
         media-controls.extensionUuid
         open-bar.extensionUuid
@@ -22,8 +21,8 @@
       "autofg-bar" = true;
       "autohg-bar" = true;
       "autohg-menu" = true;
-      "bgalpha" = 0;
-      "bgalpha2" = 0;
+      "bgalpha" = 0.0;
+      "bgalpha2" = 0.0;
       "bgalpha-wmax" = 1;
       "bg-change" = true;
       "border-wmax" = true;
