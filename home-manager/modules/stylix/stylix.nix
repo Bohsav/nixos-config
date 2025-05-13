@@ -1,5 +1,9 @@
-{ pkgs, inputs, ... }: {
-  imports = [ inputs.stylix.homeManagerModules.stylix ];
+{
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [inputs.stylix.homeManagerModules.stylix];
 
   home.packages = with pkgs; [
     dejavu_fonts
@@ -11,7 +15,7 @@
     font-awesome
     powerline-fonts
     powerline-symbols
-    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
+    nerd-fonts.symbols-only
   ];
 
   stylix = {
@@ -19,13 +23,13 @@
     polarity = "dark";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
 
-#    targets = {
-#      neovim.enable = false;
-#      waybar.enable = false;
-#      wofi.enable = false;
-#      hyprland.enable = false;
-#      hyprlock.enable = false;
-#    };
+    #    targets = {
+    #      neovim.enable = false;
+    #      waybar.enable = false;
+    #      wofi.enable = false;
+    #      hyprland.enable = false;
+    #      hyprlock.enable = false;
+    #    };
 
     targets = {
       kitty.enable = true;
