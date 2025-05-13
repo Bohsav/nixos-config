@@ -6,6 +6,6 @@
     ./zsh
     ./git.nix
     ./easyeffects.nix
-    ./nvf.nix
+    ./nvf
   ];
 }
