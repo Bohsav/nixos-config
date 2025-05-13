@@ -94,7 +94,7 @@
 
         theme = {
           enable = true;
-          name = "base-16";
+          name = "base16";
           style = "dark";
           transparent = false;
         };
