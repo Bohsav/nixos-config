@@ -88,14 +88,14 @@
         statusline = {
           lualine = {
             enable = true;
-            theme = "base-16";
+            theme = "tokyonight";
           };
         };
 
         theme = {
           enable = true;
-          name = "tokyonight";
-          style = "storm";
+          name = "base-16";
+          style = "dark";
           transparent = false;
         };
 
