@@ -6,6 +6,7 @@
       isMaximal = false;
     in {
       vim = {
+        clipboard.enable = true;
         viAlias = true;
         vimAlias = true;
         debugMode = {
