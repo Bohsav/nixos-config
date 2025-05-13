@@ -28,7 +28,7 @@
   } @ inputs: let
     system = "x86_64-linux";
     user = "sleepyfox";
-    homeStateVersion = "24.11";
+    homeStateVersion = "25.05";
     homePath = ./home-manager/home.nix;
     hosts = [
       {
