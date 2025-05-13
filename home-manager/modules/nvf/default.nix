@@ -2,9 +2,7 @@
   programs.nvf = {
     enable = true;
 
-    settings = let
-      isMaximal = false;
-    in {
+    settings = {
       vim = {
         viAlias = true;
         vimAlias = true;
@@ -26,8 +24,6 @@
           lspsaga.enable = false;
           trouble.enable = true;
           lspSignature.enable = true;
-          otter-nvim.enable = isMaximal;
-          nvim-docs-view.enable = isMaximal;
         };
 
         debugger = {
@@ -47,25 +43,6 @@
           # Languages that will be supported in default and maximal configurations.
           nix.enable = true;
           markdown.enable = true;
-
-          # Languages that are enabled in the maximal configuration.
-          bash.enable = isMaximal;
-          clang.enable = isMaximal;
-          css.enable = isMaximal;
-          html.enable = isMaximal;
-          sql.enable = isMaximal;
-          java.enable = isMaximal;
-          kotlin.enable = isMaximal;
-          ts.enable = isMaximal;
-          go.enable = isMaximal;
-          lua.enable = isMaximal;
-          zig.enable = isMaximal;
-          python.enable = isMaximal;
-          typst.enable = isMaximal;
-          rust = {
-            enable = isMaximal;
-            crates.enable = isMaximal;
-          };
 
           # Language modules that are not as common.
           assembly.enable = false;
@@ -96,7 +73,6 @@
         };
 
         visuals = {
-          nvim-scrollbar.enable = isMaximal;
           nvim-web-devicons.enable = true;
           nvim-cursorline.enable = true;
           cinnamon-nvim.enable = true;
@@ -155,20 +131,14 @@
 
         minimap = {
           minimap-vim.enable = false;
-          codewindow.enable = isMaximal; # lighter, faster, and uses lua for configuration
         };
 
         dashboard = {
           dashboard-nvim.enable = false;
-          alpha.enable = isMaximal;
         };
 
         notify = {
           nvim-notify.enable = true;
-        };
-
-        projects = {
-          project-nvim.enable = isMaximal;
         };
 
         utility = {
@@ -177,15 +147,11 @@
           vim-wakatime.enable = false;
           diffview-nvim.enable = true;
           yanky-nvim.enable = false;
-          icon-picker.enable = isMaximal;
-          surround.enable = isMaximal;
-          leetcode-nvim.enable = isMaximal;
-          multicursors.enable = isMaximal;
+          multicursors.enable = true;
 
           motion = {
             hop.enable = true;
             leap.enable = true;
-            precognition.enable = isMaximal;
           };
           images = {
             image-nvim.enable = false;
@@ -196,7 +162,6 @@
           obsidian.enable = false; # FIXME: neovim fails to build if obsidian is enabled
           neorg.enable = false;
           orgmode.enable = false;
-          mind-nvim.enable = isMaximal;
           todo-comments.enable = true;
         };
 
@@ -214,8 +179,8 @@
           modes-nvim.enable = false; # the theme looks terrible with catppuccin
           illuminate.enable = true;
           breadcrumbs = {
-            enable = isMaximal;
-            navbuddy.enable = isMaximal;
+            enable = true;
+            navbuddy.enable = true;
           };
           smartcolumn = {
             enable = true;
@@ -234,7 +199,7 @@
           chatgpt.enable = false;
           copilot = {
             enable = false;
-            cmp.enable = isMaximal;
+            cmp.enable = true;
           };
           codecompanion-nvim.enable = false;
         };
