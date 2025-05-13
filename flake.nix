@@ -2,7 +2,6 @@
   description = "My system configuration";
 
   inputs = {
-
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
 
     home-manager = {
@@ -19,36 +18,52 @@
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
   };
 
-  outputs = { self, nixpkgs, home-manager, nvf, ... }@inputs: let
+  outputs = {
+    nixpkgs,
+    home-manager,
+    nvf,
+    ...
+  } @ inputs: let
     system = "x86_64-linux";
     user = "sleepyfox";
     homeStateVersion = "24.11";
+    homePath = ./home-manager/home.nix;
     hosts = [
-      { hostname = "acer-laptop"; stateVersion = "24.11"; }
-      { hostname = "dell-laptop"; stateVersion = "24.11"; }
+      {
+        hostname = "acer-laptop";
+        stateVersion = "24.11";
+      }
+      {
+        hostname = "dell-laptop";
+        stateVersion = "24.11";
+      }
     ];
 
-    makeSystem = { hostname, stateVersion }: nixpkgs.lib.nixosSystem {
-      system = system;
-      specialArgs = {
-        inherit inputs stateVersion hostname user;
+    makeSystem = {
+      hostname,
+      stateVersion,
+    }:
+      nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {
+          inherit inputs stateVersion hostname user;
+        };
+
+        modules = [
+          ./hosts/${hostname}/configuration.nix
+        ];
       };
-
-      modules = [
-        ./hosts/${hostname}/configuration.nix
-      ];
-    };
-
   in {
     nixosConfigurations = nixpkgs.lib.foldl' (configs: host:
-      configs // {
+      configs
+      // {
         "${host.hostname}" = makeSystem {
           inherit (host) hostname stateVersion;
         };
-      }) {} hosts;
+      }) {}
+    hosts;
 
     homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
@@ -56,7 +71,7 @@
       extraSpecialArgs = {inherit inputs homeStateVersion user;};
 
       modules = [
-        ./home-manager/home.nix
+        homePath
         nvf.homeManagerModules.default
       ];
     };
