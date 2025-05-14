@@ -75,6 +75,6 @@
       light = "Papirus-Light";
     };
 
-    image = ./assets/wallpaper.jpeg;
+    image = ./assets/scifi.jpeg;
   };
 }
