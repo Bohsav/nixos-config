@@ -35,6 +35,7 @@
     targets = {
       kitty.enable = true;
       nixvim.enable = false;
+      nvf.enable = false;
     };
 
     cursor = {
