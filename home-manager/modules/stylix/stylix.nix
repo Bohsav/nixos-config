@@ -16,6 +16,7 @@
     powerline-fonts
     powerline-symbols
     nerd-fonts.symbols-only
+    meslo-lgs-nf
   ];
 
   stylix = {
@@ -32,7 +33,7 @@
     #    };
 
     targets = {
-      kitty.enable = true;
+      kitty.enable = false;
       nixvim.enable = false;
     };
 
