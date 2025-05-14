@@ -33,7 +33,7 @@
     #    };
 
     targets = {
-      kitty.enable = false;
+      kitty.enable = true;
       nixvim.enable = false;
     };
 
