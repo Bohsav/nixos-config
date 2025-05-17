@@ -87,6 +87,11 @@
     pulseaudio.enable = false;
   };
 
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
+
   # Enable sound with pipewire.
   hardware = {
     bluetooth.enable = true;
