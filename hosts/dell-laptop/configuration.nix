@@ -87,10 +87,7 @@
     pulseaudio.enable = false;
   };
 
-  virtualisation.docker.rootless = {
-    enable = true;
-    setSocketVariable = true;
-  };
+  virtualisation.docker.enable = true;
 
   # Enable sound with pipewire.
   hardware = {
@@ -186,7 +183,7 @@
     defaultUserShell = pkgs.zsh;
     users.${user} = {
       isNormalUser = true;
-      extraGroups = ["wheel" "networkmanager"];
+      extraGroups = ["wheel" "networkmanager" "docker"];
     };
   };
 
