@@ -10,6 +10,7 @@
     discord
 
     # CLI tools
+    conda
     spotify-player
     nnn
     btop
