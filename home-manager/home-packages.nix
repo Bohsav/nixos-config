@@ -9,6 +9,7 @@
     dconf-editor
     discord
     libreoffice
+    thunderbird
 
     # CLI tools
     conda
