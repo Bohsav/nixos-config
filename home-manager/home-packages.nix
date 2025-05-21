@@ -8,6 +8,7 @@
     easyeffects
     dconf-editor
     discord
+    libreoffice
 
     # CLI tools
     conda
