@@ -12,7 +12,6 @@
     thunderbird
 
     # CLI tools
-    conda
     spotify-player
     nnn
     btop
