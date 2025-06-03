@@ -4,10 +4,10 @@
 
     settings = {
       vim = {
-        options = {
-          shiftwidth = 4;
-          tabstop = 4;
-        };
+        # options = {
+        #   shiftwidth = 4;
+        #   tabstop = 4;
+        # };
         viAlias = true;
         vimAlias = true;
         debugMode = {

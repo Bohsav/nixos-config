@@ -10,9 +10,10 @@
     discord
     libreoffice
     thunderbird
+    vivaldi
+    spotify
 
     # CLI tools
-    spotify-player
     nnn
     btop
     coreutils
