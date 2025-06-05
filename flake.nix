@@ -33,7 +33,7 @@
     hosts = [
       {
         hostname = "acer-laptop";
-        stateVersion = "24.11";
+        stateVersion = "25.05";
       }
       {
         hostname = "dell-laptop";
