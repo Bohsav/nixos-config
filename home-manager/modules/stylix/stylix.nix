@@ -34,9 +34,8 @@
     #    };
 
     targets = {
+      gnome.enable = true;
       kitty.enable = true;
-      nixvim.enable = false;
-      nvf.enable = false;
     };
 
     cursor = {
