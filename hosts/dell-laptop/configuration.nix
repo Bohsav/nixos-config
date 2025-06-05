@@ -108,7 +108,7 @@
   # Enable sound with pipewire.
   hardware = {
     bluetooth.enable = true;
-    bluetooth.powerOnBoot = false;
+    bluetooth.powerOnBoot = true;
 
     # Enable OpenGL
     graphics.enable = true;
