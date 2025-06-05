@@ -38,7 +38,7 @@
       "neon" = true;
       "neon-wmax" = true;
       "shadow" = false;
-      "trigger-autotheme" = false;
+      "trigger-autotheme" = true;
       "trigger-reload" = true;
       "vpad" = 3.5;
       "wmaxbar" = true;
