@@ -4,6 +4,11 @@
 
     settings = {
       vim = {
+        imports = [
+          "./lsp-languages.nix"
+          "./visuals.nix"
+          "./ui.nix"
+        ];
         # options = {
         #   shiftwidth = 4;
         #   tabstop = 4;
@@ -20,73 +25,11 @@
           enable = true;
         };
 
-        lsp = {
-          enable = true;
-          formatOnSave = true;
-          lspkind.enable = false;
-          lightbulb.enable = true;
-          lspsaga.enable = false;
-          trouble.enable = true;
-          lspSignature.enable = true;
-        };
-
         debugger = {
           nvim-dap = {
             enable = true;
             ui.enable = true;
           };
-        };
-
-        # This section does not include a comprehensive list of available language modules.
-        # To list all available language module options, please visit the nvf manual.
-        languages = {
-          enableFormat = true;
-          enableTreesitter = true;
-          enableExtraDiagnostics = true;
-
-          # Languages that will be supported in default and maximal configurations.
-          nix.enable = true;
-          markdown.enable = true;
-
-          # Language modules that are not as common.
-          assembly.enable = false;
-          astro.enable = false;
-          nu.enable = false;
-          csharp.enable = false;
-          julia.enable = false;
-          vala.enable = false;
-          scala.enable = false;
-          r.enable = false;
-          gleam.enable = false;
-          dart.enable = false;
-          ocaml.enable = false;
-          elixir.enable = false;
-          haskell.enable = false;
-          ruby.enable = false;
-          fsharp.enable = false;
-
-          tailwind.enable = false;
-          svelte.enable = false;
-
-          # Nim LSP is broken on Darwin and therefore
-          # should be disabled by default. Users may still enable
-          # `vim.languages.vim` to enable it, this does not restrict
-          # that.
-          # See: <https://github.com/PMunch/nimlsp/issues/178#issue-2128106096>
-          nim.enable = false;
-        };
-
-        visuals = {
-          nvim-web-devicons.enable = true;
-          nvim-cursorline.enable = true;
-          cinnamon-nvim.enable = true;
-          fidget-nvim.enable = true;
-
-          highlight-undo.enable = true;
-          indent-blankline.enable = true;
-
-          # Fun
-          cellular-automaton.enable = false;
         };
 
         statusline = {
@@ -174,29 +117,6 @@
             enable = true;
             lazygit.enable = true;
           };
-        };
-
-        ui = {
-          borders.enable = true;
-          noice.enable = true;
-          colorizer.enable = true;
-          modes-nvim.enable = false; # the theme looks terrible with catppuccin
-          illuminate.enable = true;
-          breadcrumbs = {
-            enable = true;
-            navbuddy.enable = true;
-          };
-          smartcolumn = {
-            enable = true;
-            setupOpts.custom_colorcolumn = {
-              # this is a freeform module, it's `buftype = int;` for configuring column position
-              nix = "110";
-              ruby = "120";
-              java = "130";
-              go = ["90" "130"];
-            };
-          };
-          fastaction.enable = true;
         };
 
         assistant = {
