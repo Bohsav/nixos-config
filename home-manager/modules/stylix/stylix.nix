@@ -34,7 +34,7 @@
     #    };
 
     targets = {
-      gnome.enable = true;
+      gnome.useWallpaper = true;
       kitty.enable = true;
     };
 
