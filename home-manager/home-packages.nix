@@ -12,6 +12,7 @@
     thunderbird
     vivaldi
     spotify
+    gnome-tweaks
 
     # CLI tools
     nnn
