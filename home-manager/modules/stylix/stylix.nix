@@ -20,7 +20,7 @@
   ];
 
   stylix = {
-    autoEnable = false;
+    autoEnable = true;
     enable = true;
     polarity = "dark";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
@@ -36,6 +36,7 @@
     targets = {
       kitty.enable = true;
       gnome.enable = true;
+      nvf.enable = false;
     };
 
     cursor = {
