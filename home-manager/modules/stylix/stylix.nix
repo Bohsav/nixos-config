@@ -34,7 +34,6 @@
     #    };
 
     targets = {
-      gnome.useWallpaper = true;
       kitty.enable = true;
     };
 
@@ -64,7 +63,7 @@
 
       sizes = {
         terminal = 13;
-        applications = 11;
+        applications = 13;
       };
     };
 
