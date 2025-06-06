@@ -161,7 +161,7 @@
   programs = {
     zsh.enable = true;
     dconf.enable = true;
-    firefox = import ./firefox-settings.nix;
+    firefox = import ./firefox-settings.nix {inherit pkgs;};
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
