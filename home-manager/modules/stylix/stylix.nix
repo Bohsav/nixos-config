@@ -3,7 +3,7 @@
   inputs,
   ...
 }: {
-  imports = [inputs.stylix.homeManagerModules.stylix];
+  imports = [inputs.stylix.homeModules.stylix];
 
   home.packages = with pkgs; [
     dejavu_fonts

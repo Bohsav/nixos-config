@@ -48,19 +48,19 @@
   # Enable the X11 windowing system.
   # Set GNOME environment
   services = {
+    desktopManager.gnome.enable = true;
+    displayManager = {
+      gdm = {
+        enable = true;
+        wayland = true;
+      };
+    };
+
     xserver = {
       # Load nvidia driver for Xorg and Wayland
       videoDrivers = ["nvidia"];
 
       enable = true;
-      displayManager = {
-        gdm = {
-          enable = true;
-          wayland = true;
-        };
-      };
-      desktopManager.gnome.enable = true;
-
       # Configure keymap in X11
       xkb = {
         layout = "us";
