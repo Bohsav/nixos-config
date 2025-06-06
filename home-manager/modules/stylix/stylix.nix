@@ -35,6 +35,7 @@
 
     targets = {
       kitty.enable = true;
+      gnome.enable = true;
     };
 
     cursor = {
@@ -63,7 +64,7 @@
 
       sizes = {
         terminal = 13;
-        applications = 13;
+        applications = 11;
       };
     };
 
