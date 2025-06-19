@@ -20,7 +20,7 @@
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
 
     targets = {
-      kitty.enable = true;
+      kitty.enable = false;
       gnome.enable = true;
       nvf.enable = false;
     };
