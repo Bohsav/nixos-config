@@ -3,8 +3,8 @@
     enable = true;
     themeFile = "tokyo_night_storm";
     font = {
-      name = "MesloLGS NF";
-      package = pkgs.meslo-lgs-nf;
+      name = "Hack";
+      package = pkgs.nerd-fonts.hack;
       size = 14;
     };
   };

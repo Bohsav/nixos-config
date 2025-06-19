@@ -14,7 +14,7 @@
   ];
 
   stylix = {
-    enable = true;
+    enable = false;
     autoEnable = true;
     polarity = "dark";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
