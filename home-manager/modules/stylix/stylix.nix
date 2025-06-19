@@ -1,10 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
-  imports = [inputs.stylix.homeModules.stylix];
-
+{pkgs, ...}: {
   home.packages = with pkgs; [
     dejavu_fonts
     jetbrains-mono
@@ -15,23 +9,15 @@
     font-awesome
     powerline-fonts
     powerline-symbols
-    nerd-fonts.symbols-only
     meslo-lgs-nf
+    nerd-fonts.symbols-only
   ];
 
   stylix = {
-    autoEnable = true;
     enable = true;
+    autoEnable = true;
     polarity = "dark";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
-
-    #    targets = {
-    #      neovim.enable = false;
-    #      waybar.enable = false;
-    #      wofi.enable = false;
-    #      hyprland.enable = false;
-    #      hyprlock.enable = false;
-    #    };
 
     targets = {
       kitty.enable = true;

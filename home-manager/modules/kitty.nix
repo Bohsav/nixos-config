@@ -1,7 +1,11 @@
-{
+{pkgs, ...}: {
   programs.kitty = {
     enable = true;
     themeFile = "tokyo_night_storm";
-    font.size = 13;
+    font = {
+      name = "MesloLGS NF";
+      package = pkgs.meslo-lgs-nf;
+      size = 13;
+    };
   };
 }

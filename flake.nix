@@ -24,6 +24,7 @@
     nixpkgs,
     home-manager,
     nvf,
+    stylix,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -72,6 +73,7 @@
 
       modules = [
         homePath
+        stylix.homeModules.stylix
         nvf.homeManagerModules.default
       ];
     };
