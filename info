@@ -1,0 +1,4 @@
+fc-cache -r sometimes can help with fonts.
+
+To diagnose specific issues with fonts in kitty use the following:
+kitty --debug-font-fallback

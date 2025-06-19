@@ -3,7 +3,7 @@
     enable = true;
     themeFile = "tokyo_night_storm";
     font = {
-      name = "Hack";
+      name = "Hack Nerd Font";
       package = pkgs.nerd-fonts.hack;
       size = 14;
     };
