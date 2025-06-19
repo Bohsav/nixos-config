@@ -105,6 +105,7 @@
 
   # Enable sound with pipewire.
   hardware = {
+    logitech.wireless.enable = true;
     bluetooth.enable = true;
     bluetooth.powerOnBoot = true;
 
