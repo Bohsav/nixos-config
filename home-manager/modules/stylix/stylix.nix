@@ -37,18 +37,17 @@
         package = pkgs.noto-fonts-color-emoji;
       };
       monospace = {
-        name = "JetBrains Mono";
-        package = pkgs.jetbrains-mono;
+        name = "MesloLGS NF";
+        package = pkgs.meslo-lgs-nf;
       };
       sansSerif = {
-        name = "Noto Sans";
-        package = pkgs.noto-fonts;
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Sans";
       };
       serif = {
-        name = "Noto Serif";
-        package = pkgs.noto-fonts;
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Serif";
       };
-
       sizes = {
         terminal = 13;
         applications = 11;

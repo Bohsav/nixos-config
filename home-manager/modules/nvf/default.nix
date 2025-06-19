@@ -133,6 +133,7 @@
           gitsigns.codeActions.enable = false; # throws an annoying debug message
         };
 
+        mini.icons.enable = true;
         minimap = {
           minimap-vim.enable = false;
         };
