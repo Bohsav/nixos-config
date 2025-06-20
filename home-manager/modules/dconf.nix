@@ -12,7 +12,6 @@
         user-themes.extensionUuid
         system-monitor.extensionUuid
         windownavigator.extensionUuid
-        solaar-extension.extensionUuid
       ];
     };
     "org/gnome/shell/extensions/openbar" = {

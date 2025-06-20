@@ -7,5 +7,4 @@ with pkgs.gnomeExtensions; [
   transparent-window-moving
   system-monitor
   windownavigator
-  solaar-extension
 ]
