@@ -39,5 +39,6 @@
 
     # Other
     hunspell
+    hunspellDicts.en_CA
   ];
 }
