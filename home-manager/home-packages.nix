@@ -36,5 +36,8 @@
     wget
     oh-my-zsh
     zsh-powerlevel10k
+
+    # Other
+    hunspell
   ];
 }
