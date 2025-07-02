@@ -146,6 +146,7 @@
         };
 
         utility = {
+          preview.markdownPreview.enable = true;
           sleuth.enable = true;
           ccc.enable = false;
           vim-wakatime.enable = false;
