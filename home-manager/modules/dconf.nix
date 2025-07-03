@@ -12,6 +12,7 @@
         user-themes.extensionUuid
         system-monitor.extensionUuid
         windownavigator.extensionUuid
+        applications-menu.extensionUuid
       ];
     };
     "org/gnome/shell/extensions/openbar" = {
