@@ -105,6 +105,11 @@
 
   # Enable sound with pipewire.
   hardware = {
+    sane = {
+      enable = true;
+      extraBackends = [pkgs.hplipWithPlugin];
+    };
+
     logitech.wireless.enable = true;
     bluetooth.enable = true;
     bluetooth.powerOnBoot = true;
@@ -170,7 +175,7 @@
     defaultUserShell = pkgs.zsh;
     users.${user} = {
       isNormalUser = true;
-      extraGroups = ["wheel" "networkmanager"];
+      extraGroups = ["wheel" "networkmanager" "scanner" "lp"];
     };
   };
 

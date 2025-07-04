@@ -13,6 +13,7 @@
     vivaldi
     spotify
     gnome-tweaks
+    logisim-evolution
 
     # CLI tools
     nnn
