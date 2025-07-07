@@ -8,6 +8,6 @@
     ./easyeffects.nix
     ./nvf
     ./flameshot.nix
-    ./lutris.nix
+    #./lutris.nix
   ];
 }
