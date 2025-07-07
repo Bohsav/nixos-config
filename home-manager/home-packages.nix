@@ -16,7 +16,7 @@
     logisim-evolution
 
     # Gaming
-    lutris
+    # lutris
 
     # CLI tools
     nnn
