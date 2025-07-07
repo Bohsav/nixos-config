@@ -15,6 +15,9 @@
     gnome-tweaks
     logisim-evolution
 
+    # Gaming
+    lutris
+
     # CLI tools
     nnn
     btop
