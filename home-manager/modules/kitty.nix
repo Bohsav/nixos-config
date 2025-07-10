@@ -9,6 +9,8 @@
     };
     settings = {
       allow_remote_control = true;
+      listen_on = "unix:$TMPDIR/kitty";
+      enabled_layouts = "splits";
     };
   };
 }
