@@ -7,5 +7,8 @@
       package = pkgs.nerd-fonts.hack;
       size = 14;
     };
+    settings = {
+      allow_remote_control = true;
+    };
   };
 }
