@@ -7,9 +7,9 @@
       package = pkgs.nerd-fonts.hack;
       size = 14;
     };
-    settings = {
-      allow_remote_control = true;
-      listen_on = "unix:/tmp/kitty";
-    };
+    # settings = {
+    #   allow_remote_control = true;
+    #   listen_on = "unix:/tmp/kitty";
+    # };
   };
 }
