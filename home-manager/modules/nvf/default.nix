@@ -28,6 +28,7 @@
           lspsaga.enable = false;
           trouble.enable = true;
           lspSignature.enable = true;
+          nvim-docs-view.enable = true;
         };
 
         debugger = {
