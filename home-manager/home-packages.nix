@@ -14,7 +14,6 @@
     spotify
     gnome-tweaks
     logisim-evolution
-    flameshot
 
     # Gaming
     # lutris
