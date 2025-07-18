@@ -1,4 +1,6 @@
 {pkgs, ...}: {
-  flameshot.enable = true;
-  flameshot.package = pkgs.flameshot.override {enableWlrSupport = true;};
+  programs.flameshot = {
+    enable = true;
+    package = pkgs.flameshot.override {enableWlrSupport = true;};
+  };
 }
