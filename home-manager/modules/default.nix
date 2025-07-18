@@ -7,5 +7,6 @@
     ./git.nix
     ./easyeffects.nix
     ./nvf
+    ./flameshot.nix
   ];
 }
