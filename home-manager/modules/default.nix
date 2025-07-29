@@ -6,7 +6,7 @@
     ./zsh
     ./git.nix
     ./easyeffects.nix
-    ./nvf
+    # ./nvf
     ./flameshot.nix
   ];
 }

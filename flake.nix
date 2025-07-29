@@ -14,8 +14,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nvf = {
-      url = "github:notashelf/nvf";
+    # nvf = {
+    #   url = "github:notashelf/nvf";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+
+    nixvim = {
+      url = "https://github.com/nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -23,8 +28,9 @@
   outputs = {
     nixpkgs,
     home-manager,
-    nvf,
+    # nvf,
     stylix,
+    nixvim,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -74,7 +80,8 @@
       modules = [
         homePath
         stylix.homeModules.stylix
-        nvf.homeManagerModules.default
+        # nvf.homeManagerModules.default
+        nixvim.homeModules.nixvim
       ];
     };
   };
