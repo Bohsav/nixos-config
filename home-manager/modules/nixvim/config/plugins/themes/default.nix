@@ -4,18 +4,18 @@
       enable = true;
       settings = {
         background = {
-          light = "macchiato";
-          dark = "mocha";
+          light = "latte";
+          dark = "frappe";
         };
-        custom_highlights = ''
-          function(highlights)
-            return {
-            CursorLineNr = { fg = highlights.peach, style = {} },
-            NavicText = { fg = highlights.text },
-            }
-          end
-        '';
-        flavour = "macchiato"; # "latte", "mocha", "frappe", "macchiato" or raw lua code
+        # custom_highlights = ''
+        #   function(highlights)
+        #     return {
+        #     CursorLineNr = { fg = highlights.peach, style = {} },
+        #     NavicText = { fg = highlights.text },
+        #     }
+        #   end
+        # '';
+        flavour = "frappe"; # "latte", "mocha", "frappe", "macchiato" or raw lua code
         no_bold = false;
         no_italic = false;
         no_underline = false;

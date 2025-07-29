@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   home.packages = with pkgs; [
     dejavu_fonts
     jetbrains-mono
@@ -23,6 +24,7 @@
       kitty.enable = false;
       gnome.enable = true;
       nvf.enable = false;
+      nixvim.enable = false;
     };
 
     cursor = {
