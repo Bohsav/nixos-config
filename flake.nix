@@ -14,75 +14,78 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # nvf = {
-    #   url = "github:notashelf/nvf";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = {
-    nixpkgs,
-    home-manager,
-    # nvf,
-    stylix,
-    nixvim,
-    ...
-  } @ inputs: let
-    system = "x86_64-linux";
-    user = "sleepyfox";
-    homeStateVersion = "25.05";
-    homePath = ./home-manager/home.nix;
-    hosts = [
-      {
-        hostname = "acer-laptop";
-        stateVersion = "25.05";
-      }
-      {
-        hostname = "dell-laptop";
-        stateVersion = "25.05";
-      }
-    ];
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      stylix,
+      nixvim,
+      ...
+    }@inputs:
+    let
+      system = "x86_64-linux";
+      user = "sleepyfox";
+      homeStateVersion = "25.05";
+      homePath = ./home-manager/home.nix;
+      hosts = [
+        {
+          hostname = "acer-laptop";
+          stateVersion = "25.05";
+        }
+        {
+          hostname = "dell-laptop";
+          stateVersion = "25.05";
+        }
+      ];
 
-    makeSystem = {
-      hostname,
-      stateVersion,
-    }:
-      nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {
-          inherit inputs stateVersion hostname user;
+      makeSystem =
+        {
+          hostname,
+          stateVersion,
+        }:
+        nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = {
+            inherit
+              inputs
+              stateVersion
+              hostname
+              user
+              ;
+          };
+
+          modules = [
+            ./nixos/configuration.nix
+          ];
         };
+    in
+    {
+      nixosConfigurations = nixpkgs.lib.foldl' (
+        configs: host:
+        configs
+        // {
+          "${host.hostname}" = makeSystem {
+            inherit (host) hostname stateVersion;
+          };
+        }
+      ) { } hosts;
+
+      homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system};
+
+        extraSpecialArgs = { inherit inputs homeStateVersion user; };
 
         modules = [
-          ./nixos/configuration.nix
+          homePath
+          stylix.homeModules.stylix
+          nixvim.homeModules.nixvim
         ];
       };
-  in {
-    nixosConfigurations = nixpkgs.lib.foldl' (configs: host:
-      configs
-      // {
-        "${host.hostname}" = makeSystem {
-          inherit (host) hostname stateVersion;
-        };
-      }) {}
-    hosts;
-
-    homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.${system};
-
-      extraSpecialArgs = {inherit inputs homeStateVersion user;};
-
-      modules = [
-        homePath
-        stylix.homeModules.stylix
-        # nvf.homeManagerModules.default
-        nixvim.homeModules.nixvim
-      ];
     };
-  };
 }
