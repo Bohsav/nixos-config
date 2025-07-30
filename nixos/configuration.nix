@@ -5,7 +5,8 @@
   stateVersion,
   hostname,
   ...
-}: {
+}:
+{
   imports = [
     ../hosts/${hostname}/hardware-configuration.nix
     ./system-packages.nix
@@ -28,7 +29,10 @@
     };
   };
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -58,7 +62,7 @@
 
     xserver = {
       # Load nvidia driver for Xorg and Wayland
-      videoDrivers = ["nvidia"];
+      videoDrivers = [ "nvidia" ];
 
       enable = true;
       # Configure keymap in X11
@@ -107,7 +111,7 @@
   hardware = {
     sane = {
       enable = true;
-      extraBackends = [pkgs.hplipWithPlugin];
+      extraBackends = [ pkgs.hplipWithPlugin ];
     };
 
     logitech.wireless.enable = true;
@@ -167,7 +171,8 @@
   programs = {
     zsh.enable = true;
     dconf.enable = true;
-    firefox = import ./firefox-settings.nix {inherit pkgs;};
+    steam.enable = true;
+    firefox = import ./firefox-settings.nix { inherit pkgs; };
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -175,7 +180,12 @@
     defaultUserShell = pkgs.zsh;
     users.${user} = {
       isNormalUser = true;
-      extraGroups = ["wheel" "networkmanager" "scanner" "lp"];
+      extraGroups = [
+        "wheel"
+        "networkmanager"
+        "scanner"
+        "lp"
+      ];
     };
   };
 

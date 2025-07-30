@@ -18,6 +18,7 @@
 
     # Gaming
     # lutris
+    steam
 
     # CLI tools
     nnn
