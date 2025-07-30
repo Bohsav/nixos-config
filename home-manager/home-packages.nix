@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
@@ -16,7 +17,7 @@
     logisim-evolution
 
     # Gaming
-    # lutris
+    lutris
 
     # CLI tools
     nnn

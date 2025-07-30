@@ -6,8 +6,8 @@
     ./zsh
     ./git.nix
     ./easyeffects.nix
-    # ./nvf
     ./nixvim
+    ./lutris.nix
     ./flameshot.nix
   ];
 }
