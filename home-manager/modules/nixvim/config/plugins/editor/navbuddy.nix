@@ -88,12 +88,12 @@
 
       sections.left = {
         border = "rounded";
-        size = "20";
+        size = 20;
       };
 
       sections.mid = {
         border = "rounded";
-        size = "40";
+        size = 40;
       };
 
       sections.right = {
