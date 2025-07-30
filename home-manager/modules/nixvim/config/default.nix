@@ -30,7 +30,7 @@ _: {
     ./plugins/editor/navic.nix
     ./plugins/editor/navbuddy.nix # FIX there is a bug, and it is currently false
     ./plugins/editor/smartcolumn.nix
-    ./plugins/editor/smear-cursor.nix
+    ./plugins/editor/aerial.nix
     ./plugins/editor/cursorline.nix
 
     # UI plugins
