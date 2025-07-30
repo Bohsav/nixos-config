@@ -40,7 +40,7 @@
       Constructor = " ";
       Enum = " ";
       EnumMember = " ";
-      Events = " ";
+      Event = " ";
       Field = " ";
       File = "󰈙 ";
       Function = "󰊕 ";
