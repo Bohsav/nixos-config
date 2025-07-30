@@ -26,6 +26,7 @@
         "help"
         "lspinfo"
         "neo-tree"
+        "startup"
         "noice"
         "text"
       ];
