@@ -154,12 +154,12 @@
         intelBusId = "PCI:0:2:0";
         nvidiaBusId = "PCI:1:0:0";
 
-        offload = {
-          enable = true;
-          enableOffloadCmd = true;
-        };
+        # offload = {
+        #   enable = true;
+        #   enableOffloadCmd = true;
+        # };
         # Remove the "offload" above and uncomment the line below
-        #sync.enable = true;
+        sync.enable = true;
       };
     };
   };
