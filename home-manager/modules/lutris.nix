@@ -23,6 +23,6 @@
 
     steamPackage = pkgs.steam;
 
-    winePackages = pkgs.wineWow64Packages.wayland;
+    winePackages = [ pkgs.wineWow64Packages.wayland ];
   };
 }
