@@ -13,8 +13,6 @@
 
     protonPackages = [ pkgs.proton-ge-bin ];
 
-    steamPackage = pkgs.steam;
-
     winePackages = [ pkgs.wineWowPackages.waylandFull ];
   };
 }
