@@ -22,6 +22,7 @@
     wineWowPackages.waylandFull
 
     # CLI tools
+    neofetch
     nnn
     btop
     coreutils

@@ -29,6 +29,8 @@ _: {
     ./plugins/editor/copilot-chat.nix
     ./plugins/editor/navic.nix
     ./plugins/editor/navbuddy.nix
+    ./plugins/editor/smartcolumn.nix
+    ./plugins/editor/smear-cursor.nix
 
     # UI plugins
     ./plugins/ui/bufferline.nix

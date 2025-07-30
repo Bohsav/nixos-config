@@ -1,6 +1,6 @@
-{
+_: {
   plugins.navbuddy = {
-    enable = true;
+    enable = false;
 
     mappings = {
       "0" = "root";
