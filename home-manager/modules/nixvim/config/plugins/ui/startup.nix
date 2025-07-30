@@ -59,12 +59,10 @@
           [
             " Edit Nixvim Configuration"
             "edit ~/nixos-config/home-manager/modules/nixvim"
-            "ecn"
           ]
           [
             "󱅙 Edit nixos-config"
             "edit ~/nixos-config"
-            "ecs"
           ]
           # [
           #   " Copilot Chat"
