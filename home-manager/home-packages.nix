@@ -19,6 +19,7 @@
     # Gaming
     # lutris
     steam
+    wineWowPackages.waylandFull
 
     # CLI tools
     nnn
