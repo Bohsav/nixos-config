@@ -15,6 +15,7 @@
     spotify
     gnome-tweaks
     logisim-evolution
+    godot-mono
 
     # Gaming
     # lutris
