@@ -14,6 +14,9 @@
       enable = true;
       inlayHints = true;
       servers = {
+        omnisharp = {
+          enable = true;
+        };
         html = {
           enable = true;
         };
@@ -70,8 +73,10 @@
                   "http://json.schemastore.org/ansible-playbook" = "*play*.{yml,yaml}";
                   "http://json.schemastore.org/chart" = "Chart.{yml,yaml}";
                   "https://json.schemastore.org/dependabot-v2" = ".github/dependabot.{yml,yaml}";
-                  "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json" = "*docker-compose*.{yml,yaml}";
-                  "https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json" = "*flow*.{yml,yaml}";
+                  "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json" =
+                    "*docker-compose*.{yml,yaml}";
+                  "https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json" =
+                    "*flow*.{yml,yaml}";
                 };
               };
             };
