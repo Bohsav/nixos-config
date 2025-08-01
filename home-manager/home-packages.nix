@@ -23,6 +23,7 @@
     wineWowPackages.waylandFull
 
     # CLI tools
+    devenv
     lazygit
     neofetch
     nnn
