@@ -23,6 +23,7 @@
     wineWowPackages.waylandFull
 
     # CLI tools
+    lazygit
     neofetch
     nnn
     btop
