@@ -20,6 +20,10 @@
           "80"
           "100"
         ];
+        markdown = [
+          "80"
+          "100"
+        ];
       };
       disabled_filetypes = [
         "checkhealth"

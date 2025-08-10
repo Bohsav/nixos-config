@@ -2,3 +2,5 @@ fc-cache -r sometimes can help with fonts.
 
 To diagnose specific issues with fonts in kitty use the following:
 kitty --debug-font-fallback
+
+Add sleuth to nvim (if it is too slow add guess indent)

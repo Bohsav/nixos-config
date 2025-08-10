@@ -51,5 +51,6 @@
     # Other
     hunspell
     hunspellDicts.en_CA
+    times-newer-roman
   ];
 }
