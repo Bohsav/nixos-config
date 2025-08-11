@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
+    times-newer-roman
     dejavu_fonts
     jetbrains-mono
     noto-fonts
