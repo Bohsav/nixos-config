@@ -26,12 +26,7 @@
     devenv
     lazygit
     neofetch
-
-    nnn.override
-    {
-      withNerdIcons = true;
-    }
-
+    nnn
     btop
     coreutils
     eza
