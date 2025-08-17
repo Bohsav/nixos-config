@@ -4,7 +4,6 @@
 
   home.packages = with pkgs; [
     # Desktop apps
-    kitty
     solaar
     easyeffects
     dconf-editor
