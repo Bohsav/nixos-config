@@ -29,9 +29,9 @@
     };
 
     cursor = {
-      name = "Dark";
+      name = "macchiatoDark";
       size = 24;
-      package = pkgs.catppuccin;
+      package = pkgs.catppuccin-cursors;
     };
 
     fonts = {
