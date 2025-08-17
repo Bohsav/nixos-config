@@ -31,7 +31,7 @@
     cursor = {
       name = "macchiatoDark";
       size = 24;
-      package = pkgs.catppuccin-cursors;
+      package = pkgs.catppuccin-cursors.macchiatoDark;
     };
 
     fonts = {
