@@ -22,7 +22,7 @@
     efi.canTouchEfiVariables = true;
     grub =
       let
-        theme-pkg = pkgs.catppuccin-grub.override { flavor = "frappe"; };
+        theme-pkg = pkgs.catppuccin-grub.override { flavor = "latte"; };
       in
       {
         enable = true;
@@ -35,6 +35,7 @@
         theme = "${theme-pkg}";
         font = "${theme-pkg}/font.pf2";
       };
+    timeout = 10;
   };
 
   nix.settings = {
