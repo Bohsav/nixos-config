@@ -26,7 +26,7 @@
     devenv
     lazygit
     neofetch
-    nnn
+    # nnn
     btop
     coreutils
     eza
