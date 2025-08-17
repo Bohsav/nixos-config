@@ -10,7 +10,7 @@
           owner = "jarun";
           repo = "nnn";
           rev = "v5.1";
-          sha256 = "sha256-b0bb51180c3f2e33d6d65990734b5fd78e07a35c";
+          sha256 = "sha256-125f4b355849bf51a2e032926101f05e5df66ef2";
         })
         + "/plugins";
       mappings = {
