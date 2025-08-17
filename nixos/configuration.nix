@@ -22,7 +22,7 @@
     efi.canTouchEfiVariables = true;
     grub =
       let
-        theme-pkg = pkgs.catppuccin-grub.override { flavor = "latte"; };
+        theme-pkg = pkgs.catppuccin-grub.override { flavor = "frappe"; };
       in
       {
         enable = true;
