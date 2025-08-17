@@ -9,7 +9,7 @@
       mediainfo
       mktemp
       unzip
-      tar
+      gnutar
       man
       bsdtar
       bat
