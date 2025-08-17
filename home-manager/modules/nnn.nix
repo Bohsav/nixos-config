@@ -11,7 +11,6 @@
       unzip
       gnutar
       man
-      bsdtar
       bat
       ffmpegthumbnailer
       ffmpeg
