@@ -1,5 +1,7 @@
 {
   imports = [
+    ./nnn.nix
+
     ./dconf.nix
     ./stylix
     ./kitty.nix
