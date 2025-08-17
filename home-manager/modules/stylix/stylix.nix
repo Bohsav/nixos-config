@@ -19,7 +19,7 @@
     enable = true;
     autoEnable = true;
     polarity = "dark";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
 
     targets = {
       kitty.enable = false;
@@ -29,9 +29,9 @@
     };
 
     cursor = {
-      name = "DMZ-Black";
+      name = "Dark";
       size = 24;
-      package = pkgs.vanilla-dmz;
+      package = pkgs.catppuccin;
     };
 
     fonts = {
