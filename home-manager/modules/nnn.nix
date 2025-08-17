@@ -9,7 +9,7 @@
         (pkgs.fetchFromGitHub {
           owner = "jarun";
           repo = "nnn";
-          rev = "5.1";
+          sha-256 = "sha256-b0bb51180c3f2e33d6d65990734b5fd78e07a35c";
         })
         + "/plugins";
       mappings = {
