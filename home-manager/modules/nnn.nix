@@ -3,6 +3,21 @@
   programs.nnn = {
     enable = true;
     package = pkgs.nnn.override { withNerdIcons = true; };
+    extraPackages = with pkgs; [
+      less
+      tree
+      mediainfo
+      mktemp
+      unzip
+      tar
+      man
+      bsdtar
+      bat
+      ffmpegthumbnailer
+      ffmpeg
+      poppler
+      glow
+    ];
 
     plugins = {
       src =

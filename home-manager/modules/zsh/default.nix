@@ -15,7 +15,7 @@
 
     shellAliases = {
       edit-config = "nnn ~/nixos-config";
-      build-home-config = "home-manager switch --flake ~/nixos-config";
+      build-home-config = "home-manager switch -b backup --flake ~/nixos-config";
       build-system-config = "sudo nixos-rebuild switch --flake ~/nixos-config";
     };
     plugins = [
