@@ -136,8 +136,9 @@
             command = "${lib.getExe pkgs.deno}";
             append_args = [
               "fmt"
-              "-"
+              "$FILENAME"
             ];
+            stdin = false;
           };
           gci = {
             command = "${lib.getExe' pkgs.gci "gci"}";
