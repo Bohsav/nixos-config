@@ -25,7 +25,7 @@
 
       # Number of spaces that represent a <TAB>
       # tabstop = 2;
-      # softtabstop = 2;
+      softtabstop = 2;
       #
       # Show tabline always
       showtabline = 2;

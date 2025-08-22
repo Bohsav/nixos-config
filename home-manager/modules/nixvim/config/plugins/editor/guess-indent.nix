@@ -1,6 +1,6 @@
 {
   plugins.guess-indent = {
-    enable = true;
+    enable = false;
 
     settings = {
       auto_cmd = true;
