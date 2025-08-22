@@ -1,7 +1,7 @@
 {
   colorschemes = {
     catppuccin = {
-      enable = true;
+      enable = false;
       settings = {
         background = {
           light = "latte";
@@ -67,6 +67,11 @@
       enable = false;
 
       flavor = "duskfox";
+    };
+    bamboo = {
+      enable = true;
+      transparent = false;
+      style = "multiplex";
     };
   };
 }
