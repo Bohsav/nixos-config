@@ -70,8 +70,10 @@
     };
     bamboo = {
       enable = true;
-      transparent = false;
-      style = "multiplex";
+      settings = {
+        transparent = false;
+        style = "multiplex";
+      };
     };
   };
 }
