@@ -136,7 +136,7 @@
             command = "${lib.getExe pkgs.deno}";
             append_args = [
               "fmt"
-              "$FILENAME"
+              "-"
             ];
           };
           gci = {
