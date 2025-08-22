@@ -134,7 +134,10 @@
         formatters = {
           deno_fmt = {
             command = "${lib.getExe pkgs.deno}";
-            append_args = [ "fmt" ];
+            append_args = [
+              "fmt"
+              "$FILENAME"
+            ];
           };
           gci = {
             command = "${lib.getExe' pkgs.gci "gci"}";
