@@ -136,7 +136,7 @@
             command = "${lib.getExe pkgs.deno} fmt";
           };
           gci = {
-            command = "${lib.getExe pkgs.gci}";
+            command = "${lib.getExe' pkgs.gci "gci"}";
           };
           goimports = {
             command = "${lib.getExe pkgs.gosimports}";
