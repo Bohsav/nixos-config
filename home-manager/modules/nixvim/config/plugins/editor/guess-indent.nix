@@ -27,7 +27,7 @@
         expandtab = false;
       };
 
-      override_editorconfig = true;
+      override_editorconfig = false;
     };
   };
 }
