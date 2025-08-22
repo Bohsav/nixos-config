@@ -1,7 +1,7 @@
 {
   colorschemes = {
     catppuccin = {
-      enable = false;
+      enable = true;
       settings = {
         background = {
           light = "latte";
@@ -64,7 +64,7 @@
       };
     };
     nightfox = {
-      enable = true;
+      enable = false;
 
       flavor = "duskfox";
     };
