@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       indent.enable = false;
-      highlight.enable = false;
+      highlight.enable = true;
     };
     folding = false;
     nixvimInjections = true;
