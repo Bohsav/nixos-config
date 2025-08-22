@@ -33,6 +33,7 @@
         "startup"
         "noice"
         "text"
+        "nofile"
       ];
       scope = "window";
     };

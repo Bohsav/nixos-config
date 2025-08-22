@@ -133,7 +133,8 @@
 
         formatters = {
           deno_fmt = {
-            command = "${lib.getExe pkgs.deno} fmt";
+            command = "${lib.getExe pkgs.deno}";
+            append_args = [ "fmt" ];
           };
           gci = {
             command = "${lib.getExe' pkgs.gci "gci"}";
