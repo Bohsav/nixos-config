@@ -104,11 +104,12 @@
           ];
           lua = [ "stylua" ];
           nix = [ "nixfmt-rfc-style" ];
-          markdown = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            stop_after_first = true;
-          };
+          # markdown = {
+          #   __unkeyed-1 = "prettierd";
+          #   __unkeyed-2 = "prettier";
+          #   stop_after_first = true;
+          # };
+          markdown = [ "deno_fmt" ];
           yaml = {
             __unkeyed-1 = "prettierd";
             __unkeyed-2 = "prettier";
@@ -122,10 +123,24 @@
             "shfmt"
           ];
           json = [ "jq" ];
+          go = [
+            "goimports"
+            "gofmt"
+            "gci"
+          ];
           "_" = [ "trim_whitespace" ];
         };
 
         formatters = {
+          deno_fmt = {
+            command = "${lib.getExe pkgs.deno} fmt";
+          };
+          gci = {
+            command = "${lib.getExe pkgs.gci}";
+          };
+          goimports = {
+            command = "${lib.getExe pkgs.gosimports}";
+          };
           black = {
             command = "${lib.getExe pkgs.black}";
           };

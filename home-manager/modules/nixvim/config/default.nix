@@ -32,6 +32,7 @@ _: {
     ./plugins/editor/smartcolumn.nix
     ./plugins/editor/aerial.nix
     ./plugins/editor/cursorline.nix
+    ./plugins/editor/guess-indent.nix
 
     # UI plugins
     ./plugins/ui/bufferline.nix
