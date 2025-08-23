@@ -1,9 +1,5 @@
 {
   plugins = {
-    colorful-menu = {
-      enable = true;
-    };
-
     cmp-emoji = {
       enable = true;
     };
