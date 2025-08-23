@@ -67,6 +67,9 @@
         };
       };
     };
+    cmp-nvim-lsp-signature-help = {
+      enable = true;
+    };
     cmp-nvim-lsp = {
       enable = true;
     }; # lsp
