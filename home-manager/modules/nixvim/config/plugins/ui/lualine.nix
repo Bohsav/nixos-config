@@ -14,13 +14,13 @@ _: {
             "alpha"
           ];
         };
-        theme = "nightfox";
+        theme = "auto";
       };
       sections = {
         lualine_a = [
           {
             __unkeyed-1 = "mode";
-            icon = "";
+            icon = "󰒔";
           }
         ];
         lualine_b = [
