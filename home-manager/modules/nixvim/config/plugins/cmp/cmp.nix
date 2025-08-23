@@ -47,10 +47,28 @@
 
         window = {
           completion = {
-            border = "solid";
+            border = [
+              "╭"
+              "─"
+              "╮"
+              "│"
+              "╯"
+              "─"
+              "╰"
+              "│"
+            ];
           };
           documentation = {
-            border = "solid";
+            border = [
+              "╭"
+              "─"
+              "╮"
+              "│"
+              "╯"
+              "─"
+              "╰"
+              "│"
+            ];
           };
         };
 
