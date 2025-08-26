@@ -8,7 +8,7 @@
         "v"
       ];
       key = "gf";
-      action = lib.nixvim.utils.MkRaw "require('actions-preview').code_actions()";
+      action.__raw = ''require('actions-preview').code_actions()'';
       options = {
         desc = "Acions Preview Code Action";
       };
