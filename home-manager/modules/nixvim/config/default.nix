@@ -33,6 +33,7 @@ _: {
     ./plugins/editor/aerial.nix
     ./plugins/editor/cursorline.nix
     ./plugins/editor/guess-indent.nix
+    ./plugins/editor/actions-preview.nix
 
     # UI plugins
     ./plugins/ui/bufferline.nix
