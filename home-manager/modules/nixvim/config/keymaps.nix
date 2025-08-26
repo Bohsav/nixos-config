@@ -1,7 +1,18 @@
+{ lib, ... }:
 {
   globals.mapleader = " ";
 
   keymaps = [
+    {
+      mode = [
+        "v"
+      ];
+      key = "gf";
+      action = lib.nixvim.nestedLiteralLua "require(actions-preview).code_actions";
+      options = {
+        desc = "Acions Preview Code Action";
+      };
+    }
     {
       mode = [
         "n"
