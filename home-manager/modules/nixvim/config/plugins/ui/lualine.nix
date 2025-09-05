@@ -101,11 +101,11 @@ _: {
           {
             __unkeyed-1.__raw = ''
               function()
-                return require("navic").get_location()
+                return require("nvim-navic").get_location()
               end,
 
               cond = function()
-                return require("navic").is_available()
+                return require("nvim-navic").is_available()
               end
             '';
           }
