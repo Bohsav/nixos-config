@@ -9,6 +9,7 @@ _: {
           "neo-tree"
         ];
         disabledFiletypes = {
+          __unkeyed-1 = "neo-tree";
           statusline = [
             "startup"
             "alpha"
