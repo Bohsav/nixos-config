@@ -87,18 +87,12 @@ _: {
           {
             __unkeyed-1 = "aerial";
             colored = true;
-            cond = {
-              __raw = ''
-                function()
-                  local buf_size_limit = 1024 * 1024
-                  if vim.api.nvim_buf_get_offset(0, vim.api.nvim_buf_line_count(0)) > buf_size_limit then
-                    return false
-                  end
-
-                  return true
-                end
-              '';
+            dense = false;
+            dense_sep = ".";
+            depth = {
+              __raw = "nil";
             };
+            sep = " ) ";
           }
         ];
       };
