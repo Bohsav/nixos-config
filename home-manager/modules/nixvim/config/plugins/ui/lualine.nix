@@ -97,7 +97,7 @@ _: {
             __unkeyed-1 = "lsp_status";
           }
         ];
-        lualine_c = [
+        lualine_b = [
           {
             __unkeyed-1.__raw = ''
               function()
