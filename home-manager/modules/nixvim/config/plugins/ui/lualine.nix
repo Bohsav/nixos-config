@@ -85,7 +85,7 @@ _: {
       winbar = {
         lualine_c = [
           {
-            __unkeyed-1 = "navic";
+            __unkeyed-1 = "aerial";
             colored = true;
             cond = {
               __raw = ''
