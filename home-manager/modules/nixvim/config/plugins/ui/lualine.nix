@@ -20,7 +20,7 @@ _: {
         lualine_a = [
           {
             __unkeyed-1 = "mode";
-            icon = "󰒔";
+            icon = " ";
           }
         ];
         lualine_b = [
@@ -47,9 +47,6 @@ _: {
               info = " ";
               hint = "󰝶 ";
             };
-          }
-          {
-            __unkeyed-1 = "navic";
           }
         ];
         lualine_x = [
@@ -90,6 +87,22 @@ _: {
         lualine_z = [
           {
             __unkeyed-1 = "location";
+          }
+        ];
+      };
+
+      winbar = {
+        lualine_c = [
+          {
+            __unkeyed-1.__raw = ''
+              function()
+                return require("nvim-navic").get_location()
+              end,
+
+              cond = function()
+                return require("nvim-navic").is_available()
+              end
+            '';
           }
         ];
       };
