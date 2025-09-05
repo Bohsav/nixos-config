@@ -92,6 +92,11 @@ _: {
       };
 
       winbar = {
+        lualine_a = [
+          {
+            __unkeyed-1 = "lsp_status";
+          }
+        ];
         lualine_c = [
           {
             __unkeyed-1.__raw = ''
