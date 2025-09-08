@@ -35,21 +35,11 @@
         src = ./nnn;
         file = "cd_on_q.zsh";
       }
-      # {
-      #   name = "nnn-diffs";
-      #   src = ./nnn;
-      #   file = "diffs.zsh";
-      # }
-      # {
-      #   name = "nnn-dragdrop";
-      #   src = ./nnn;
-      #   file = "dragdrop.zsh";
-      # }
-      # {
-      #   name = "nnn-preview-tui";
-      #   src = ./nnn;
-      #   file = "preview-tui.zsh";
-      # }
+      {
+        name = "nnn-catpuccin";
+        src = ./nnn;
+        file = "nnn_catpuccin.zsh";
+      }
     ];
 
     initContent =
