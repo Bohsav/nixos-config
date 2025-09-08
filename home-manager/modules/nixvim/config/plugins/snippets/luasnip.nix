@@ -9,7 +9,7 @@
             owner = "honza";
             repo = "vim-snippets";
             rev = "f371d635f6f6350d34bbb483e37e383db322d145";
-            sha256 = "";
+            sha256 = "sha256-Hf09SQHphPznYtCyPvtcL33o3OuIK+sDiXCUkpzsmMs=";
           })
           + "/snippets";
         include = [
