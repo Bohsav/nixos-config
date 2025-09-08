@@ -35,11 +35,11 @@
         src = ./nnn;
         file = "cd_on_q.zsh";
       }
-      {
-        name = "nnn-catpuccin";
-        src = ./nnn;
-        file = "nnn_catpuccin.zsh";
-      }
+      # {
+      #   name = "nnn-catpuccin";
+      #   src = ./nnn;
+      #   file = "nnn_catpuccin.zsh";
+      # }
     ];
 
     initContent =
