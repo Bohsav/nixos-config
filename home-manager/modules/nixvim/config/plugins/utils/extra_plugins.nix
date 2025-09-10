@@ -4,7 +4,7 @@
     go-nvim
   ];
 
-  # extraConfigLua = ''
-  #
-  # '';
+  extraConfigLua = ''
+    require("go").setup()
+  '';
 }
