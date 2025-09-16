@@ -53,6 +53,5 @@
 
     openvpn
     openvpn-auth-ldap
-    networkmanager-openvpn
   ];
 }
