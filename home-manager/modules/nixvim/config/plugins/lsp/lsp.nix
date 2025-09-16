@@ -35,7 +35,7 @@
         pyright = {
           enable = true;
         };
-        java = {
+        java_language_server = {
           enable = true;
         };
         gopls = {
