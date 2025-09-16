@@ -87,7 +87,12 @@
       };
     };
     # Enable CUPS to print documents.
-    printing.enable = true;
+    printing = {
+      enable = true;
+      drivers = with pkgs; [
+        hplip
+      ];
+    };
 
     pipewire = {
       enable = true;
