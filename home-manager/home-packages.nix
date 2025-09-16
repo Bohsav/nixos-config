@@ -53,5 +53,6 @@
 
     openvpn
     openvpn-auth-ldap
+    openconnect
   ];
 }
