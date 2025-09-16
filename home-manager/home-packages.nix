@@ -51,8 +51,7 @@
     hunspell
     hunspellDicts.en_CA
 
-    openvpn
-    openvpn-auth-ldap
     openconnect
+    openfortivpn-webview
   ];
 }
