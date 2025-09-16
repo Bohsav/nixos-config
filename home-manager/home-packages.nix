@@ -14,7 +14,7 @@
     spotify
     gnome-tweaks
     logisim-evolution
-    godot-mono
+    # godot-mono
 
     # Gaming
     # lutris
@@ -26,7 +26,6 @@
     devenv
     lazygit
     neofetch
-    # nnn
     btop
     coreutils
     eza
