@@ -71,7 +71,7 @@
           zstyle ':completion:::::' completer _expand _complete _ignored _approximate # enable approximate matches for completion
 
           function connectvpn {
-            sudo openconnect --protocol=fortinet -C $("openfortivpn-webview sslvpn1.unb.ca:10443") sslvpn1.unb.ca:10443
+            sudo openconnect --protocol=fortinet -C $(openfortivpn-webview sslvpn1.unb.ca:10443) sslvpn1.unb.ca:10443
           }
         '';
       in
