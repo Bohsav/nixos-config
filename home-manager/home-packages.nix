@@ -50,5 +50,9 @@
     # Other
     hunspell
     hunspellDicts.en_CA
+
+    openvpn
+    openvpn-auth-ldap
+    networkmanager-openvpn
   ];
 }
