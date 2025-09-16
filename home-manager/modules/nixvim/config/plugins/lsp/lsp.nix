@@ -35,6 +35,9 @@
         pyright = {
           enable = true;
         };
+        java = {
+          enable = true;
+        };
         gopls = {
           enable = true;
         };
