@@ -71,7 +71,7 @@ _: {
         "x"
       ];
       key = "r";
-      action.__raw = "function() require('flash').treesitter_search()";
+      action.__raw = "function() require('flash').treesitter_search() end";
       options = {
         desc = "Flash Treesitter Search";
       };
