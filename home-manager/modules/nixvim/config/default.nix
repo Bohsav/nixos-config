@@ -34,6 +34,7 @@ _: {
     ./plugins/editor/cursorline.nix
     ./plugins/editor/guess-indent.nix
     ./plugins/editor/actions-preview.nix
+    ./plugins/editor/flash.nix
 
     # UI plugins
     ./plugins/ui/bufferline.nix
