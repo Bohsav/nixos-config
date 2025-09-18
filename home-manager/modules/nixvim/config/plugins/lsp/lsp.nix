@@ -38,9 +38,6 @@
         pyright = {
           enable = true;
         };
-        jdtls = {
-          enable = true;
-        };
         gopls = {
           enable = true;
         };
