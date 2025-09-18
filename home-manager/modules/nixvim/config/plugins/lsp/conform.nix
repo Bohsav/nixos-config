@@ -126,7 +126,7 @@
           go = [
             "goimports"
             "gofmt"
-            "gci"
+            # "gci"
           ];
           "_" = [ "trim_whitespace" ];
         };
@@ -140,9 +140,9 @@
             ];
             stdin = false;
           };
-          gci = {
-            command = "${lib.getExe' pkgs.gci "gci"}";
-          };
+          # gci = {
+          #   command = "${lib.getExe' pkgs.gci "gci"}";
+          # };
           goimports = {
             command = "${lib.getExe pkgs.gosimports}";
           };
