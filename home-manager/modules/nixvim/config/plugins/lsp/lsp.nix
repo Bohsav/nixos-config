@@ -10,6 +10,9 @@
     helm = {
       enable = true;
     };
+    lsp-signature = {
+      enable = true;
+    };
     lsp = {
       enable = true;
       inlayHints = true;
