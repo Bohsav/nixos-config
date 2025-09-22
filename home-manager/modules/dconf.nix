@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   dconf.enable = true;
   dconf.settings = {
     "org/gnome/shell" = {
@@ -36,7 +37,7 @@
       "hpad" = 2.5;
       "margin-wmax" = 2;
       "mfgalha" = 1;
-      "neon" = true;
+      "neon" = false;
       "neon-wmax" = true;
       "shadow" = false;
       "trigger-autotheme" = true;
