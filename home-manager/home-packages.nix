@@ -23,6 +23,7 @@
 
     # CLI tools
     xclip
+    wl-clipboard
     devenv
     lazygit
     neofetch
