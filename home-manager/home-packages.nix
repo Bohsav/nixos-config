@@ -14,6 +14,7 @@
     spotify
     gnome-tweaks
     logisim-evolution
+    teams-for-linux
     # godot-mono
 
     # Gaming
