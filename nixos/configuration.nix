@@ -7,7 +7,8 @@
 {
   imports = [
     ../hosts/${hostname}/hardware-configuration.nix
-    ./system-packages.nix
+    ./default-system-packages.nix
+    ./get-gnome-extensions.nix
     ./exclude-gnome-apps.nix
     ./boot-loader.nix
     ./nix-settings.nix
