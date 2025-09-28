@@ -22,7 +22,12 @@
     ./nix-services/xserver.nix
     ./nix-services/printing.nix
     ./nix-services/pipewire.nix
+    ./nix-services/tlp.nix
   ];
+
+  services = {
+    thermald.enable = true;
+  };
 
   networking.hostName = hostname;
 
@@ -41,7 +46,6 @@
 
     # Enable OpenGL
     graphics.enable = true;
-
   };
 
   security.rtkit.enable = true;
