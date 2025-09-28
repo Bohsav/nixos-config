@@ -6,10 +6,11 @@
 }:
 {
   imports = [
+    # desktop
+    ./gnome
+
     ../hosts/${hostname}/hardware-configuration.nix
     ./default-system-packages.nix
-    ./get-gnome-extensions.nix
-    ./exclude-gnome-apps.nix
     ./boot-loader.nix
     ./nix-settings.nix
     ./networking.nix
@@ -19,7 +20,6 @@
     ./hardware-nvidia-laptop-A2000.nix
 
     # services
-    ./nix-services/display.nix
     ./nix-services/xserver.nix
     ./nix-services/printing.nix
     ./nix-services/pipewire.nix
