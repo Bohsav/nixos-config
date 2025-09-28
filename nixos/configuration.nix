@@ -1,7 +1,5 @@
 {
-  # config,
   pkgs,
-  # user,
   stateVersion,
   hostname,
   ...
@@ -28,107 +26,8 @@
 
   networking.hostName = hostname;
 
-  # nix boot.loader
-  # boot.loader = {
-  #   systemd-boot.enable = false;
-  #
-  #   efi.canTouchEfiVariables = true;
-  #   grub =
-  #     let
-  #       theme-pkg = pkgs.catppuccin-grub.override { flavor = "frappe"; };
-  #     in
-  #     {
-  #       enable = true;
-  #       useOSProber = true;
-  #       copyKernels = true;
-  #       device = "nodev";
-  #       efiSupport = true;
-  #
-  #       fontSize = 16;
-  #       theme = "${theme-pkg}";
-  #       font = "${theme-pkg}/font.pf2";
-  #     };
-  #   timeout = 10;
-  # };
-
-  # nix nix.settings
-  # nix.settings = {
-  #   experimental-features = [
-  #     "nix-command"
-  #     "flakes"
-  #   ];
-  #   trusted-users = [
-  #     "root"
-  #     "sleepyfox"
-  #   ];
-  # };
-
-  # nix networking.networkmanager
-  # networking.networkmanager = {
-  #   enable = true;
-  #   plugins = with pkgs; [
-  #     networkmanager-openconnect
-  #   ];
-  # };
-
   time.timeZone = "America/Moncton";
   i18n.defaultLocale = "en_CA.UTF-8";
-
-  # dir services
-  # services = {
-  # nix services.desktopManager + displayManager
-  # desktopManager.gnome.enable = true;
-  # displayManager = {
-  #   gdm = {
-  #     enable = true;
-  #     wayland = true;
-  #   };
-  # };
-
-  # nix services.xserver
-  # xserver = {
-  #   # Load nvidia driver for Xorg and Wayland
-  #   videoDrivers = [ "nvidia" ];
-  #
-  #   enable = true;
-  #   # Configure keymap in X11
-  #   xkb = {
-  #     layout = "us";
-  #     variant = "";
-  #   };
-  # };
-
-  # nix services.printing
-  # printing = {
-  #   enable = true;
-  #   drivers = with pkgs; [
-  #     hplip
-  #   ];
-  # };
-
-  # nix services.pipewire
-  # pipewire = {
-  #   enable = true;
-  #   alsa.enable = true;
-  #   alsa.support32Bit = true;
-  #   pulse.enable = true;
-  #
-  #   wireplumber = {
-  #     enable = true;
-  #     configPackages = [
-  #       (pkgs.writeTextDir "share/wireplumber/wireplumber.conf.d/51-mitigate-annoying-profile-switch.conf" ''
-  #         wireplumber.settings = {
-  #           bluetooth.autoswitch-to-headset-profile = false
-  #         }
-  #
-  #         monitor.bluez.properties = {
-  #           bluez5.roles = [ a2dp_sink a2dp_source ]
-  #         }
-  #       '')
-  #     ];
-  #   };
-  # };
-  # };
 
   hardware = {
     sane = {
@@ -143,81 +42,9 @@
     # Enable OpenGL
     graphics.enable = true;
 
-    # nix hardware-nvidia-laptop
-    # nvidia = {
-    #   # Modesetting is required.
-    #   modesetting.enable = true;
-    #
-    #   # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
-    #   # Enable this if you have graphical corruption issues or application crashes after waking
-    #   # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead
-    #   # of just the bare essentials.
-    #   powerManagement.enable = false;
-    #
-    #   # Fine-grained power management. Turns off GPU when not in use.
-    #   # Experimental and only works on modern Nvidia GPUs (Turing or newer).
-    #   powerManagement.finegrained = false;
-    #
-    #   # Use the NVidia open source kernel module (not to be confused with the
-    #   # independent third-party "nouveau" open source driver).
-    #   # Support is limited to the Turing and later architectures. Full list of
-    #   # supported GPUs is at:
-    #   # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
-    #   # Only available from driver 515.43.04+
-    #   open = true; # For A2000
-    #
-    #   # Enable the Nvidia settings menu,
-    #   # accessible via `nvidia-settings`.
-    #   nvidiaSettings = true;
-    #
-    #   # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    #   package = config.boot.kernelPackages.nvidiaPackages.stable;
-    #
-    #   prime = {
-    #     intelBusId = "PCI:0:2:0";
-    #     nvidiaBusId = "PCI:1:0:0";
-    #
-    #     offload = {
-    #       enable = true;
-    #       enableOffloadCmd = true;
-    #     };
-    #     # Remove the "offload" above and uncomment the line below
-    #     # sync.enable = true;
-    #   };
-    # };
   };
 
   security.rtkit.enable = true;
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
-  # nix programs
-  # programs = {
-  #   zsh.enable = true;
-  #   dconf.enable = true;
-  #   steam = {
-  #     enable = true;
-  #     remotePlay.openFirewall = true;
-  #     dedicatedServer.openFirewall = true;
-  #     localNetworkGameTransfers.openFirewall = true;
-  #   };
-  #   firefox = import ./firefox-settings.nix { inherit pkgs; };
-  # };
-
-  # nix users
-  # users = {
-  #   defaultUserShell = pkgs.zsh;
-  #   users.${user} = {
-  #     isNormalUser = true;
-  #     extraGroups = [
-  #       "wheel"
-  #       "networkmanager"
-  #       "scanner"
-  #       "lp"
-  #     ];
-  #   };
-  # };
 
   nixpkgs.config.allowUnfree = true;
 
