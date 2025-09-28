@@ -15,7 +15,7 @@
 
   networking.hostName = hostname;
 
-  # boot loader
+  # nix boot.loader
   boot.loader = {
     systemd-boot.enable = false;
 
@@ -38,6 +38,7 @@
     timeout = 10;
   };
 
+  # nix nix.settings
   nix.settings = {
     experimental-features = [
       "nix-command"
@@ -49,6 +50,7 @@
     ];
   };
 
+  # nix networking.networkmanager
   networking.networkmanager = {
     enable = true;
     plugins = with pkgs; [
@@ -59,7 +61,9 @@
   time.timeZone = "America/Moncton";
   i18n.defaultLocale = "en_CA.UTF-8";
 
+  # dir services
   services = {
+    # nix services.desktopManager + displayManager
     desktopManager.gnome.enable = true;
     displayManager = {
       gdm = {
@@ -68,6 +72,7 @@
       };
     };
 
+    # nix services.xserver
     xserver = {
       # Load nvidia driver for Xorg and Wayland
       videoDrivers = [ "nvidia" ];
@@ -79,7 +84,8 @@
         variant = "";
       };
     };
-    # Enable CUPS to print documents.
+
+    # nix services.printing
     printing = {
       enable = true;
       drivers = with pkgs; [
@@ -87,6 +93,7 @@
       ];
     };
 
+    # nix services.pipewire
     pipewire = {
       enable = true;
       alsa.enable = true;
@@ -113,6 +120,7 @@
     pulseaudio.enable = false;
   };
 
+  # nix hardware
   hardware = {
     sane = {
       enable = true;
@@ -126,6 +134,7 @@
     # Enable OpenGL
     graphics.enable = true;
 
+    # nix hardware-nvidia-laptop
     nvidia = {
       # Modesetting is required.
       modesetting.enable = true;
@@ -168,11 +177,13 @@
       };
     };
   };
+
   security.rtkit.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  # nix programs
   programs = {
     zsh.enable = true;
     dconf.enable = true;
@@ -185,6 +196,7 @@
     firefox = import ./firefox-settings.nix { inherit pkgs; };
   };
 
+  # nix users
   users = {
     defaultUserShell = pkgs.zsh;
     users.${user} = {
