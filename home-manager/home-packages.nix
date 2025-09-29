@@ -18,8 +18,6 @@
     # godot-mono
 
     # Gaming
-    # lutris
-    steam
     wineWowPackages.waylandFull
 
     # CLI tools
