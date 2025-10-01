@@ -1,4 +1,4 @@
-{ user, ... }:
+{ user, pkgs, ... }:
 {
   services = {
     displayManager = {
@@ -10,6 +10,7 @@
     };
     desktopManager.cosmic.enable = true;
   };
+  environment.systemPackages = with pkgs; [ forecast ];
 
   environment.cosmic.excludePackages = [ ];
 }
