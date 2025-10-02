@@ -9,6 +9,10 @@
     system-monitor
     windownavigator
     applications-menu
+
+    appindicator
   ];
+
+  services.udev.packages = with pkgs; [ gnome-settings-daemon ];
 
 }
