@@ -64,6 +64,6 @@
       light = "Papirus-Light";
     };
 
-    image = ./assets/scifi.jpeg;
+    image = ./assets/mountain.jpeg;
   };
 }

@@ -7,7 +7,7 @@
 {
   imports = [
     # desktop
-    ./cosmic
+    ./gnome
 
     ../hosts/${hostname}/hardware-configuration.nix
     ./default-system-packages.nix
