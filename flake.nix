@@ -61,7 +61,7 @@
           };
 
           modules = [
-            ./nixos/configuration.nix
+            ./nixos/${hostname}-configuration.nix
           ];
         };
     in

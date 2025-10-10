@@ -7,23 +7,23 @@
 {
   imports = [
     # desktop
-    ./gnome
+    ./generic/gnome
 
     ../hosts/${hostname}/hardware-configuration.nix
-    ./default-system-packages.nix
-    ./boot-loader.nix
-    ./nix-settings.nix
-    ./networking.nix
-    ./programs.nix
-    ./users.nix
+    ./generic/default-system-packages.nix
+    ./generic/boot-loader.nix
+    ./generic/nix-settings.nix
+    ./generic/networking.nix
+    ./generic/programs.nix
+    ./generic/users.nix
 
-    ./hardware-nvidia-laptop-A2000.nix
+    ./generic/hardware-nvidia-laptop-A2000.nix
 
     # services
-    ./nix-services/xserver.nix
-    ./nix-services/printing.nix
-    ./nix-services/pipewire.nix
-    ./nix-services/tlp.nix
+    ./generic/nix-services/xserver.nix
+    ./generic/nix-services/printing.nix
+    ./generic/nix-services/pipewire.nix
+    ./generic/nix-services/tlp.nix
   ];
 
   services = {
