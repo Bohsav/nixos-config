@@ -24,11 +24,11 @@
       enable = true;
     };
     lsp-signature = {
-      enable = true;
+      enable = false;
     };
     lsp = {
       enable = true;
-      inlayHints = true;
+      inlayHints = false;
       servers = {
         omnisharp = {
           enable = true;

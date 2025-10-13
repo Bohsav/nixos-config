@@ -24,6 +24,7 @@
           ];
         };
         sources = [
+          { name = "nvim_lsp_signature_help"; }
           { name = "git"; }
           { name = "nvim_lsp"; }
           { name = "jdtls"; }
