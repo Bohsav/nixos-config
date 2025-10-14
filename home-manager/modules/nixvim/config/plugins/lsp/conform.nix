@@ -151,6 +151,10 @@
           };
           isort = {
             command = "${lib.getExe pkgs.isort}";
+            args = [
+              "$FILENAME"
+            ];
+            stdin = false;
           };
           nixfmt-rfc-style = {
             command = "${lib.getExe pkgs.nixfmt-rfc-style}";
