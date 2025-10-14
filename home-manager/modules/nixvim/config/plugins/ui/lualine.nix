@@ -82,20 +82,6 @@ _: {
         ];
       };
 
-      winbar = {
-        lualine_c = [
-          {
-            __unkeyed-1 = "lspsaga";
-            colored = true;
-            dense = false;
-            dense_sep = ".";
-            depth = {
-              __raw = "nil";
-            };
-            sep = " ";
-          }
-        ];
-      };
     };
   };
 }
