@@ -1,6 +1,24 @@
 { pkgs, ... }:
 {
   plugins = {
+    lspsaga = {
+      enable = true;
+
+      settings = {
+        implement = {
+          enable = true;
+        };
+        lightbulb = {
+          enable = false;
+        };
+        symbol_in_winbar = {
+          enable = true;
+        };
+        ui = {
+          border = "single";
+        };
+      };
+    };
     jdtls = {
       enable = true;
       settings = {

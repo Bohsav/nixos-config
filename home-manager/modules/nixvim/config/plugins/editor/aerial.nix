@@ -1,6 +1,6 @@
 {
   plugins.aerial = {
-    enable = true;
+    enable = false;
     settings = {
       filter_kind = false;
     };

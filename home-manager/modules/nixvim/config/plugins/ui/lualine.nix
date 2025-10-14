@@ -85,7 +85,7 @@ _: {
       winbar = {
         lualine_c = [
           {
-            __unkeyed-1 = "aerial";
+            __unkeyed-1 = "lspsaga";
             colored = true;
             dense = false;
             dense_sep = ".";
