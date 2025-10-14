@@ -5,9 +5,46 @@
   keymaps = [
     {
       mode = [
+        "n"
+        "x"
+      ];
+      key = "<leader>lR";
+      action = "<CMD>Lspsaga rename<Enter>";
+      options = {
+        desc = "Lspsaga Rename under cursor";
+        buffer = true;
+      };
+    }
+    {
+      mode = [
+        "n"
+        "x"
+      ];
+      key = "<leader>lO";
+      action = "<CMD>Lspsaga outline<Enter>";
+      options = {
+        desc = "Lspsaga show outline";
+        buffer = true;
+      };
+    }
+    {
+      mode = [
+        "n"
+        "x"
+      ];
+      key = "<leader>t";
+      action = "<CMD>Lspsaga term_toggle<Enter>";
+      options = {
+        desc = "Toggle terminal";
+      };
+    }
+    {
+      mode = [
+        "n"
+        "x"
         "v"
       ];
-      key = "gf";
+      key = "<leader>ca";
       action.__raw = ''require('actions-preview').code_actions'';
       options = {
         desc = "Acions Preview Code Action";

@@ -141,10 +141,10 @@
             action = "type_definition";
             desc = "Type Definition";
           };
-          K = {
-            action = "hover";
-            desc = "Hover";
-          };
+          # K = {
+          #   action = "hover";
+          #   desc = "Hover";
+          # };
           "<leader>cw" = {
             action = "workspace_symbol";
             desc = "Workspace Symbol";
@@ -168,6 +168,25 @@
             desc = "Previous Diagnostic";
           };
         };
+        extra = [
+          {
+            action = "<CMD>LspStop<Enter>";
+            key = "<leader>lx";
+          }
+          {
+            action = "<CMD>LspStart<Enter>";
+            key = "<leader>ls";
+          }
+          {
+            action = "<CMD>LspRestart<Enter>";
+            key = "<leader>lr";
+          }
+
+          {
+            action = "<CMD>Lspsaga hover_doc<Enter>";
+            key = "K";
+          }
+        ];
       };
     };
   };
@@ -175,27 +194,27 @@
     ansible-vim
   ];
 
-  extraConfigLua = ''
-    local _border = "rounded"
-
-    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-      vim.lsp.handlers.hover, {
-        border = _border
-      }
-    )
-
-    vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
-      vim.lsp.handlers.signature_help, {
-        border = _border
-      }
-    )
-
-    vim.diagnostic.config{
-      float={border=_border}
-    };
-
-    require('lspconfig.ui.windows').default_options = {
-      border = _border
-    }
-  '';
+  # extraConfigLua = ''
+  #   local _border = "rounded"
+  #
+  #   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+  #     vim.lsp.handlers.hover, {
+  #       border = _border
+  #     }
+  #   )
+  #
+  #   vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
+  #     vim.lsp.handlers.signature_help, {
+  #       border = _border
+  #     }
+  #   )
+  #
+  #   vim.diagnostic.config{
+  #     float={border=_border}
+  #   };
+  #
+  #   require('lspconfig.ui.windows').default_options = {
+  #     border = _border
+  #   }
+  # '';
 }

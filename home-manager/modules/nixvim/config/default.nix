@@ -26,11 +26,7 @@ _: {
     ./plugins/editor/illuminate.nix
     ./plugins/editor/indent-blankline.nix
     ./plugins/editor/todo-comments.nix
-    ./plugins/editor/copilot-chat.nix
-    ./plugins/editor/navic.nix
-    ./plugins/editor/navbuddy.nix # FIX there is a bug, and it is currently false
     ./plugins/editor/smartcolumn.nix
-    ./plugins/editor/aerial.nix
     ./plugins/editor/cursorline.nix
     ./plugins/editor/guess-indent.nix
     ./plugins/editor/actions-preview.nix
@@ -56,8 +52,6 @@ _: {
     ./plugins/utils/extra_plugins.nix
     ./plugins/utils/mini.nix
     ./plugins/utils/markdown-preview.nix
-    ./plugins/utils/obsidian.nix
-    ./plugins/utils/toggleterm.nix
     ./plugins/utils/web-devicons.nix
   ];
 }
