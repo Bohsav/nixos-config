@@ -1,9 +1,12 @@
 {
   programs.git = {
     enable = true;
-    userName = "Nixos";
-    userEmail = "bustion047@gmail.com";
-    extraConfig = {
+
+    settings = {
+      user = {
+        name = "Nixos";
+        email = "bustion047@gmail.com";
+      };
       init.defaultBranch = "main";
     };
   };
