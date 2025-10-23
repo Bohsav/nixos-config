@@ -9,6 +9,6 @@
       dedicatedServer.openFirewall = true;
       localNetworkGameTransfers.openFirewall = true;
     };
-    firefox = import ./firefox-settings.nix { inherit pkgs; };
+    firefox = import ./firefox/hard-settings.nix { inherit pkgs; };
   };
 }
