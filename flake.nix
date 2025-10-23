@@ -42,6 +42,10 @@
           hostname = "dell-laptop";
           stateVersion = "25.05";
         }
+        {
+          hostname = "the-fridge";
+          stateVersion = "24.11";
+        }
       ];
 
       makeSystem =
