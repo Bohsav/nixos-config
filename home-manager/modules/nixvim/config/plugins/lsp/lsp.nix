@@ -75,9 +75,6 @@
         terraformls = {
           enable = true;
         };
-        ansiblels = {
-          enable = true;
-        };
         jsonls = {
           enable = true;
         };
