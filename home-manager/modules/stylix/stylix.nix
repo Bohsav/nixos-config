@@ -30,7 +30,7 @@
 
     cursor = {
       name = "catppuccin-macchiato-dark-cursors";
-      size = 24;
+      size = 36;
       package = pkgs.catppuccin-cursors.macchiatoDark;
     };
 
