@@ -49,6 +49,8 @@
     graphics.enable = true;
   };
 
+  programs.firefox = import ./generic/firefox/hard-settings.nix { inherit pkgs; };
+
   security.rtkit.enable = true;
 
   nixpkgs.config.allowUnfree = true;

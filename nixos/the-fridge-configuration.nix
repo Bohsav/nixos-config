@@ -17,7 +17,7 @@
     ./generic/programs.nix
     ./generic/users.nix
 
-	./generic/hardware-nvidia-3060.nix
+    ./generic/hardware-nvidia-3060.nix
 
     # services
     ./generic/nix-services/xserver.nix
@@ -43,6 +43,16 @@
     # Enable OpenGL
     graphics.enable = true;
 
+  };
+
+  programs = {
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true;
+      dedicatedServer.openFirewall = true;
+      localNetworkGameTransfers.openFirewall = true;
+    };
+    firefox = import ./generic/firefox/soft-settings.nix { inherit pkgs; };
   };
 
   security.rtkit.enable = true;
