@@ -30,7 +30,7 @@
 
     cursor = {
       name = "catppuccin-macchiato-dark-cursors";
-      size = 36;
+      size = 28;
       package = pkgs.catppuccin-cursors.macchiatoDark;
     };
 
@@ -52,7 +52,7 @@
         name = "DejaVu Serif";
       };
       sizes = {
-        terminal = 13;
+        terminal = 14;
         applications = 11;
       };
     };
