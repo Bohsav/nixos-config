@@ -1,6 +1,8 @@
 {
   pkgs,
   lib,
+  hostname,
+  user,
   ...
 }:
 {
@@ -15,8 +17,8 @@
 
     shellAliases = {
       edit-config = "nnn ~/nixos-config";
-      build-home-config = "home-manager switch -b backup --flake ~/nixos-config";
-      build-system-config = "sudo nixos-rebuild switch --flake ~/nixos-config";
+      build-home-config = "home-manager switch -b backup --flake ~/nixos-config#${user}@${hostname}";
+      build-system-config = "sudo nixos-rebuild switch --flake ~/nixos-config#${hostname}";
       home = "~/nixos-config";
     };
     plugins = [
