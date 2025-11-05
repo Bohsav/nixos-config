@@ -31,20 +31,24 @@
     let
       system = "x86_64-linux";
       user = "sleepyfox";
-      homeStateVersion = "25.05";
-      homePath = ./home-manager/home.nix;
       hosts = [
         {
           hostname = "acer-laptop";
           stateVersion = "25.05";
+          homePath = ./home-manager/generic/home.nix;
+          homeStateVersion = "25.05";
         }
         {
           hostname = "dell-laptop";
           stateVersion = "25.05";
+          homePath = ./home-manager/generic/home.nix;
+          homeStateVersion = "25.05";
         }
         {
           hostname = "the-fridge";
           stateVersion = "24.11";
+          homePath = ./home-manager/generic/home.nix;
+          homeStateVersion = "25.05";
         }
       ];
 
@@ -68,6 +72,32 @@
             ./nixos/${hostname}-configuration.nix
           ];
         };
+
+      makeHome =
+        {
+          hostname,
+          homeStateVersion,
+          homePath,
+        }:
+        home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.${system};
+
+          extraSpecialArgs = {
+            inherit
+              inputs
+              homeStateVersion
+              user
+              hostname
+              ;
+          };
+
+          modules = [
+            homePath
+            stylix.homeModules.stylix
+            nixvim.homeModules.nixvim
+          ];
+        };
+
     in
     {
       nixosConfigurations = nixpkgs.lib.foldl' (
@@ -80,16 +110,15 @@
         }
       ) { } hosts;
 
-      homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
-
-        extraSpecialArgs = { inherit inputs homeStateVersion user; };
-
-        modules = [
-          homePath
-          stylix.homeModules.stylix
-          nixvim.homeModules.nixvim
-        ];
-      };
+      homeConfigurations = nixpkgs.lib.foldl' (
+        configs: host:
+        configs
+        // {
+          "${user}@${host.hostname}" = makeHome {
+            inherit (host) hostname homeStateVersion homePath;
+          };
+        }
+      ) { } hosts;
     };
+
 }
