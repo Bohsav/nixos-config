@@ -1,14 +1,14 @@
 {
   imports = [
-    ./nnn.nix
-
-    ./dconf.nix
-    ./stylix
-    ./kitty.nix
+    ./easyeffects
     ./zsh
-    ./git.nix
-    ./easyeffects.nix
+    ./stylix
     ./nixvim
+
+    ./nnn.nix
+    ./dconf.nix
+    ./kitty.nix
+    ./git.nix
     ./lutris.nix
     ./flameshot.nix
   ];
