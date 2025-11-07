@@ -6,7 +6,7 @@
     font = {
       name = "Fira Code Nerd Font";
       package = pkgs.nerd-fonts.fira-code;
-      size = 12;
+      size = 14;
     };
     settings = {
       allow_remote_control = true;
