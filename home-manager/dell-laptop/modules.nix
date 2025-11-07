@@ -1,4 +1,4 @@
-{ pkgs }:
+{ lib, ... }:
 {
   imports = [
     ../generic/modules/git.nix
@@ -8,12 +8,11 @@
     ../generic/modules/zsh
     ../generic/modules/nixvim
     ../generic/modules/easyeffects
+    ../generic/modules/dconf.nix
+    ../generic/modules/kitty.nix
 
     ./stylix.nix
   ];
 
-}
-// import ../generic/modules/kitty.nix {
-  pkgs = pkgs;
-  font-size = 10;
+  programs.kitty.font.size = lib.mkForce 14;
 }

@@ -41,7 +41,7 @@
         {
           hostname = "dell-laptop";
           stateVersion = "25.05";
-          homePath = ./home-manager/generic/home.nix;
+          homePath = ./home-manager/dell-laptop/home.nix;
           homeStateVersion = "25.05";
         }
         {

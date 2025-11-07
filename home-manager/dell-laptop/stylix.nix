@@ -52,8 +52,8 @@
         package = pkgs.raleway;
       };
       sizes = {
-        terminal = 16;
-        applications = 14;
+        terminal = 14;
+        applications = 12;
       };
     };
 
