@@ -22,8 +22,8 @@
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
 
     targets = {
-      kitty.enable = false;
       gnome.enable = true;
+      kitty.enable = false;
       nvf.enable = false;
       nixvim.enable = false;
     };

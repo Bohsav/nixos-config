@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  font-size ? 12,
+  ...
+}:
 {
   programs.kitty = {
     enable = true;
@@ -6,7 +10,7 @@
     font = {
       name = "Fira Code Nerd Font";
       package = pkgs.nerd-fonts.fira-code;
-      size = 14;
+      size = font-size;
     };
     settings = {
       allow_remote_control = true;
