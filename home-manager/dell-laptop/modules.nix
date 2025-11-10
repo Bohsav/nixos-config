@@ -5,14 +5,23 @@
     ../generic/modules/lutris.nix
     ../generic/modules/nnn.nix
     ../generic/modules/flameshot.nix
-    ../generic/modules/zsh
-    ../generic/modules/nixvim
-    ../generic/modules/easyeffects
     ../generic/modules/dconf.nix
     ../generic/modules/kitty.nix
 
-    ./stylix.nix
+    ../generic/modules/zsh
+    ../generic/modules/stylix
+    ../generic/modules/nixvim
+    ../generic/modules/easyeffects
   ];
 
   programs.kitty.font.size = 14;
+
+  stylix = {
+    cursor.size = 28;
+
+    fonts.sizes = {
+      terminal = 14;
+      applications = 12;
+    };
+  };
 }

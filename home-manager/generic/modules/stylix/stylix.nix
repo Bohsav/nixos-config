@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   home.packages = with pkgs; [
     times-newer-roman
@@ -7,7 +7,7 @@
     noto-fonts
     noto-fonts-lgc-plus
     texlivePackages.hebrew-fonts
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     font-awesome
     powerline-fonts
     powerline-symbols
@@ -28,7 +28,7 @@
       nixvim.enable = false;
     };
 
-    cursor = {
+    cursor = builtins.mapAttrs (name: value: lib.mkDefault value) {
       name = "catppuccin-macchiato-dark-cursors";
       size = 28;
       package = pkgs.catppuccin-cursors.macchiatoDark;
@@ -51,7 +51,7 @@
         package = pkgs.dejavu_fonts;
         name = "DejaVu Serif";
       };
-      sizes = {
+      sizes = builtins.mapAttrs (name: value: lib.mkDefault value) {
         terminal = 14;
         applications = 11;
       };
