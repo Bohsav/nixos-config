@@ -4,5 +4,6 @@
     home-manager
     vim
     git
+    notesnook
   ];
 }
