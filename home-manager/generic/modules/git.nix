@@ -8,6 +8,8 @@
         email = "bustion047@gmail.com";
       };
       init.defaultBranch = "main";
+
+      pull.ff = "merge";
     };
   };
 }
