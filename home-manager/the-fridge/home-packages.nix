@@ -15,6 +15,10 @@
     gnome-tweaks
     logisim-evolution
     teams-for-linux
+    clickup
+
+    # Gaming
+    wineWowPackages.waylandFull
 
     # CLI tools
     xclip

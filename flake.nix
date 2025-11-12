@@ -47,7 +47,7 @@
         {
           hostname = "the-fridge";
           stateVersion = "24.11";
-          homePath = ./home-manager/generic/home.nix;
+          homePath = ./home-manager/the-fridge/home.nix;
           homeStateVersion = "25.05";
         }
       ];

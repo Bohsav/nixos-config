@@ -9,11 +9,12 @@
     ../generic/modules/kitty.nix
 
     ../generic/modules/zsh
-    ../generic/modules/stylix
     ../generic/modules/nixvim
     ../generic/modules/easyeffects
+
+    ./stylix.nix
   ];
 
-  programs.kitty.font.size = 14;
+  programs.kitty.font.size = 12;
 
 }
