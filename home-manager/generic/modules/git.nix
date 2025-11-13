@@ -9,7 +9,7 @@
       };
       init.defaultBranch = "main";
 
-      pull.ff = "merge";
+      pull.ff = "only";
     };
   };
 }
