@@ -19,7 +19,7 @@
       edit-config = "nnn ~/nixos-config";
       build-home-config = "home-manager switch -b backup --flake ~/nixos-config#${user}@${hostname}";
       build-system-config = "sudo nixos-rebuild switch --flake ~/nixos-config#${hostname}";
-      home = "~/nixos-config";
+      nvim-config = "nnn ~/nixos-config/home-manager/generic/modules/nixvim";
     };
     plugins = [
       {
