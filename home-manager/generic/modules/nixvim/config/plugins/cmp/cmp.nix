@@ -10,13 +10,12 @@
         performance = {
           debounce = 60;
           fetchingTimeout = 200;
-          maxViewEntries = 30;
+          maxViewEntries = 10;
         };
         snippet = {
           expand = "luasnip";
         };
         formatting = {
-
           fields = [
             "kind"
             "abbr"
