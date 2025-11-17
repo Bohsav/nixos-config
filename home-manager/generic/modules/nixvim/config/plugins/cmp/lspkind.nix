@@ -5,6 +5,7 @@
       symbol_map = {
         Copilot = " ";
         Spell = " ";
+        Latex = " ";
       };
 
       maxwidth = 50;

@@ -23,4 +23,9 @@
       { name = "vimtex"; }
     ];
   };
+
+  plugins.treesitter.settings.highlight = {
+    disable = [ "latex" ];
+    additional_vim_regex_highlighting = [ "latex" ];
+  };
 }
