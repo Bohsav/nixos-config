@@ -9,8 +9,8 @@
         };
         performance = {
           debounce = 60;
-          fetchingTimeout = 200;
-          maxViewEntries = 10;
+          fetching_timeout = 200;
+          max_view_entries = 200;
         };
         snippet = {
           expand = "luasnip";
@@ -25,25 +25,34 @@
         sources = [
           { name = "nvim_lsp_signature_help"; }
           { name = "git"; }
-          { name = "nvim_lsp"; }
-          { name = "jdtls"; }
+          {
+            name = "nvim_lsp"; # from neovim lsp
+            max_item_count = 10;
+          }
+          {
+            name = "jdtls"; # from jdtlsp
+            max_item_count = 10;
+          }
           {
             name = "buffer"; # text within current buffer
             option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
             keywordLength = 3;
+            max_item_count = 5;
           }
-          # { name = "copilot"; }
           {
             name = "path"; # file system paths
             keywordLength = 3;
+            max_item_count = 10;
           }
           {
             name = "luasnip"; # snippets
             keywordLength = 3;
+            max_item_count = 5;
           }
           {
             name = "treesitter"; # treesitter
             keywordLength = 3;
+            max_item_count = 10;
           }
         ];
 
@@ -110,36 +119,8 @@
     }; # treesitter info
   };
   extraConfigLua = ''
-        luasnip = require("luasnip")
-        kind_icons = {
-          Text = "󰊄",
-          Method = " ",
-          Function = "󰡱 ",
-          Constructor = " ",
-          Field = " ",
-          Variable = "󱀍 ",
-          Class = " ",
-          Interface = " ",
-          Module = "󰕳 ",
-          Property = " ",
-          Unit = " ",
-          Value = " ",
-          Enum = " ",
-          Keyword = " ",
-          Snippet = " ",
-          Color = " ",
-          File = "",
-          Reference = " ",
-          Folder = " ",
-          EnumMember = " ",
-          Constant = " ",
-          Struct = " ",
-          Event = " ",
-          Operator = " ",
-          TypeParameter = " ",
-        } 
 
-         local cmp = require'cmp'
+     local cmp = require'cmp'
 
      -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
      cmp.setup.cmdline({'/', "?" }, {
