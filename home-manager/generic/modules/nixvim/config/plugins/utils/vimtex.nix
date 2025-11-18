@@ -28,4 +28,6 @@
     disable = [ "latex" ];
     additional_vim_regex_highlighting = [ "latex" ];
   };
+
+  plugins.texpresso.enable = true;
 }
