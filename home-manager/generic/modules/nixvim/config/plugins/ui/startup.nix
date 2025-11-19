@@ -83,16 +83,6 @@
               "Telescope file_browser"
               "fe"
             ]
-            # [
-            #   " Copilot Chat"
-            #   "CopilotChat"
-            #   "ct"
-            # ]
-            # [
-            #   "󰧑 SecondBrain"
-            #   "edit ~/projects/personal/SecondBrain"
-            #   "sb"
-            # ]
           ];
           highlight = "string";
           defaultColor = "";

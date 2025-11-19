@@ -27,17 +27,15 @@
           { name = "git"; }
           {
             name = "nvim_lsp"; # from neovim lsp
-            max_item_count = 10;
           }
           {
             name = "jdtls"; # from jdtlsp
-            max_item_count = 10;
           }
           {
             name = "buffer"; # text within current buffer
             option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
             keywordLength = 3;
-            max_item_count = 5;
+            max_item_count = 10;
           }
           {
             name = "path"; # file system paths
@@ -52,7 +50,6 @@
           {
             name = "treesitter"; # treesitter
             keywordLength = 3;
-            max_item_count = 10;
           }
         ];
 
@@ -111,9 +108,6 @@
     cmp_luasnip = {
       enable = true;
     }; # snippets
-    cmp-cmdline = {
-      enable = false;
-    }; # autocomplete for cmdline
     cmp-treesitter = {
       enable = true;
     }; # treesitter info
