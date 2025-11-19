@@ -37,7 +37,7 @@
       expandtab = true;
 
       # Enable smart indentation
-      smartindent = true;
+      # smartindent = true;
 
       # Number of spaces to use for each step of (auto)indent
       shiftwidth = 2;
