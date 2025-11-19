@@ -14,6 +14,9 @@
     };
 
     opts = {
+      # Maximum number of entries in pop-up menu's (INCLUDING nvim-cmp)
+      pumheight = 10;
+
       # Show line numbers
       number = true;
 
@@ -26,16 +29,16 @@
       # Number of spaces that represent a <TAB>
       # tabstop = 2;
       softtabstop = 2;
-      #
+
       # Show tabline always
       showtabline = 2;
-      #
+
       # Use spaces instead of tabs
       expandtab = true;
 
       # Enable smart indentation
       smartindent = true;
-      #
+
       # Number of spaces to use for each step of (auto)indent
       shiftwidth = 2;
 
