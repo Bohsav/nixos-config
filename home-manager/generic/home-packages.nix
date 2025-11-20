@@ -43,7 +43,9 @@
     oh-my-zsh
     zsh-powerlevel10k
 
+    # Latex things
     latexrun
+    texliveSmall
 
     # Other
     hunspell
