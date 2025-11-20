@@ -43,11 +43,11 @@
     oh-my-zsh
     zsh-powerlevel10k
 
-    latexrun
-
     # Other
     hunspell
     hunspellDicts.en_CA
+
+    zathura
 
     openconnect
     openfortivpn-webview

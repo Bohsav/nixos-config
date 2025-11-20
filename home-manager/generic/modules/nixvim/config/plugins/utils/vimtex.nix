@@ -3,11 +3,17 @@
   plugins.vimtex = {
     enable = true;
 
-    texlivePackage = pkgs.texlive.combine { inherit (pkgs.texlive) scheme-tetex biblatex biber; };
+    texlivePackage = pkgs.texlive.combine {
+      inherit (pkgs.texlive)
+        scheme-tetex
+        biblatex
+        biber
+        latexmk
+        ;
+    };
 
     # base example from nixvim wiki
     settings = {
-      compiler_method = "latexrun";
       toc_config = {
         split_pos = "vert topleft";
         split_width = 40;
