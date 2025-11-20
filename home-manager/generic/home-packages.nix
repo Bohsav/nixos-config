@@ -15,10 +15,6 @@
     gnome-tweaks
     logisim-evolution
     teams-for-linux
-    # godot-mono
-
-    # Gaming
-    wineWowPackages.waylandFull
 
     # CLI tools
     xclip
@@ -46,6 +42,8 @@
     wget
     oh-my-zsh
     zsh-powerlevel10k
+
+    latexrun
 
     # Other
     hunspell

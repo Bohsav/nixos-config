@@ -6,6 +6,7 @@
 {
   imports = [
     ./home-packages.nix
+    ../generic/home-packages.nix
     ./modules.nix
   ];
 
