@@ -17,7 +17,9 @@
     ./generic/programs.nix
     ./generic/users.nix
 
-    ./generic/hardware-nvidia-3060.nix
+    # hardware
+    ./generic/hardware/bluetooth.nix
+    ./generic/hardware/nvidia-3060.nix
 
     # services
     ./generic/nix-services/xserver.nix
@@ -37,12 +39,9 @@
     };
 
     logitech.wireless.enable = true;
-    bluetooth.enable = true;
-    bluetooth.powerOnBoot = true;
 
     # Enable OpenGL
     graphics.enable = true;
-
   };
 
   programs = {

@@ -17,7 +17,9 @@
     ./generic/programs.nix
     ./generic/users.nix
 
-    ./generic/hardware-nvidia-laptop-A2000.nix
+    # hardware
+    ./generic/hardware/bluetooth.nix
+    ./generic/hardware/laptop-A2000.nix
 
     # services
     ./generic/nix-services/xserver.nix
@@ -42,8 +44,6 @@
     };
 
     logitech.wireless.enable = true;
-    bluetooth.enable = true;
-    bluetooth.powerOnBoot = true;
 
     # Enable OpenGL
     graphics.enable = true;
