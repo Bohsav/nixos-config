@@ -7,7 +7,6 @@ _: {
         extensions = [
           "fzf"
           "neo-tree"
-          "aerial"
         ];
         disabledFiletypes = {
           __unkeyed-1 = "neo-tree";
