@@ -28,7 +28,6 @@ _: {
     ./plugins/editor/todo-comments.nix
     ./plugins/editor/smartcolumn.nix
     ./plugins/editor/cursorline.nix
-    ./plugins/editor/guess-indent.nix
     ./plugins/editor/actions-preview.nix
     ./plugins/editor/flash.nix
 
