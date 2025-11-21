@@ -23,9 +23,9 @@
       sections = {
         header = {
           type = "text";
-          oldfilesDirectory = false;
+          oldfiles_directory = false;
           align = "center";
-          foldSection = false;
+          fold_section = false;
           title = "Header";
           margin = 5;
           content = [
@@ -52,14 +52,14 @@
           ];
           highlight = "Statement";
           defaultColor = "";
-          oldfilesAmount = 0;
+          oldfilesAmount = 3;
         };
 
         body = {
           type = "mapping";
-          oldfilesDirectory = false;
+          oldfiles_directory = false;
           align = "center";
-          foldSection = false;
+          fold_section = false;
           title = "Menu";
           margin = 5;
           content = [
@@ -90,6 +90,5 @@
         };
       };
     };
-
   };
 }
