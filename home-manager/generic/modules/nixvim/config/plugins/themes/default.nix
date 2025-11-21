@@ -64,12 +64,12 @@
       };
     };
     nightfox = {
-      enable = false;
+      enable = true;
 
       flavor = "duskfox";
     };
     bamboo = {
-      enable = true;
+      enable = false;
       settings = {
         transparent = false;
         style = "multiplex";
