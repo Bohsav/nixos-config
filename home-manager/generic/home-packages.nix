@@ -5,7 +5,6 @@
   home.packages = with pkgs; [
     # Desktop apps
     solaar
-    easyeffects
     dconf-editor
     discord
     libreoffice
