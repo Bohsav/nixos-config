@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  dconf.enable = true;
+  dconf.enable = false;
   dconf.settings = {
     "org/gnome/shell" = {
       disable-user-extensions = false;

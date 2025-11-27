@@ -15,6 +15,7 @@
     gnome-tweaks
     logisim-evolution
     teams-for-linux
+    notesnook
 
     # CLI tools
     xclip
