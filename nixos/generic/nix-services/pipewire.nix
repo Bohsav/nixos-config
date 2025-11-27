@@ -31,7 +31,6 @@
         };
       };
     };
-    blueman.enable = true;
     pulseaudio.enable = false;
   };
 }
