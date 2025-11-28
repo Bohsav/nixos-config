@@ -1,6 +1,7 @@
 {
   homeStateVersion,
   user,
+  lib,
   ...
 }:
 {
@@ -9,6 +10,8 @@
     ./home-packages.nix
     ./modules.nix
   ];
+
+  dconf.enable = lib.mkForce false;
 
   home = {
     username = user;
