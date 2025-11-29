@@ -7,7 +7,7 @@
 {
   imports = [
     # desktop
-    ./generic/gnome
+    ./generic/plasma6
 
     ../hosts/${hostname}/hardware-configuration.nix
     ./generic/default-system-packages.nix
