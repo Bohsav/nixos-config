@@ -1,9 +1,11 @@
 {
   homeStateVersion,
   user,
+  lib,
   ...
 }:
 {
+  dconf.enable = lib.mkForce false;
   imports = [
     ./home-packages.nix
     ../generic/home-packages.nix
