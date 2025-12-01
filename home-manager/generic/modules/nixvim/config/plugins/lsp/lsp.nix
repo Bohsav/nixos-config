@@ -51,7 +51,7 @@
       enable = true;
     };
     lsp-signature = {
-      enable = false;
+      enable = true;
     };
     lsp = {
       enable = true;
