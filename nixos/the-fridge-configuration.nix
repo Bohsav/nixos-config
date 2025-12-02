@@ -33,6 +33,7 @@
       options = [ "discard" ];
     }
   ];
+  powerManagement.enable = true;
 
   networking.hostName = hostname;
 
