@@ -1,5 +1,6 @@
 { ... }:
 {
+  programs.dconf.enable = true;
   imports = [
     ./display.nix
     ./gnome-extensions-packages.nix
