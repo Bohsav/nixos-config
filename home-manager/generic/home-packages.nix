@@ -6,13 +6,11 @@
     # Desktop apps
     solaar
     easyeffects
-    dconf-editor
     discord
     libreoffice
     thunderbird
     vivaldi
     spotify
-    gnome-tweaks
     logisim-evolution
     teams-for-linux
     notesnook
