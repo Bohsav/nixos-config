@@ -27,6 +27,13 @@
     ./generic/nix-services/pipewire.nix
   ];
 
+  swapDevices = [
+    {
+      device = "/dev/sdb3";
+      options = [ "discard" ];
+    }
+  ];
+
   networking.hostName = hostname;
 
   time.timeZone = "America/Moncton";
