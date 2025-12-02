@@ -27,11 +27,8 @@
     ./generic/nix-services/pipewire.nix
   ];
 
-  swapDevices = [
-    {
-      device = "/dev/sdb3";
-      options = [ "discard" ];
-    }
+  boot.kernelParams = [
+    "nouveau.modeset=0"
   ];
   powerManagement.enable = true;
 
