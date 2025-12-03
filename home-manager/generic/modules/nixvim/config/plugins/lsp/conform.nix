@@ -128,10 +128,18 @@
             "gofmt"
             # "gci"
           ];
+          tex = [
+            "tex_fmt"
+          ];
           "_" = [ "trim_whitespace" ];
         };
 
         formatters = {
+          tex_fmt = {
+            command = "${lib.getExe pkgs.tex-fmt}";
+            args = [ "--stdin" ];
+            stdin = true;
+          };
           deno_fmt = {
             command = "${lib.getExe pkgs.deno}";
             append_args = [
