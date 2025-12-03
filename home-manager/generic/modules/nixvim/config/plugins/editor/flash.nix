@@ -39,7 +39,7 @@ _: {
         "x"
         "o"
       ];
-      key = "s";
+      key = "gfs";
       action.__raw = "function() require('flash').jump() end";
       options = {
         desc = "Flash Search";
@@ -51,7 +51,7 @@ _: {
         "x"
         "o"
       ];
-      key = "S";
+      key = "gfS";
       action.__raw = "function() require('flash').treesitter() end";
       options = {
         desc = "Flash Treesitter";
@@ -59,7 +59,7 @@ _: {
     }
     {
       mode = "o";
-      key = "r";
+      key = "gfr";
       action.__raw = "function() require('flash').remote() end";
       options = {
         desc = "Flash Remote";
@@ -70,7 +70,7 @@ _: {
         "o"
         "x"
       ];
-      key = "r";
+      key = "gfr";
       action.__raw = "function() require('flash').treesitter_search() end";
       options = {
         desc = "Flash Treesitter Search";
