@@ -16,7 +16,6 @@ in
     spotify
     logisim-evolution
     teams-for-linux
-    notesnook
 
     # CLI tools
     xclip
