@@ -131,6 +131,9 @@
           tex = [
             "tex_fmt"
           ];
+          bib = [
+            "tex_fmt"
+          ];
           "_" = [ "trim_whitespace" ];
         };
 
