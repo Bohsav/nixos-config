@@ -1,4 +1,7 @@
 { pkgs, ... }:
+let
+  texcount = pkgs.texlive.withPackages (ps: [ ps.texcount ]);
+in
 {
   nixpkgs.config.allowUnfree = true;
 
@@ -46,7 +49,9 @@
     hunspell
     hunspellDicts.en_CA
 
+    # tex packages
     zathura
+    texcount
 
     openconnect
     openfortivpn-webview
