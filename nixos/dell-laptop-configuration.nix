@@ -28,6 +28,9 @@
     ./generic/nix-services/tlp.nix
   ];
 
+  powerManagement.enable = true;
+  boot.resumeDevice = "/dev/nvme1n1p3";
+
   services = {
     thermald.enable = true;
   };
