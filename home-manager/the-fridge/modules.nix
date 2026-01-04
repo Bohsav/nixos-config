@@ -6,6 +6,7 @@
     ../generic/modules/nnn.nix
     ../generic/modules/flameshot.nix
     ../generic/modules/kitty.nix
+    ../generic/modules/dconf.nix
 
     ../generic/modules/zsh
     ../generic/modules/nixvim
