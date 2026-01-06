@@ -9,6 +9,7 @@
     system-monitor
     windownavigator
     applications-menu
+    user-themes
 
     appindicator
   ];
