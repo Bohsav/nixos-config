@@ -29,7 +29,7 @@
   ];
 
   powerManagement.enable = true;
-  boot.resumeDevice = "/dev/nvme1n1p3";
+  boot.resumeDevice = "/dev/disk/by-uuid/304d22bd-c8c1-47b2-991c-bc524d0ba05f";
 
   services = {
     thermald.enable = true;
