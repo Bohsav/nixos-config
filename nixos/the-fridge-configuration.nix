@@ -31,6 +31,7 @@
     "nouveau.modeset=0"
   ];
   powerManagement.enable = true;
+  boot.resumeDevice = "/dev/disk/by-uuid/464b27a4-5169-424c-869f-09af869d043d";
 
   networking.hostName = hostname;
 
