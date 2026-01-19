@@ -33,7 +33,20 @@
 
   services = {
     thermald.enable = true;
+    power-profiles-daemon.enable = true;
+    logind.settings.Login = {
+      LidSwitch = "suspend-then-hibernate";
+    };
   };
+
+  boot.kernelParams = [
+    "mem_sleep_default=deep"
+  ];
+
+  systemd.sleep.extraConfig = ''
+    HibernateDelaySec=30m
+    SuspendState=mem
+  '';
 
   networking.hostName = hostname;
 
