@@ -32,6 +32,7 @@
   boot.resumeDevice = "/dev/disk/by-uuid/304d22bd-c8c1-47b2-991c-bc524d0ba05f";
 
   services = {
+    fwupd.enable = true;
     thermald.enable = true;
     logind.settings.Login = {
       LidSwitch = "suspend-then-hibernate";
