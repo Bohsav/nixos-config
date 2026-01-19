@@ -33,7 +33,6 @@
 
   services = {
     thermald.enable = true;
-    power-profiles-daemon.enable = true;
     logind.settings.Login = {
       LidSwitch = "suspend-then-hibernate";
     };

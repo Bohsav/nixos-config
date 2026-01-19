@@ -3,6 +3,7 @@
   services = {
     power-profiles-daemon.enable = false;
     tlp = {
+      pd.enable = true;
       enable = true;
       settings = {
 
