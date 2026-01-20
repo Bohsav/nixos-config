@@ -8,7 +8,7 @@
         blur-my-shell.extensionUuid
         media-controls.extensionUuid
         open-bar.extensionUuid
-        rounded-window-corners-reborn.extensionUuid
+        # rounded-window-corners-reborn.extensionUuid
         transparent-window-moving.extensionUuid
         user-themes.extensionUuid
         system-monitor.extensionUuid
