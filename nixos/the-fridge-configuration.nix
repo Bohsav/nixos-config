@@ -2,6 +2,7 @@
   pkgs,
   stateVersion,
   hostname,
+  user,
   ...
 }:
 {
@@ -49,6 +50,16 @@
     # Enable OpenGL
     graphics.enable = true;
   };
+
+  virtualisation.docker = {
+    enable = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
+
+  users.users.${user}.extraGroups = [ "docker" ];
 
   programs = {
     steam = {

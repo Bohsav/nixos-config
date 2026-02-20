@@ -9,7 +9,6 @@
     ./dconf.nix
     ./kitty.nix
     ./git.nix
-    ./lutris.nix
     ./flameshot.nix
   ];
 }
