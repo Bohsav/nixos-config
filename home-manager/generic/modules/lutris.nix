@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   programs.lutris = {
-    enable = true;
+    enable = false;
 
     extraPackages = with pkgs; [
       mangohud
