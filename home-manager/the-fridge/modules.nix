@@ -2,7 +2,6 @@
 {
   imports = [
     ../generic/modules/git.nix
-    ../generic/modules/lutris.nix
     ../generic/modules/nnn.nix
     ../generic/modules/flameshot.nix
     ../generic/modules/kitty.nix
