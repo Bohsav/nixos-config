@@ -29,9 +29,9 @@
     };
 
     cursor = {
-      name = "catppuccin-macchiato-dark-cursors";
+      name = "DMZ-Black";
       size = 28;
-      package = pkgs.catppuccin-cursors.macchiatoDark;
+      package = pkgs.vanilla-dmz;
     };
 
     fonts = {

@@ -28,10 +28,10 @@
       nixvim.enable = false;
     };
 
-    cursor = builtins.mapAttrs (name: value: lib.mkDefault value) {
-      name = "catppuccin-macchiato-dark-cursors";
+    cursor = {
+      name = "DMZ-Black";
       size = 28;
-      package = pkgs.catppuccin-cursors.macchiatoDark;
+      package = pkgs.vanilla-dmz;
     };
 
     fonts = {
