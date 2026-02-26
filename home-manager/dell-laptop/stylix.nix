@@ -3,7 +3,6 @@
   home.packages = with pkgs; [
     times-newer-roman
     dejavu_fonts
-    jetbrains-mono
     noto-fonts
     noto-fonts-lgc-plus
     texlivePackages.hebrew-fonts
