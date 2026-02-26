@@ -34,7 +34,9 @@
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.stable;
 
+    forceFullCompositionPipeline = true;
     prime = {
+      sync.enable = true;
       intelBusId = "PCI:0:2:0";
       nvidiaBusId = "PCI:1:0:0";
 
@@ -43,7 +45,6 @@
       #   enableOffloadCmd = true;
       # };
       # Remove the "offload" above and uncomment the line below
-      sync.enable = true;
     };
   };
 }
