@@ -5,6 +5,7 @@
     ./stylix
     ./nixvim
 
+    ./pass-secret-service.nix
     ./lazygit.nix
     ./nnn.nix
     ./dconf.nix
