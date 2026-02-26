@@ -2,6 +2,7 @@
   pkgs,
   stateVersion,
   hostname,
+  user,
   ...
 }:
 {
@@ -27,6 +28,24 @@
     ./generic/nix-services/pipewire.nix
     ./generic/nix-services/tlp.nix
   ];
+
+  virtualisation.docker = {
+    enable = false;
+    autoPrune = {
+      enable = true;
+      dates = "monthly";
+    };
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+      daemon.settings = {
+        hosts = [
+          "unix:///run/user/1000/docker.sock"
+          "tcp://0.0.0.0:2375"
+        ];
+      };
+    };
+  };
 
   powerManagement.enable = true;
   boot.resumeDevice = "/dev/disk/by-uuid/304d22bd-c8c1-47b2-991c-bc524d0ba05f";
@@ -54,10 +73,7 @@
   };
 
   programs.firefox = import ./generic/firefox/hard-settings.nix { inherit pkgs; };
-
   security.rtkit.enable = true;
-
   nixpkgs.config.allowUnfree = true;
-
   system.stateVersion = stateVersion;
 }
