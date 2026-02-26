@@ -5,6 +5,7 @@ _: {
     ./keymaps.nix
     ./auto_cmds.nix
     ./file_types.nix
+    ./lsp-filetypes.nix
 
     # Themes
     ./plugins/themes

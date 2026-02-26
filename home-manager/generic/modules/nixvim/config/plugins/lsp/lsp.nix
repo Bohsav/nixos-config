@@ -71,6 +71,20 @@
       enable = true;
       inlayHints = true;
       servers = {
+        html = {
+          enable = true;
+          filetypes = [
+            "html"
+          ];
+        };
+        jinja_lsp = {
+          enable = true;
+          package = pkgs.jinja-lsp;
+          filetypes = [
+            "jinja"
+            "html"
+          ];
+        };
         omnisharp = {
           enable = true;
         };
