@@ -5,6 +5,9 @@
     ../generic/modules/nnn.nix
     ../generic/modules/flameshot.nix
     ../generic/modules/kitty.nix
+    ../generic/modules/lazygit.nix
+    ../generic/modules/tmux.nix
+    ../generic/modules/pass-secret-service.nix
 
     ../generic/modules/zsh
     ../generic/modules/nixvim
