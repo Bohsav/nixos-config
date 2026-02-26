@@ -1,5 +1,8 @@
 { config, ... }:
 {
+  boot.kernelParams = [
+    "nvidia-modeset.disable_vrr_memclk_switch=1"
+  ];
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
