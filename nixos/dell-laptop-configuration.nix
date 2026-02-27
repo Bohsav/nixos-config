@@ -30,7 +30,7 @@
   ];
 
   virtualisation.docker = {
-    enable = false;
+    enable = true;
     autoPrune = {
       enable = true;
       dates = "monthly";
@@ -38,12 +38,6 @@
     rootless = {
       enable = true;
       setSocketVariable = true;
-      daemon.settings = {
-        hosts = [
-          "unix:///run/user/1000/docker.sock"
-          "tcp://0.0.0.0:2375"
-        ];
-      };
     };
   };
 
