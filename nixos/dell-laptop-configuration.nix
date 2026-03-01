@@ -30,7 +30,7 @@
   ];
 
   virtualisation.docker = {
-    enable = true;
+    enable = false;
     autoPrune = {
       enable = true;
       dates = "monthly";
@@ -43,10 +43,6 @@
 
   powerManagement.enable = true;
   boot.resumeDevice = "/dev/disk/by-uuid/304d22bd-c8c1-47b2-991c-bc524d0ba05f";
-  boot.kernelParams = [
-    "nvidia.NVreg_EnableGpuFirmware=0"
-    "nvidia_drm.modeset=1"
-  ];
 
   services = {
     fwupd.enable = true;
