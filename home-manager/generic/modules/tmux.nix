@@ -45,8 +45,8 @@
       set -g status-justify left
       set -g status-style 'fg=red'
 
-      set -g status-left ' '
-      set -g status-left-length 10
+      set -g status-left '  '
+      set -g status-left-length 20
 
       set -g status-right-style 'fg=black bg=yellow'
       set -g status-right '%Y-%m-%d %H:%M '
