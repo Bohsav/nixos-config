@@ -3,7 +3,7 @@
   programs.lazygit = {
     enable = true;
     settings = {
-      keybindings.universal.return = "<c-q>";
+      keybinding.universal.return = "<c-q>";
     };
   };
 }
