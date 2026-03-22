@@ -8,8 +8,19 @@ _: {
       fzf-native = {
         enable = true;
       };
+      advanced-git-search = {
+        enable = true;
+      };
     };
     settings = {
+      file_ignore_patterns = [
+        "^.git/"
+        "^.mypy_cache/"
+        "^__pycache__/"
+        "^output/"
+        "^data/"
+        "%.ipynb"
+      ];
       defaults = {
         layout_config = {
           horizontal = {
@@ -20,6 +31,12 @@ _: {
       };
     };
     keymaps = {
+      "<leader>:" = {
+        action = "command_history";
+        options = {
+          desc = "Command History";
+        };
+      };
       "<leader><space>" = {
         action = "find_files";
         options = {
@@ -74,18 +91,37 @@ _: {
           desc = "Search git files";
         };
       };
-      "<leader>gc" = {
-        action = "git_commits";
-        options = {
-          desc = "Commits";
-        };
-      };
       "<leader>gs" = {
         action = "git_status";
         options = {
-          desc = "Status";
+          desc = "Examine git status";
         };
       };
+      "<leader>gc" = {
+        action = "search_log_content";
+        options = {
+          desc = "Examine repo log";
+        };
+      };
+      "<leader>gl" = {
+        action = "search_log_content_file";
+        options = {
+          desc = "Examine changes to this file";
+        };
+      };
+      "<leader>gd" = {
+        action = "diff_commit_file";
+        options = {
+          desc = "Examine changes mentioning this file";
+        };
+      };
+      "<leader>gv" = {
+        action = "<CMD>'<,'>AdvancedGitSearch diff_commit_line<Enter>";
+        options = {
+          desc = "Examine commits related to this selection";
+        };
+      };
+
       "<leader>sa" = {
         action = "autocommands";
         options = {
@@ -95,7 +131,7 @@ _: {
       "<leader>sb" = {
         action = "current_buffer_fuzzy_find";
         options = {
-          desc = "Buffer";
+          desc = "Current Buffer live grep";
         };
       };
       "<leader>sc" = {
