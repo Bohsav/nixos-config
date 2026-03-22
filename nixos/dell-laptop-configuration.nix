@@ -27,19 +27,8 @@
     ./generic/nix-services/printing.nix
     ./generic/nix-services/pipewire.nix
     ./generic/nix-services/tlp.nix
+    ./generic/docker.nix
   ];
-
-  virtualisation.docker = {
-    enable = false;
-    autoPrune = {
-      enable = true;
-      dates = "monthly";
-    };
-    rootless = {
-      enable = true;
-      setSocketVariable = true;
-    };
-  };
 
   powerManagement.enable = true;
   boot.resumeDevice = "/dev/disk/by-uuid/304d22bd-c8c1-47b2-991c-bc524d0ba05f";

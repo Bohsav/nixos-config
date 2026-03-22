@@ -22,6 +22,8 @@
     ./generic/hardware/bluetooth.nix
     ./generic/hardware/nvidia-3060.nix
 
+    ./generic/docker.nix
+
     # services
     ./generic/nix-services/xserver.nix
     ./generic/nix-services/printing.nix
@@ -49,14 +51,6 @@
 
     # Enable OpenGL
     graphics.enable = true;
-  };
-
-  virtualisation.docker = {
-    enable = true;
-    rootless = {
-      enable = true;
-      setSocketVariable = true;
-    };
   };
 
   users.users.${user}.extraGroups = [ "docker" ];
