@@ -30,7 +30,8 @@ _: {
     ./plugins/editor/smartcolumn.nix
     ./plugins/editor/cursorline.nix
     ./plugins/editor/actions-preview.nix
-    ./plugins/editor/flash.nix
+    ./plugins/editor/leap.nix
+    # ./plugins/editor/flash.nix
 
     # UI plugins
     ./plugins/ui/bufferline.nix
