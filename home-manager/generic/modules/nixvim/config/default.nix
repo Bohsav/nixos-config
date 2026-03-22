@@ -5,6 +5,7 @@ _: {
     ./keymaps.nix
     ./auto_cmds.nix
     ./file_types.nix
+    ./lsp-filetypes.nix
 
     # Themes
     ./plugins/themes
@@ -52,5 +53,6 @@ _: {
     ./plugins/utils/mini.nix
     ./plugins/utils/markdown-preview.nix
     ./plugins/utils/web-devicons.nix
+    # ./plugins/utils/vimtex.nix
   ];
 }

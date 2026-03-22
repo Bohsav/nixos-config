@@ -71,10 +71,21 @@
       enable = true;
       inlayHints = true;
       servers = {
-        omnisharp = {
-          enable = true;
-        };
         html = {
+          enable = true;
+          filetypes = [
+            "html"
+          ];
+        };
+        jinja_lsp = {
+          enable = true;
+          package = pkgs.jinja-lsp;
+          filetypes = [
+            "jinja"
+            "html"
+          ];
+        };
+        omnisharp = {
           enable = true;
         };
         lua_ls = {

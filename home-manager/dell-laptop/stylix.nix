@@ -3,7 +3,6 @@
   home.packages = with pkgs; [
     times-newer-roman
     dejavu_fonts
-    jetbrains-mono
     noto-fonts
     noto-fonts-lgc-plus
     texlivePackages.hebrew-fonts
@@ -30,9 +29,9 @@
     };
 
     cursor = {
-      name = "catppuccin-macchiato-dark-cursors";
+      name = "DMZ-Black";
       size = 28;
-      package = pkgs.catppuccin-cursors.macchiatoDark;
+      package = pkgs.vanilla-dmz;
     };
 
     fonts = {
@@ -58,7 +57,7 @@
       };
     };
 
-    iconTheme = {
+    icons = {
       enable = true;
       package = pkgs.papirus-icon-theme;
       dark = "Papirus-Dark";

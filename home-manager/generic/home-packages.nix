@@ -21,7 +21,6 @@ in
     xclip
     wl-clipboard
     devenv
-    lazygit
     neofetch
     btop
     coreutils

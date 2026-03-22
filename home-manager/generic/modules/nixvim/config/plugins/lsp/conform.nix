@@ -78,11 +78,6 @@
         '';
         notify_on_error = true;
         formatters_by_ft = {
-          html = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            stop_after_first = true;
-          };
           css = {
             __unkeyed-1 = "prettierd";
             __unkeyed-2 = "prettier";
@@ -103,12 +98,7 @@
             "isort"
           ];
           lua = [ "stylua" ];
-          nix = [ "nixfmt-rfc-style" ];
-          # markdown = {
-          #   __unkeyed-1 = "prettierd";
-          #   __unkeyed-2 = "prettier";
-          #   stop_after_first = true;
-          # };
+          nix = [ "nixfmt" ];
           markdown = [ "deno_fmt" ];
           yaml = {
             __unkeyed-1 = "prettierd";
@@ -134,7 +124,6 @@
           bib = [
             "tex_fmt"
           ];
-          "_" = [ "trim_whitespace" ];
         };
 
         formatters = {
@@ -151,9 +140,6 @@
             ];
             stdin = false;
           };
-          # gci = {
-          #   command = "${lib.getExe' pkgs.gci "gci"}";
-          # };
           goimports = {
             command = "${lib.getExe pkgs.gosimports}";
           };
@@ -167,8 +153,8 @@
             ];
             stdin = false;
           };
-          nixfmt-rfc-style = {
-            command = "${lib.getExe pkgs.nixfmt-rfc-style}";
+          nixfmt = {
+            command = "${lib.getExe pkgs.nixfmt}";
           };
           alejandra = {
             command = "${lib.getExe pkgs.alejandra}";
