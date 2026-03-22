@@ -1,4 +1,4 @@
-{
+_: {
   plugins.telescope = {
     enable = true;
     extensions = {
@@ -30,12 +30,6 @@
         action = "live_grep";
         options = {
           desc = "Grep (root dir)";
-        };
-      };
-      "<leader>:" = {
-        action = "command_history";
-        options = {
-          desc = "Command History";
         };
       };
       "<leader>b" = {
@@ -171,6 +165,15 @@
         };
       };
     };
+    extraConfigLua = ''
+      require("telescope").setup{
+        pickers = {
+          colorscheme = {
+            enable_preview = true
+          }
+        }
+      }
+    '';
   };
   keymaps = [
     {
@@ -198,13 +201,4 @@
       };
     }
   ];
-  extraConfigLua = ''
-    require("telescope").setup{
-      pickers = {
-        colorscheme = {
-          enable_preview = true
-        }
-      }
-    }
-  '';
 }
