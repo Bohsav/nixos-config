@@ -10,7 +10,7 @@
         performance = {
           debounce = 60;
           fetching_timeout = 200;
-          max_view_entries = 200;
+          max_view_entries = 100;
         };
         snippet = {
           expand = "luasnip";
@@ -23,13 +23,17 @@
           ];
         };
         sources = [
-          { name = "nvim_lsp_signature_help"; }
-          { name = "git"; }
+          {
+            name = "nvim_lsp_signature_help";
+            max_item_count = 10;
+          }
           {
             name = "nvim_lsp"; # from neovim lsp
+            max_item_count = 20;
           }
           {
             name = "jdtls"; # from jdtlsp
+            max_item_count = 10;
           }
           {
             name = "buffer"; # text within current buffer
@@ -45,7 +49,7 @@
           {
             name = "luasnip"; # snippets
             keywordLength = 3;
-            max_item_count = 5;
+            max_item_count = 10;
           }
           {
             name = "treesitter"; # treesitter
@@ -81,15 +85,15 @@
         };
 
         mapping = {
-          "<C-Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
-          "<C-j>" = "cmp.mapping.select_next_item()";
-          "<C-k>" = "cmp.mapping.select_prev_item()";
-          "<C-e>" = "cmp.mapping.abort()";
           "<C-b>" = "cmp.mapping.scroll_docs(-4)";
           "<C-f>" = "cmp.mapping.scroll_docs(4)";
+          "<C-j>" = "cmp.mapping.select_next_item()";
+          "<C-k>" = "cmp.mapping.select_prev_item()";
           "<C-Space>" = "cmp.mapping.complete()";
-          "<C-CR>" = "cmp.mapping.confirm({ select = true })";
+          "<C-e>" = "cmp.mapping.abort()";
+          "<C-y>" = "cmp.mapping.confirm({ select = true })";
           "<S-CR>" = "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })";
+          "<C-Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
         };
       };
     };
