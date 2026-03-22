@@ -21,7 +21,6 @@ in
     xclip
     wl-clipboard
     devenv
-    neofetch
     btop
     coreutils
     eza
