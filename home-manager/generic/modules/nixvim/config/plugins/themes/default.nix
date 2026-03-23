@@ -22,6 +22,7 @@
         no_underline = false;
         transparent_background = false;
         integrations = {
+          lsp_saga = true;
           cmp = true;
           notify = true;
           gitsigns = true;
