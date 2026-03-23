@@ -3,6 +3,7 @@
     catppuccin = {
       enable = true;
       settings = {
+        dim_inactive.enabled = true;
         background = {
           light = "latte";
           dark = "frappe";
@@ -41,6 +42,7 @@
             enabled = true;
             indentscope_color = "rosewater";
           };
+          leap.enabled = true;
           native_lsp = {
             enabled = true;
             inlay_hints = {
