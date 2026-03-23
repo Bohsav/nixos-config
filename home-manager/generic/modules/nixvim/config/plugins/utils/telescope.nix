@@ -97,31 +97,6 @@ _: {
           desc = "Examine git status";
         };
       };
-      "<leader>gc" = {
-        action = "search_log_content";
-        options = {
-          desc = "Examine repo log";
-        };
-      };
-      "<leader>gl" = {
-        action = "search_log_content_file";
-        options = {
-          desc = "Examine changes to this file";
-        };
-      };
-      "<leader>gd" = {
-        action = "diff_commit_file";
-        options = {
-          desc = "Examine changes mentioning this file";
-        };
-      };
-      "<leader>gv" = {
-        action = "<CMD>'<,'>AdvancedGitSearch diff_commit_line<Enter>";
-        options = {
-          desc = "Examine commits related to this selection";
-        };
-      };
-
       "<leader>sa" = {
         action = "autocommands";
         options = {
@@ -212,6 +187,38 @@ _: {
     '';
   };
   keymaps = [
+    {
+      mode = "n";
+      key = "<leader>gc";
+      action = "<cmd>AdvancedGitSearch search_log_content<cr>";
+      options = {
+        desc = "Examine git repo log";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gl";
+      action = "<cmd>AdvancedGitSearch search_log_content_file<cr>";
+      options = {
+        desc = "Examine git changes to this file";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gv";
+      action = "<cmd>AdvancedGitSearch diff_commit_file<cr>";
+      options = {
+        desc = "Examine git changes mentioning this file";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gv";
+      action = "<cmd>'<,'>AdvancedGitSearch diff_commit_line<cr>";
+      options = {
+        desc = "Examine commits related to this selection";
+      };
+    }
     {
       mode = "n";
       key = "<leader>sd";
