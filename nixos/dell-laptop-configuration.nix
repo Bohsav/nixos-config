@@ -56,6 +56,7 @@
   };
 
   programs.firefox = import ./generic/firefox/hard-settings.nix { inherit pkgs; };
+  programs.coolercontrol.enable = true;
   security.rtkit.enable = true;
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = stateVersion;
