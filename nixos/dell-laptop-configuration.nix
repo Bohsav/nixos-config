@@ -60,4 +60,6 @@
   security.rtkit.enable = true;
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = stateVersion;
+
+  environment.systemPackages = with pkgs; [ libsmbios ];
 }
