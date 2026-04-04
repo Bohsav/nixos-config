@@ -10,7 +10,7 @@
     # desktop
     ./generic/gnome
 
-    ../hosts/${hostname}/hardware-configuration.nix
+    ../hardware/${hostname}/hardware-configuration.nix
     ./generic/default-system-packages.nix
     ./generic/boot-loader.nix
     ./generic/nix-settings.nix
