@@ -13,6 +13,7 @@
     ../generic/modules/zsh
     ../generic/modules/nixvim
     ../generic/modules/easyeffects
+    ../generic/modules/niri.nix
 
     ./stylix.nix
   ];

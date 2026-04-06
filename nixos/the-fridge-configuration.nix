@@ -8,7 +8,8 @@
 {
   imports = [
     # desktop
-    ./generic/gnome
+    ./generic/niri.nix
+    ./generic/greetd.nix
 
     ../hardware/${hostname}/hardware-configuration.nix
     ./generic/default-system-packages.nix

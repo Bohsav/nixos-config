@@ -1,8 +1,25 @@
 {
   description = "My system configuration";
+  nixConfig = {
+    extra-substituters = [
+      "https://noctalia.cachix.org"
+      "https://niri.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+      "niri.cachix.org-1:1iYpYgkFj1Z8n2kzqYh6gMPkTFogyXv3gZHMoenlJ9o="
+    ];
+  };
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+
+    niri-flake.url = "github:sodiboo/niri-flake";
+
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -16,7 +33,6 @@
 
     nixvim = {
       url = "github:nix-community/nixvim";
-      # inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -26,18 +42,13 @@
       home-manager,
       stylix,
       nixvim,
+      niri-flake,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
       user = "sleepyfox";
       hosts = [
-        {
-          hostname = "acer-laptop";
-          stateVersion = "25.05";
-          homePath = ./home-manager/generic/home.nix;
-          homeStateVersion = "25.05";
-        }
         {
           hostname = "dell-laptop";
           stateVersion = "25.05";
@@ -70,6 +81,7 @@
 
           modules = [
             ./nixos/${hostname}-configuration.nix
+            niri-flake.nixosModules.niri
           ];
         };
 
@@ -95,6 +107,7 @@
             homePath
             stylix.homeModules.stylix
             nixvim.homeModules.nixvim
+            niri-flake.homeModules.niri
           ];
         };
 
