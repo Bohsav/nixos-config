@@ -3,11 +3,9 @@
   nixConfig = {
     extra-substituters = [
       "https://noctalia.cachix.org"
-      "https://niri.cachix.org"
     ];
     extra-trusted-public-keys = [
       "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
-      "niri.cachix.org-1:1iYpYgkFj1Z8n2kzqYh6gMPkTFogyXv3gZHMoenlJ9o="
     ];
   };
 

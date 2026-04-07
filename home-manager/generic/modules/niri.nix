@@ -4,16 +4,20 @@
   ...
 }:
 {
-  imports = [
-    inputs.niri-flake.homeManagerModules.default
-  ];
-
   programs.niri = {
     enable = true;
     settings = {
-      startup = {
-        command = "noctalia-shell";
-      };
+binds = {
+"Mod+Shift+E".action.quit.skip-confirmation = false;
+"Mod+T".action.spawn = "kitty";
+};
+      spawn-at-startup = [
+        {
+          argv = [
+            "noctalia-shell"
+          ];
+        }
+      ];
     };
   };
 }

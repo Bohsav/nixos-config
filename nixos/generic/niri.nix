@@ -5,24 +5,9 @@
   ...
 }:
 {
-
-  programs.niri.enable = true;
-
-  services.seatd.enable = true;
-
-  # Hardware acceleration
-  hardware.opengl = {
+  programs.niri = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+    package = pkgs.niri;
   };
-
-  # dbus
-  services.dbus.enable = true;
-
-  # xdg portal
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-  };
+environment.systemPackages = with pkgs; [ xwayland-satellite ];
 }
