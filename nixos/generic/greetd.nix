@@ -2,13 +2,17 @@
   pkgs,
   config,
   user,
+  lib,
   ...
 }:
 let
   niriConfig = pkgs.writeText "greetd-niri-config" ''
-    spawn-sh-at-startup "regreet; niri msg action quit --skip-confirmation"
+    spawn-sh-at-startup "${config.programs.regreet.package}/bin/regreet; ${config.programs.niri.package}/bin/niri msg action quit --skip-confirmation"
     hotkey-overlay {
         skip-at-startup
+    }
+    cursor {
+        xcursor-theme "Adwaita"
     }
   '';
 in
@@ -22,7 +26,6 @@ in
       };
     };
   };
-  programs.regreet = {
-    enable = true;
-  };
+
+  programs.regreet.enable = true;
 }
