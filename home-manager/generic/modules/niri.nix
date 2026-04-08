@@ -14,6 +14,7 @@
         "Alt+W".action.focus-window-or-workspace-up = { };
         "Alt+D".action.focus-column-right = { };
 
+        "Mod+Shift+H".action.show-hotkey-overlay = { };
         "Mod+Shift+E".action.quit.skip-confirmation = false;
 
         "Mod+T" = {
@@ -22,9 +23,21 @@
         };
 
         # Core Noctalia binds
-        "Mod+Space".action.spawn = [ "noctalia-shell ipc call launcher toggle" ];
+        "Mod+Space".action.spawn = [
+          "noctalia-shell"
+          "ipc"
+          "call"
+          "launcher"
+          "toggle"
+        ];
 
-        "Mod+Alt+L".action.spawn = [ "noctalia-shell ipc call lockScreen lock" ];
+        "Mod+Alt+L".action.spawn = [
+          "noctalia-shell"
+          "ipc"
+          "call"
+          "lockScreen"
+          "lock"
+        ];
 
         # Audio & Brightness
         "XF86AudioRaiseVolume".action.spawn = [
