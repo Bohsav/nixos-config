@@ -10,6 +10,7 @@
     # desktop
     ./generic/niri.nix
     ./generic/greetd.nix
+    ./generic/plymouth.nix
 
     ../hardware/${hostname}/hardware-configuration.nix
     ./generic/default-system-packages.nix

@@ -1,4 +1,9 @@
-{ pkgs, config,  user, ... }:
+{
+  pkgs,
+  config,
+  user,
+  ...
+}:
 let
   niriConfig = pkgs.writeText "greetd-niri-config" ''
     spawn-sh-at-startup "regreet; niri msg action quit --skip-confirmation"
@@ -12,12 +17,12 @@ in
     enable = true;
     settings = {
       default_session = {
-command = "${config.programs.niri.package}/bin/niri-session";
-user="${user}";
+        command = "${config.programs.niri.package}/bin/niri-session --config ${niriConfig}";
+        user = "greeter";
       };
     };
   };
   programs.regreet = {
-enable = true;
-};
+    enable = true;
+  };
 }
