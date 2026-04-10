@@ -27,5 +27,17 @@ in
     };
   };
 
-  programs.regreet.enable = true;
+  programs.regreet = {
+    enable = true;
+
+    theme = {
+      name = "Nordic";
+      package = pkgs.nordic;
+    };
+
+    cursorTheme = {
+      package = pkgs.vanilla-dmz;
+      name = "DMZ-Black";
+    };
+  };
 }

@@ -16,6 +16,11 @@
       allow_remote_control = true;
       listen_on = "unix:/tmp/kitty";
       disable_ligatures = "cursor";
+      hide_window_decorations = true;
+      tab_bar_style = "powerline";
+      cursor_trail = 200;
+      cursor_trail_decay = "0.1 0.4";
+      cursor_trail_start_threshold = 10;
     };
   };
 }
