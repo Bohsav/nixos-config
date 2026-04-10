@@ -7,7 +7,11 @@
   programs.noctalia-shell = {
     enable = true;
     settings = {
-      colorSchemes.predefinedScheme = "Cherry Blossom";
+      colorSchemes = {
+        useWallpaperColors = true;
+      };
+
+      nightLight.enabled = true;
     };
   };
 }

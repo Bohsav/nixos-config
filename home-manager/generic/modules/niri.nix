@@ -4,20 +4,14 @@
   ...
 }:
 {
-  imports = [
-    inputs.niri-flake.homeModules.stylix
-  ];
-
-  stylix.targets.niri.enable = false;
-
   programs.niri = {
     enable = true;
     settings = {
       window-rules = [
         {
           geometry-corner-radius = {
-            top-left = 13.;
-            top-right = 13.;
+            top-left = 12.;
+            top-right = 12.;
             bottom-left = 12.;
             bottom-right = 12.;
           };
@@ -29,7 +23,7 @@
       layout = {
         gaps = 14;
         border.enable = false;
-        focus-ring.enable = false;
+        focus-ring.width = 1;
       };
       binds = {
         "Mod+O".action.toggle-overview = { };
@@ -52,12 +46,21 @@
         "Mod+Escape".action.toggle-keyboard-shortcuts-inhibit = { };
 
         "Mod+M".action.maximize-column = { };
+
         "Mod+Shift+M".action.fullscreen-window = { };
 
         "Mod+T" = {
           repeat = false;
           action.spawn = "kitty";
         };
+
+        "Print".action.spawn = [
+          "flameshot"
+          "gui"
+          "-r"
+          "|"
+          "wl-copy"
+        ];
 
         # Core Noctalia binds
         "Mod+Space".action.spawn = [

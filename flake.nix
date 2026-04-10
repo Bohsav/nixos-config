@@ -106,6 +106,7 @@
             stylix.homeModules.stylix
             nixvim.homeModules.nixvim
             niri-flake.homeModules.niri
+            niri-flake.homeModules.stylix
           ];
         };
 

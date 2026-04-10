@@ -26,6 +26,7 @@
       gnome.enable = true;
       nvf.enable = false;
       nixvim.enable = false;
+      niri.enable = false;
     };
 
     cursor = {
