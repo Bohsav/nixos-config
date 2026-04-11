@@ -65,6 +65,6 @@
       light = "Papirus-Light";
     };
 
-    image = ../generic/modules/stylix/assets/mountain.jpeg;
+    image = ../generic/modules/stylix/assets/water.jpeg;
   };
 }

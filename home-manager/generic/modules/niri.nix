@@ -21,6 +21,11 @@
       input.keyboard.xkb.layout = "us,ru";
       input.keyboard.track-layout = "global";
       layout = {
+        preset-column-widths = [
+          { proportion = 0.33333; }
+          { proportion = 0.5; }
+          { proportion = 0.66667; }
+        ];
         gaps = 14;
         border.enable = false;
         focus-ring.width = 1;
@@ -40,8 +45,12 @@
 
         "Mod+Shift+Q".action.close-window = { };
 
-        "Mod+Control+LeftArrow".action.move-column-left = { };
-        "Mod+Control+RightArrow".action.move-column-right = { };
+        "Alt+Shift+L".action.move-column-left = { };
+        "Alt+Shift+H".action.move-column-right = { };
+        "Alt+Shift+K".action.switch-workspace-up = { };
+        "Alt+Shift+J".action.switch-workspace-down = { };
+
+        "Alt+Shift+W".action.switch-preset-column-width = { };
 
         "Mod+Escape".action.toggle-keyboard-shortcuts-inhibit = { };
 
