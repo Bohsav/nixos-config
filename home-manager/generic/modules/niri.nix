@@ -45,16 +45,15 @@
 
         "Mod+Shift+Q".action.close-window = { };
 
-        "Alt+Shift+L".action.move-column-left = { };
-        "Alt+Shift+H".action.move-column-right = { };
-        "Alt+Shift+K".action.switch-workspace-up = { };
-        "Alt+Shift+J".action.switch-workspace-down = { };
+        "Alt+Shift+A".action.move-column-left = { };
+        "Alt+Shift+D".action.move-column-right = { };
+        "Alt+Shift+W".action.move-column-to-workspace-up = { };
+        "Alt+Shift+S".action.move-window-to-workspace-down = { };
 
-        "Alt+Shift+W".action.switch-preset-column-width = { };
+        "Alt+Shift+N".action.switch-preset-column-width = { };
+        "Alt+Shift+M".action.maximize-column = { };
 
         "Mod+Escape".action.toggle-keyboard-shortcuts-inhibit = { };
-
-        "Mod+M".action.maximize-column = { };
 
         "Mod+Shift+M".action.fullscreen-window = { };
 
