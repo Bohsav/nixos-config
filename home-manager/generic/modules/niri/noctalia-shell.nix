@@ -43,6 +43,10 @@
         overviewEnabled = true;
       };
 
+      location = {
+        autoLocate = true;
+      };
+
       bar = {
         widgets = {
           left = [
