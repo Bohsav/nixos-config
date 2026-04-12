@@ -14,6 +14,8 @@
 
     niri-flake.url = "github:sodiboo/niri-flake";
 
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -32,6 +34,7 @@
     nixvim = {
       url = "github:nix-community/nixvim";
     };
+
   };
 
   outputs =

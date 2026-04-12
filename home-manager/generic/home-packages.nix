@@ -13,7 +13,6 @@ in
     libreoffice
     thunderbird
     vivaldi
-    spotify
     logisim-evolution
     teams-for-linux
 

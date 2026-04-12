@@ -12,6 +12,7 @@
     ../generic/modules/nixvim
     ../generic/modules/easyeffects
     ../generic/modules/niri
+    ../generic/modules/spicetify.nix
 
     ./stylix.nix
   ];
