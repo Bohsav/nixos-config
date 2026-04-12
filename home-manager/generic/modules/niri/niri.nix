@@ -71,13 +71,10 @@
           action.spawn = "kitty";
         };
 
-        "Print".action.spawn = [
-          "flameshot"
-          "gui"
-          "-r"
-          "|"
-          "wl-copy"
-        ];
+        "Print" = {
+          repeat = false;
+          action.spawn-sh = [ "flameshot gui -r | wl-copy" ];
+        };
 
         # Core Noctalia binds
         "Mod+Space".action.spawn = [
