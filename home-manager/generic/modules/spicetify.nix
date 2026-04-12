@@ -12,8 +12,11 @@
       enable = true;
       enabledExtensions = with spicePkgs.extensions; [
         shuffle
+        fullAppDisplay
       ];
 
-      name = "starryNight";
+      wayland = true;
+
+      theme = spicePkgs.themes.starryNight;
     };
 }
