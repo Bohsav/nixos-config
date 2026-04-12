@@ -18,6 +18,15 @@
           clip-to-geometry = true;
         }
       ];
+      layer-rules = [
+        {
+          matches = [
+            { namespace = "^noctalia-shell"; }
+          ];
+
+          place-within-backdrop = true;
+        }
+      ];
       input.keyboard.xkb.layout = "us,ru";
       input.keyboard.track-layout = "global";
       layout = {
