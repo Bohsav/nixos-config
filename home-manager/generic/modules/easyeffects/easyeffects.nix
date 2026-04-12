@@ -1,6 +1,6 @@
 {
   services.easyeffects = {
-    enable = false;
+    enable = true;
 
     extraPresets = {
       base = builtins.fromJSON (builtins.readFile ./Base.json);
