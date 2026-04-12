@@ -4,6 +4,7 @@
     ./zsh
     ./stylix
     ./nixvim
+    ./niri
 
     ./tmux.nix
     ./pass-secret-service.nix

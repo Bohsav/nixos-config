@@ -4,11 +4,20 @@
     inputs.noctalia.homeModules.default
   ];
 
+  home.packages = with pkgs; [
+    dejavu_fonts
+  ];
+
   programs.noctalia-shell = {
     enable = true;
     settings = {
       colorSchemes = {
         useWallpaperColors = true;
+      };
+
+      ui = {
+        fontDefault = "DejaVu Sans";
+        fontFixed = "DejaVu Sans Mono";
       };
 
       # plugins = {
@@ -29,6 +38,10 @@
       # pluginSettings = { };
 
       nightLight.enabled = true;
+
+      wallpaper = {
+        overviewEnabled = true;
+      };
 
       bar = {
         widgets = {

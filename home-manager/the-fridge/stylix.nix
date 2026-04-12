@@ -27,6 +27,7 @@
       nvf.enable = false;
       nixvim.enable = false;
       niri.enable = false;
+      noctalia-shell.enable = false;
     };
 
     cursor = {

@@ -11,8 +11,7 @@
     ../generic/modules/zsh
     ../generic/modules/nixvim
     ../generic/modules/easyeffects
-    ../generic/modules/niri.nix
-    ../generic/modules/noctalia-shell.nix
+    ../generic/modules/niri
 
     ./stylix.nix
   ];

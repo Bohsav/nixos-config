@@ -8,8 +8,7 @@
 {
   imports = [
     # desktop
-    ./generic/niri.nix
-    ./generic/greetd.nix
+    ./generic/niri
     ./generic/plymouth.nix
 
     ../hardware/${hostname}/hardware-configuration.nix
@@ -58,12 +57,6 @@
   users.users.${user}.extraGroups = [ "docker" ];
 
   programs = {
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true;
-      dedicatedServer.openFirewall = true;
-      localNetworkGameTransfers.openFirewall = true;
-    };
     firefox = import ./generic/firefox/soft-settings.nix { inherit pkgs; };
   };
 
