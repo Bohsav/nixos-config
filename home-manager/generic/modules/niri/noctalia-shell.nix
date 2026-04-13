@@ -1,4 +1,9 @@
-{ pkgs, inputs, ... }:
+{
+  pkgs,
+  inputs,
+  config,
+  ...
+}:
 {
   imports = [
     inputs.noctalia.homeModules.default
@@ -8,9 +13,18 @@
     dejavu_fonts
   ];
 
+  services.swayidle = {
+    enable = true;
+
+    events.before-sleep = "${config.programs.noctalia-shell.package}/bin/noctalia-shell ipc call lockScreen lock";
+
+    extraArgs = [ "-w" ];
+  };
+
   programs.noctalia-shell = {
     enable = true;
     settings = {
+
       colorSchemes = {
         useWallpaperColors = true;
       };

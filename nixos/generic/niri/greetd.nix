@@ -21,7 +21,7 @@ in
     enable = true;
     settings = {
       default_session = {
-        command = "${config.programs.niri.package}/bin/niri --config ${niriConfig}";
+        command = "dbus-run-session ${config.programs.niri.package}/bin/niri --config ${niriConfig}";
         user = "greeter";
       };
     };

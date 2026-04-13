@@ -7,6 +7,8 @@
   programs.niri = {
     enable = true;
     settings = {
+      prefer-no-csd = true;
+      environment."NIXOS_OZONE_WL" = "1";
       window-rules = [
         {
           geometry-corner-radius = {

@@ -12,10 +12,9 @@
       enable = true;
       enabledExtensions = with spicePkgs.extensions; [
         shuffle
-        fullAppDisplay
       ];
 
-      wayland = true;
+      windowManagerPatch = true;
 
       theme = spicePkgs.themes.starryNight;
     };
