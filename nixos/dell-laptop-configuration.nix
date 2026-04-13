@@ -8,12 +8,12 @@
 {
   imports = [
     # desktop
-    ./generic/gnome
+    ./generic/niri
+    ./generic/plymouth.nix
 
     ../hardware/${hostname}/hardware-configuration.nix
     ./generic/default-system-packages.nix
     ./generic/boot-loader.nix
-    ./generic/plymouth.nix
     ./generic/nix-settings.nix
     ./generic/networking.nix
     ./generic/programs.nix

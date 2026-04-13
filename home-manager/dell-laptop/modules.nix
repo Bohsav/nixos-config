@@ -9,10 +9,11 @@
     ../generic/modules/tmux.nix
     ../generic/modules/pass-secret-service.nix
 
+    ../generic/modules/niri
+    ../generic/modules/spicetify.nix
     ../generic/modules/zsh
     ../generic/modules/nixvim
     ../generic/modules/easyeffects
-    ../generic/modules/dconf.nix
 
     ./stylix.nix
   ];
