@@ -67,6 +67,27 @@
               id = "ActiveWindow";
             }
           ];
+          right = [
+            {
+              id = "Tray";
+            }
+            {
+              id = "NotificationHistory";
+            }
+            {
+              displayMode = "graphic";
+              id = "Battery";
+            }
+            {
+              id = "Volume";
+            }
+            {
+              id = "Brightness";
+            }
+            {
+              id = "ControlCenter";
+            }
+          ];
         };
       };
     };

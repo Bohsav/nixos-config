@@ -1,5 +1,6 @@
 { ... }:
 {
+  services.upower.enable = true;
   imports = [
     ./niri.nix
     ./greetd.nix

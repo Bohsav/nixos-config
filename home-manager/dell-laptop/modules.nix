@@ -7,7 +7,6 @@
     ../generic/modules/kitty.nix
     ../generic/modules/lazygit.nix
     ../generic/modules/tmux.nix
-    ../generic/modules/pass-secret-service.nix
 
     ../generic/modules/niri
     ../generic/modules/spicetify.nix
