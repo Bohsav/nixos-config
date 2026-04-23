@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   plugins.vimtex = {
-    enable = false;
+    enable = true;
 
     texlivePackage = pkgs.texlive.combine {
       inherit (pkgs.texlive)
