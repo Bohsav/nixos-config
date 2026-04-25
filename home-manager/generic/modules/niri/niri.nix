@@ -23,7 +23,7 @@
       layer-rules = [
         {
           matches = [
-            { namespace = "^noctalia-shell"; }
+            { namespace = "^noctalia-overview*"; }
           ];
 
           place-within-backdrop = true;
