@@ -46,10 +46,10 @@
 
         "Ctrl+Space".action.switch-layout = "next";
 
-        "Alt+A".action.focus-column-left = { };
-        "Alt+S".action.focus-window-or-workspace-down = { };
-        "Alt+W".action.focus-window-or-workspace-up = { };
-        "Alt+D".action.focus-column-right = { };
+        "Mod+A".action.focus-column-left = { };
+        "Mod+S".action.focus-window-or-workspace-down = { };
+        "Mod+W".action.focus-window-or-workspace-up = { };
+        "Mod+D".action.focus-column-right = { };
 
         "Mod+Shift+H".action.show-hotkey-overlay = { };
         "Mod+Shift+E".action.quit.skip-confirmation = false;
