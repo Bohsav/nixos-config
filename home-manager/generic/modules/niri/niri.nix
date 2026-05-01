@@ -62,7 +62,7 @@
         "Alt+Shift+S".action.move-window-to-workspace-down = { };
 
         "Alt+Shift+N".action.switch-preset-column-width = { };
-        "Alt+Shift+M".action.maximize-column = { };
+        "Mod+Ctrl+M".action.maximize-column = { };
 
         "Mod+Escape".action.toggle-keyboard-shortcuts-inhibit = { };
 
@@ -87,7 +87,7 @@
           "toggle"
         ];
 
-        "Mod+Alt+L".action.spawn = [
+        "Mod+Shift+L".action.spawn = [
           "noctalia-shell"
           "ipc"
           "call"

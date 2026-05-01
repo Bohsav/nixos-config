@@ -34,6 +34,11 @@
         fontFixed = "DejaVu Sans Mono";
       };
 
+      general = {
+        lockScreenAnimations = true;
+        enableLockScreenMediaControls = true;
+      };
+
       # plugins = {
       #   sources = [
       #     {
