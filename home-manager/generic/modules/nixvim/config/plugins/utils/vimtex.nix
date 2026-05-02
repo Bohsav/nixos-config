@@ -9,6 +9,7 @@
         biblatex
         biber
         latexmk
+        titlesec
         ;
     };
 
