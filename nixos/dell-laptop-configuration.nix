@@ -12,6 +12,7 @@
     ./generic/plymouth.nix
 
     ../hardware/${hostname}/hardware-configuration.nix
+    ../hardware/${hostname}/hardware-quirks.nix
     ./generic/default-system-packages.nix
     ./generic/boot-loader.nix
     ./generic/nix-settings.nix
