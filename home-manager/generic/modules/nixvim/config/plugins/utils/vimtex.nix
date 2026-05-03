@@ -10,6 +10,7 @@
         biber
         latexmk
         titlesec
+        biblatex-ieee
         ;
     };
 
