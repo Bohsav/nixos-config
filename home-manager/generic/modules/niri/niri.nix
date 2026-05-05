@@ -29,6 +29,16 @@
           place-within-backdrop = true;
         }
       ];
+      outputs = {
+        "HDMI-A-1".position = {
+          x = 1920;
+          y = 0;
+        };
+        "DP-2".position = {
+          x = 0;
+          y = 0;
+        };
+      };
       input.keyboard.xkb.layout = "us,ru";
       input.keyboard.track-layout = "global";
       layout = {
@@ -46,25 +56,25 @@
 
         "Ctrl+Space".action.switch-layout = "next";
 
-        "Mod+A".action.focus-column-left = { };
+        "Mod+A".action.focus-column-or-monitor-left = { };
         "Mod+S".action.focus-window-or-workspace-down = { };
         "Mod+W".action.focus-window-or-workspace-up = { };
-        "Mod+D".action.focus-column-right = { };
+        "Mod+D".action.focus-column-or-monitor-right = { };
 
         "Mod+Shift+H".action.show-hotkey-overlay = { };
         "Mod+Shift+E".action.quit.skip-confirmation = false;
 
-        "Mod+Alt+L".action.focus-monitor-left = { };
-        "Mod+Alt+R".action.focus-monitor-right = { };
+        "Mod+N".action.focus-monitor-right = { };
+        "Mod+Shift+N".action.focus-monitor-left = { };
 
         "Mod+Shift+Q".action.close-window = { };
 
-        "Alt+Shift+A".action.move-column-left = { };
-        "Alt+Shift+D".action.move-column-right = { };
+        "Alt+Shift+A".action.move-column-left-or-to-monitor-left = { };
+        "Alt+Shift+D".action.move-column-right-or-to-monitor-right = { };
         "Alt+Shift+W".action.move-column-to-workspace-up = { };
-        "Alt+Shift+S".action.move-window-to-workspace-down = { };
+        "Alt+Shift+S".action.move-column-to-workspace-down = { };
 
-        "Alt+Shift+N".action.switch-preset-column-width = { };
+        "Alt+Shift+C".action.switch-preset-column-width = { };
         "Mod+Ctrl+M".action.maximize-column = { };
 
         "Mod+Escape".action.toggle-keyboard-shortcuts-inhibit = { };
