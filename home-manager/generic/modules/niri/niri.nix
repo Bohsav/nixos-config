@@ -54,6 +54,9 @@
         "Mod+Shift+H".action.show-hotkey-overlay = { };
         "Mod+Shift+E".action.quit.skip-confirmation = false;
 
+        "Mod+Alt+L".action.focus-monitor-left = { };
+        "Mod+Alt+R".action.focus-monitor-right = { };
+
         "Mod+Shift+Q".action.close-window = { };
 
         "Alt+Shift+A".action.move-column-left = { };
