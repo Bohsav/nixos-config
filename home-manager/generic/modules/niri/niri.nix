@@ -56,10 +56,10 @@
 
         "Ctrl+Space".action.switch-layout = "next";
 
-        "Mod+A".action.focus-column-or-monitor-left = { };
-        "Mod+S".action.focus-window-or-workspace-down = { };
-        "Mod+W".action.focus-window-or-workspace-up = { };
-        "Mod+D".action.focus-column-or-monitor-right = { };
+        "Ctrl+Alt+A".action.focus-column-or-monitor-left = { };
+        "Ctrl+Alt+S".action.focus-window-or-workspace-down = { };
+        "Ctrl+Alt+W".action.focus-window-or-workspace-up = { };
+        "Ctrl+Alt+D".action.focus-column-or-monitor-right = { };
 
         "Mod+Shift+H".action.show-hotkey-overlay = { };
         "Mod+Shift+E".action.quit.skip-confirmation = false;
