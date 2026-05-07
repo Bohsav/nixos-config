@@ -12,10 +12,18 @@
   services.fstrim.enable = true;
 
   boot = {
-    kernelModules = [ "kvm-intel" ];
-    blacklistedKernelModules = [ "nouveau" ];
+    kernelModules = [
+      "kvm-intel"
+    ];
+    blacklistedKernelModules = [
+      "nouveau"
+      "intel_hid"
+    ];
   };
-  boot.kernelParams = [ "i915.modeset=1" ];
+  boot.kernelParams = [
+    "i915.modeset=1"
+    "NVreg_UseKernelSuspendNotifiers=1"
+  ];
   hardware = {
     graphics = {
       enable = lib.mkDefault true;
