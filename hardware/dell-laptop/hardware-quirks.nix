@@ -55,4 +55,10 @@
   # powerManagement.cpuFreqGovernor = lib.mkDefault "performance";
 
   services.xserver.videoDrivers = lib.mkDefault [ "nvidia" ];
+
+  # Disable LID0/lid
+  services.udev.extraRules = ''
+    ACTION=="add" SUBSYSTEM=="platform" KERNEL=="PNP0C0D:00" ATTR{power/wakeup}="disabled"
+    ACTION=="add" SUBSYSTEM=="pci" ATTR{vendor}=="0x8086" ATTR{device}=="0x7ae0" ATTR{power/wakeup}="disabled"
+  '';
 }
