@@ -36,7 +36,7 @@
       ];
     };
     nvidia = {
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = lib.mkDefault config.boot.kernelPackages.nvidiaPackages.stable;
       nvidiaSettings = lib.mkDefault true;
       modesetting.enable = lib.mkDefault true;
       open = lib.mkDefault false;
