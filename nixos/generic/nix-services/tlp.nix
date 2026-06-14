@@ -6,6 +6,15 @@
       pd.enable = true;
       enable = true;
       settings = {
+        TLP_PROFILE_AC = "PRF";
+        TLP_PROFILE_BAT = "SAV";
+
+        SOUND_POWER_SAVE_ON_AC = 0;
+        SOUND_POWER_SAVE_ON_BAT = 1;
+
+        PLATFORM_PROFILE_ON_AC = "performance";
+        PLATFORM_PROFILE_ON_BAT = "balanced";
+        PLATFORM_PROFILE_ON_SAV = "quiet";
 
         CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
         CPU_ENERGY_PERF_POLICY_ON_AC = "balance_performance";
