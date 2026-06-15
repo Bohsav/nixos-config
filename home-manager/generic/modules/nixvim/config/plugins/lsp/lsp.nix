@@ -51,7 +51,7 @@
       enable = true;
     };
     lsp-signature = {
-      enable = true;
+      enable = false;
       settings = {
         extra_trigger_chars = [
           "("
@@ -69,7 +69,7 @@
     };
     lsp = {
       enable = true;
-      # inlayHints = true;
+      inlayHints = false;
       servers = {
         html = {
           enable = true;
