@@ -54,6 +54,7 @@
           {
             name = "treesitter"; # treesitter
             keywordLength = 3;
+            max_item_count = 10;
           }
         ];
 
@@ -81,6 +82,8 @@
               "╰"
               "│"
             ];
+            max_height = "math.floor(40 * (40 / vim.o.lines))";
+            max_width = "math.floor((40 * 2) * (vim.o.columns / (40 * 2 * 16 / 9)))";
           };
         };
 

@@ -69,7 +69,7 @@
     };
     lsp = {
       enable = true;
-      inlayHints = true;
+      # inlayHints = true;
       servers = {
         html = {
           enable = true;
