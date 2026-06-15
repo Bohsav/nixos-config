@@ -34,8 +34,8 @@
     ];
   };
 
+  plugins.treesitter.highlight.disable = [ "latex" ];
   plugins.treesitter.settings.highlight = {
-    disable = [ "latex" ];
     additional_vim_regex_highlighting = [ "latex" ];
   };
 
