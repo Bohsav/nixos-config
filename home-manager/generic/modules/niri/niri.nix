@@ -30,9 +30,16 @@
         }
       ];
       outputs = {
-        "HDMI-A-1".position = {
-          x = 0;
-          y = 0;
+        "HDMI-A-1" = {
+          mode = {
+            refresh = 120.0;
+            width = 1920;
+            height = 1080;
+          };
+          position = {
+            x = 0;
+            y = 0;
+          };
         };
         "DP-2".position = {
           x = 1920;
