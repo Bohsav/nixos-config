@@ -31,11 +31,11 @@
       ];
       outputs = {
         "HDMI-A-1".position = {
-          x = 1920;
+          x = 0;
           y = 0;
         };
         "DP-2".position = {
-          x = 0;
+          x = 1920;
           y = 0;
         };
       };
