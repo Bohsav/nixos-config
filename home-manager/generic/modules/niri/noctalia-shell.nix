@@ -16,7 +16,7 @@
   services.swayidle = {
     enable = true;
 
-    events.before-sleep = "${config.programs.noctalia.package}/bin/noctalia-shell ipc call lockScreen lock";
+    events.before-sleep = "${config.programs.noctalia.package}/bin/noctalia ipc call lockScreen lock";
 
     extraArgs = [ "-w" ];
   };
@@ -24,90 +24,63 @@
   programs.noctalia = {
     enable = true;
     settings = {
+      shell.niri_overview_type_to_launch_enabled = true;
+      backdrop.enabled = true;
 
       colorSchemes = {
         useWallpaperColors = true;
       };
 
-      ui = {
-        fontDefault = "DejaVu Sans";
-        fontFixed = "DejaVu Sans Mono";
+      nightlight.enabled = true;
+
+      bar.main = {
+        widget_spacing = 8;
+        background_opacity = 0.8;
+
+        margin_ends = 18;
+        start = [
+          "wallpaper"
+          "workspaces"
+          "launcher"
+          "tray"
+          "active_window"
+        ];
+        center = [
+          "privacy"
+          "lock_keys"
+          "audio_visualizer"
+          "media"
+          "weather"
+          "notifications"
+        ];
+        end = [
+          "control-center"
+          "session"
+          "keyboard_layout"
+          "bluetooth"
+          "network"
+          "sysmon"
+          "battery"
+          "volume"
+          "brightness"
+        ];
       };
 
-      general = {
-        lockScreenAnimations = true;
-        enableLockScreenMediaControls = true;
+      widget."lock_keys" = {
+        display = "full";
+        hide_when_off = true;
       };
 
-      # plugins = {
-      #   sources = [
-      #     {
-      #       enabled = true;
-      #       name = "Official Noctalia Plugins";
-      #       url = "https://github.com/noctalia-dev/noctalia-plugins";
-      #     }
-      #   ];
-      #   states = {
-      #     mangowc-layout-switcher = {
-      #       enabled = true;
-      #       sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
-      #     };
-      #   };
-      # };
-      # pluginSettings = { };
-
-      nightLight.enabled = true;
-
-      wallpaper = {
-        overviewEnabled = true;
+      widget."privacy" = {
+        hide_inactive = true;
       };
 
-      bar = {
-        widgets = {
-          left = [
-            {
-              id = "Launcher";
-            }
-            {
-              id = "Workspace";
-            }
-            {
-              id = "SystemMonitor";
-            }
-          ];
-          center = [
-            {
-              id = "MediaMini";
-            }
-            {
-              id = "Clock";
-            }
-            {
-              id = "ActiveWindow";
-            }
-          ];
-          right = [
-            {
-              id = "Tray";
-            }
-            {
-              id = "NotificationHistory";
-            }
-            {
-              displayMode = "graphic";
-              id = "Battery";
-            }
-            {
-              id = "Volume";
-            }
-            {
-              id = "Brightness";
-            }
-            {
-              id = "ControlCenter";
-            }
-          ];
-        };
+      widget."audio_visualizer" = {
+        show_when_idle = true;
+      };
+
+      widget."notifications" = {
+        hide_when_no_unread = true;
       };
     };
   };

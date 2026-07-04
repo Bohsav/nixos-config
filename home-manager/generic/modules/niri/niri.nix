@@ -9,21 +9,30 @@
     settings = {
       prefer-no-csd = true;
       environment."NIXOS_OZONE_WL" = "1";
+      debug = {
+        honor-xdg-activation-with-invalid-serial = [ ];
+      };
       window-rules = [
         {
           geometry-corner-radius = {
-            top-left = 12.;
-            top-right = 12.;
-            bottom-left = 12.;
-            bottom-right = 12.;
+            top-left = 20.;
+            top-right = 20.;
+            bottom-left = 20.;
+            bottom-right = 20.;
           };
           clip-to-geometry = true;
+        }
+        {
+          matches = [ { app-id = "dev.noctalia.Noctalia.Settings"; } ];
+          open-floating = true;
+          default-column-width.fixed = 1080;
+          default-window-height.fixed = 920;
         }
       ];
       layer-rules = [
         {
           matches = [
-            { namespace = "^noctalia-overview*"; }
+            { namespace = "^noctalia-backdrop"; }
           ];
 
           place-within-backdrop = true;
@@ -99,63 +108,95 @@
         };
 
         # Core Noctalia binds
-        "Mod+Space".action.spawn = [
-          "noctalia-shell"
-          "ipc"
-          "call"
+        "F4".action.spawn = [
+          "noctalia"
+          "msg"
+          "panel-toggle"
           "launcher"
-          "toggle"
+        ];
+
+        "Mod+Space".action.spawn = [
+          "noctalia"
+          "msg"
+          "panel-toggle"
+          "launcher"
         ];
 
         "Mod+Shift+L".action.spawn = [
-          "noctalia-shell"
-          "ipc"
-          "call"
-          "lockScreen"
+          "noctalia"
+          "msg"
+          "session"
           "lock"
+        ];
+        "F3".action.spawn = [
+          "noctalia"
+          "msg"
+          "settings-toggle"
+        ];
+        "F5".action.spawn = [
+          "noctalia"
+          "msg"
+          "mic-mute"
+        ];
+        "F6".action.spawn = [
+          "noctalia"
+          "msg"
+          "session"
+          "lock"
+        ];
+
+        "XF86AudioPrev".action.spawn = [
+          "noctalia"
+          "msg"
+          "media"
+          "previous"
+        ];
+
+        "XF86AudioPlay".action.spawn = [
+          "noctalia"
+          "msg"
+          "media"
+          "toggle"
+        ];
+
+        "XF86AudioNext".action.spawn = [
+          "noctalia"
+          "msg"
+          "media"
+          "next"
         ];
 
         # Audio & Brightness
         "XF86AudioRaiseVolume".action.spawn = [
-          "noctalia-shell"
-          "ipc"
-          "call"
-          "volume"
-          "increase"
+          "noctalia"
+          "msg"
+          "volume-up"
         ];
         "XF86AudioLowerVolume".action.spawn = [
-          "noctalia-shell"
-          "ipc"
-          "call"
-          "volume"
-          "decrease"
+          "noctalia"
+          "msg"
+          "volume-down"
         ];
         "XF86AudioMute".action.spawn = [
-          "noctalia-shell"
-          "ipc"
-          "call"
-          "volume"
-          "muteOutput"
+          "noctalia"
+          "msg"
+          "volume-mute"
         ];
         "XF86MonBrightnessUp".action.spawn = [
-          "noctalia-shell"
-          "ipc"
-          "call"
-          "brightness"
-          "increase"
+          "noctalia"
+          "msg"
+          "brightness-up"
         ];
         "XF86MonBrightnessDown".action.spawn = [
-          "noctalia-shell"
-          "ipc"
-          "call"
-          "brightness"
-          "decrease"
+          "noctalia"
+          "msg"
+          "brightness-down"
         ];
       };
       spawn-at-startup = [
         {
           argv = [
-            "noctalia-shell"
+            "noctalia"
           ];
         }
       ];
