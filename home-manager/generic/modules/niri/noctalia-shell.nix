@@ -16,12 +16,12 @@
   services.swayidle = {
     enable = true;
 
-    events.before-sleep = "${config.programs.noctalia-shell.package}/bin/noctalia-shell ipc call lockScreen lock";
+    events.before-sleep = "${config.programs.noctalia.package}/bin/noctalia-shell ipc call lockScreen lock";
 
     extraArgs = [ "-w" ];
   };
 
-  programs.noctalia-shell = {
+  programs.noctalia = {
     enable = true;
     settings = {
 
