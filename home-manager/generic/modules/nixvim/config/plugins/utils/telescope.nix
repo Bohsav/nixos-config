@@ -73,22 +73,16 @@ _: {
           desc = "Resume";
         };
       };
-      "<leader>fg" = {
-        action = "oldfiles";
+      "<leader>gf" = {
+        action = "git_files";
         options = {
-          desc = "Recent";
+          desc = "Search git files";
         };
       };
       "<leader>fb" = {
         action = "buffers";
         options = {
           desc = "Buffers";
-        };
-      };
-      "<C-p>" = {
-        action = "git_files";
-        options = {
-          desc = "Search git files";
         };
       };
       "<leader>gs" = {
@@ -169,12 +163,6 @@ _: {
           desc = "Resume";
         };
       };
-      "<leader>uC" = {
-        action = "colorscheme";
-        options = {
-          desc = "Colorscheme preview";
-        };
-      };
     };
   };
   keymaps = [
@@ -196,7 +184,7 @@ _: {
     }
     {
       mode = "n";
-      key = "<leader>gv";
+      key = "<leader>go";
       action = "<cmd>AdvancedGitSearch diff_commit_file<cr>";
       options = {
         desc = "Examine git changes mentioning this file";
