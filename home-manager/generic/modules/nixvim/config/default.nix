@@ -12,7 +12,6 @@ _: {
 
     # Completion
     ./plugins/cmp/cmp.nix
-    ./plugins/cmp/cmp-copilot.nix
     ./plugins/cmp/lspkind.nix
     ./plugins/cmp/autopairs.nix
     ./plugins/cmp/schemastore.nix
@@ -21,7 +20,6 @@ _: {
     ./plugins/snippets/luasnip.nix
 
     # Editor plugins and configurations
-    ./plugins/editor/neo-tree.nix
     ./plugins/editor/treesitter.nix
     ./plugins/editor/undotree.nix
     ./plugins/editor/illuminate.nix
@@ -31,12 +29,10 @@ _: {
     ./plugins/editor/cursorline.nix
     ./plugins/editor/actions-preview.nix
     ./plugins/editor/leap.nix
-    # ./plugins/editor/flash.nix
 
     # UI plugins
     ./plugins/ui/bufferline.nix
     ./plugins/ui/lualine.nix
-    ./plugins/ui/startup.nix
 
     # LSP and formatting
     ./plugins/lsp/lsp.nix
@@ -54,6 +50,5 @@ _: {
     ./plugins/utils/mini.nix
     ./plugins/utils/markdown-preview.nix
     ./plugins/utils/web-devicons.nix
-    ./plugins/utils/vimtex.nix
   ];
 }
