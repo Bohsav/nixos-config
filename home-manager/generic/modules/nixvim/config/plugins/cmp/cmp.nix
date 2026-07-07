@@ -10,7 +10,7 @@
         performance = {
           debounce = 60;
           fetching_timeout = 200;
-          max_view_entries = 100;
+          max_view_entries = 50;
         };
         snippet = {
           expand = "luasnip";
@@ -25,7 +25,7 @@
         sources = [
           {
             name = "nvim_lsp_signature_help";
-            max_item_count = 10;
+            max_item_count = 3;
           }
           {
             name = "nvim_lsp"; # from neovim lsp
@@ -33,13 +33,13 @@
           }
           {
             name = "jdtls"; # from jdtlsp
-            max_item_count = 10;
+            max_item_count = 20;
           }
           {
             name = "buffer"; # text within current buffer
             option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
             keywordLength = 3;
-            max_item_count = 10;
+            max_item_count = 5;
           }
           {
             name = "path"; # file system paths
@@ -49,12 +49,12 @@
           {
             name = "luasnip"; # snippets
             keywordLength = 3;
-            max_item_count = 10;
+            max_item_count = 5;
           }
           {
             name = "treesitter"; # treesitter
             keywordLength = 3;
-            max_item_count = 10;
+            max_item_count = 20;
           }
         ];
 
