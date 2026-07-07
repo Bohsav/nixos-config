@@ -17,8 +17,8 @@
       bind-key C-a send-prefix
 
       # split panes using | and -
-      bind | split-window -h
-      bind - split-window -v
+      bind | split-window -h "#{pane_current_path}"
+      bind - split-window -v "#{pane_current_path}"
       unbind '"'
       unbind %
 
@@ -62,6 +62,9 @@
 
       # messages
       set -g message-style 'fg=yellow bg=red bold'
+
+      # Same directory window
+      bind c new-window -c "#{pane_current_path}"
     '';
   };
 }
