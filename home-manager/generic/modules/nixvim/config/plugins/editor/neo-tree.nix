@@ -1,6 +1,6 @@
 {
   plugins.neo-tree = {
-    enable = true;
+    enable = false;
 
     settings = {
       filesystem = {
