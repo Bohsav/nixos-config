@@ -1,4 +1,20 @@
 {
+  autoCmd = [
+
+    {
+      group = "vim_enter";
+      event = [ "VimEnter" ];
+      pattern = "*";
+      callback = {
+        __raw = ''
+          function()
+            vim.cmd('Startup')
+          end
+        '';
+      };
+    }
+  ];
+
   plugins.startup = {
     enable = false;
 
