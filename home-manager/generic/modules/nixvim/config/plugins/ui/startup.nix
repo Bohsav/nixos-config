@@ -1,6 +1,6 @@
 {
   plugins.startup = {
-    enable = true;
+    enable = false;
 
     settings = {
       options = {
