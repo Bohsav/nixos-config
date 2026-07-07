@@ -39,6 +39,7 @@
         };
         formatting = {
           fields = [
+            "icon"
             "kind"
             "abbr"
             "menu"
