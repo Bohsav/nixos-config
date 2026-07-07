@@ -16,7 +16,7 @@
   services.swayidle = {
     enable = true;
 
-    events.before-sleep = "${config.programs.noctalia.package}/bin/noctalia ipc call lockScreen lock";
+    events.before-sleep = "${config.programs.noctalia.package}/bin/noctalia msg session lock";
 
     extraArgs = [ "-w" ];
   };
