@@ -1,6 +1,6 @@
 _: {
   plugins.flash = {
-    enable = true;
+    enable = false;
 
     settings = {
       modes.char.keys = {
