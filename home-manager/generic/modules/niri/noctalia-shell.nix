@@ -50,6 +50,7 @@
           "lock_keys"
           "audio_visualizer"
           "media"
+          "clock"
           "weather"
           "notifications"
         ];
