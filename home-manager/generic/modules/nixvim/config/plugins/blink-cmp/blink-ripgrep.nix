@@ -1,5 +1,5 @@
 { ... }: {
-plugins.blink-ripgrep.enable = true;
+  plugins.blink-ripgrep.enable = true;
   plugins.blink-cmp = {
     enable = true;
     settings.sources.providers = {
