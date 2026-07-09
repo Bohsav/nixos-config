@@ -6,6 +6,7 @@ _: {
     ./auto_cmds.nix
     ./file_types.nix
     ./lsp-filetypes.nix
+    ./performance.nix
 
     # Themes
     ./plugins/themes
