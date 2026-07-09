@@ -62,7 +62,6 @@ in
           "path"
           "buffer"
         ];
-
         sources.providers = {
           lsp.score_offset = 100;
           path.score_offset = 1;

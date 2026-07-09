@@ -11,7 +11,7 @@ _: {
     ./plugins/themes
 
     # Completion
-    ./plugins/cmp
+    ./plugins/blink-cmp
 
     # Snippets
     ./plugins/snippets/luasnip.nix
