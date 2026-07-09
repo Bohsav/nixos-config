@@ -1,6 +1,17 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 let
-  window_border = "padded";
+  window_border_fancy = [
+    "╭"
+    "─"
+    "╮"
+    "│"
+    "╯"
+    "─"
+    "╰"
+    "│"
+  ];
+  window_border_default = "padded";
+  window_border = window_border_default;
 in
 {
   plugins = {
@@ -47,6 +58,8 @@ in
 
           menu = {
             enabled = true;
+
+            draw.columns = lib.nixvim.mkRaw ''{ { "label", "label_description", gap = 1 }, { "kind_icon", "kind", gap = 1 } }'';
 
             border = window_border;
           };
