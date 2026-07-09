@@ -70,7 +70,7 @@
       binds = {
         "Mod+O".action.toggle-overview = { };
 
-        "Ctrl+Space".action.switch-layout = "next";
+        "Ctrl+Shift+L".action.switch-layout = "next";
 
         "Ctrl+Alt+A".action.focus-column-or-monitor-left = { };
         "Ctrl+Alt+S".action.focus-window-or-workspace-down = { };
