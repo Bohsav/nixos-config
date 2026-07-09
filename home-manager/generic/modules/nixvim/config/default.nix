@@ -11,8 +11,7 @@ _: {
     ./plugins/themes
 
     # Completion
-    ./plugins/cmp/cmp.nix
-    ./plugins/cmp/schemastore.nix
+    ./plugins/cmp
 
     # Snippets
     ./plugins/snippets/luasnip.nix
