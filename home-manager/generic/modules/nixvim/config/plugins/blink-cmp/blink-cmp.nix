@@ -12,6 +12,37 @@ let
   ];
   window_border_default = "padded";
   window_border = window_border_default;
+
+  icons = {
+    Copilot = " ";
+    Spell = " ";
+    Vimtex = " ";
+    Text = "󰊄";
+    Method = "󰡱 ";
+    Function = "󰊕 ";
+    Constructor = " ";
+    Field = "󰜢 ";
+    Variable = "󰆦 ";
+    Class = " ";
+    Interface = "󱡠 ";
+    Module = "󰕳 ";
+    Property = " ";
+    Unit = " ";
+    Value = " ";
+    Enum = " ";
+    Keyword = " ";
+    Snippet = " ";
+    Color = " ";
+    File = " ";
+    Reference = " ";
+    Folder = " ";
+    EnumMember = " ";
+    Constant = " 󰏿";
+    Struct = " ";
+    Event = " ";
+    Operator = "󰪚 ";
+    TypeParameter = "󰬛 ";
+  };
 in
 {
   plugins = {
@@ -35,6 +66,7 @@ in
           "<C-y>" = [ "select_and_accept" ];
         };
         appearance.use_nvim_cmp_as_default = true;
+        appearance.kind_icons = icons;
 
         completion = {
           accept.create_undo_point = true;
@@ -78,8 +110,11 @@ in
         sources.providers = {
           lsp.score_offset = 100;
           path.score_offset = 1;
-          snippets.score_offset = 0;
-          buffer.score_offset = 0;
+          snippets = {
+            preset = "luasnip";
+            score_offset = 0;
+          };
+          buffer.score_offset = 10;
         };
       };
     };
