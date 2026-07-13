@@ -41,8 +41,16 @@
           };
         };
         per_filetype = {
-          text = [ "dictionary" ];
-          markdown = [ "thesaurus" ];
+          text = [
+            "dictionary"
+            "path"
+          ];
+          markdown = [
+            "snippets"
+            "thesaurus"
+            "lsp"
+            "path"
+          ];
         };
       };
     };

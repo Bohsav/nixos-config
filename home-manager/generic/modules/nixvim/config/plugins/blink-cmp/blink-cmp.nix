@@ -1,4 +1,9 @@
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 let
   window_border_fancy = [
     "╭"
@@ -101,6 +106,8 @@ in
 
         signature.enabled = true;
 
+        snippets = lib.mkIf config.plugins.luasnip.enable { preset = "luasnip"; };
+
         sources.default = [
           "lsp"
           "snippets"
@@ -109,12 +116,9 @@ in
         ];
         sources.providers = {
           lsp.score_offset = 100;
-          path.score_offset = 1;
-          snippets = {
-            preset = "luasnip";
-            score_offset = 0;
-          };
-          buffer.score_offset = 10;
+          snippets.score_offset = 100;
+          path.score_offset = 10;
+          buffer.score_offset = 0;
         };
       };
     };
