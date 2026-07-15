@@ -50,9 +50,16 @@
             y = 0;
           };
         };
-        "DP-2".position = {
-          x = 1920;
-          y = 0;
+        "DP-1" = {
+          mode = {
+            refresh = 120.0;
+            width = 1920;
+            height = 1080;
+          };
+          position = {
+            x = 1920;
+            y = 0;
+          };
         };
       };
       input.keyboard.xkb.layout = "us,ru";
