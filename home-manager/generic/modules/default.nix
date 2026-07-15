@@ -14,5 +14,6 @@
     ./kitty.nix
     ./git.nix
     ./flameshot.nix
+    ./zellij.nix
   ];
 }
