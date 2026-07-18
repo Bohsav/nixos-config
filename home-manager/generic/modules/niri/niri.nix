@@ -111,7 +111,11 @@
 
         "Print" = {
           repeat = false;
-          action.spawn-sh = [ "flameshot gui -r | wl-copy" ];
+          action.spawn = [
+            "noctalia"
+            "msg"
+            "screenshot-region"
+          ];
         };
 
         # Core Noctalia binds
