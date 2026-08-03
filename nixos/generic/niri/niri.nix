@@ -5,6 +5,7 @@
   ...
 }:
 {
+  services.xserver.enable = lib.mkForce false;
   programs.niri = {
     enable = true;
     package = pkgs.niri;

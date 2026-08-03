@@ -26,7 +26,6 @@
     ./generic/docker.nix
 
     # services
-    ./generic/nix-services/xserver.nix
     ./generic/nix-services/printing.nix
     ./generic/nix-services/pipewire.nix
   ];
