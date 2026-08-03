@@ -7,7 +7,7 @@
 }:
 let
   niriConfig = pkgs.writeText "greetd-niri-config" ''
-    spawn-sh-at-startup "${config.programs.regreet.package}/bin/regreet; ${config.programs.niri.package}/bin/niri msg action quit --skip-confirmation"
+    spawn-sh-at-startup "${config.services.displayManager.regreet.package}/bin/regreet; ${config.programs.niri.package}/bin/niri msg action quit --skip-confirmation"
     hotkey-overlay {
         skip-at-startup
     }
@@ -27,12 +27,12 @@ in
     };
   };
 
-  programs.regreet = {
+  services.displayManager.regreet = {
     enable = true;
 
     theme = {
-      name = "Nordic";
-      package = pkgs.nordic;
+      name = "Colloid";
+      package = pkgs.colloid-gtk-theme;
     };
 
     cursorTheme = {
