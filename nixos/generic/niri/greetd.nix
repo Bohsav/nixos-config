@@ -31,7 +31,7 @@ in
     enable = true;
 
     theme = {
-      name = "Colloid";
+      name = "Colloid-Dark";
       package = pkgs.colloid-gtk-theme;
     };
 
