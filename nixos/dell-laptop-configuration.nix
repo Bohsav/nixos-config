@@ -25,7 +25,6 @@
     ./generic/hardware/laptop-A2000.nix
 
     # services
-    ./generic/nix-services/xserver.nix
     ./generic/nix-services/printing.nix
     ./generic/nix-services/pipewire.nix
     ./generic/nix-services/tlp.nix
