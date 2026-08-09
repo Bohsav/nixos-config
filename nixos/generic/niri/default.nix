@@ -5,5 +5,6 @@
     ./niri.nix
     ./greetd.nix
     ./nautilus.nix
+    ./xdg.nix
   ];
 }
