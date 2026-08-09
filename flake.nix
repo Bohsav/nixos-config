@@ -12,8 +12,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
-    niri-flake.url = "github:sodiboo/niri-flake";
-
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
     noctalia = {
@@ -43,7 +41,6 @@
       home-manager,
       stylix,
       nixvim,
-      niri-flake,
       ...
     }@inputs:
     let
@@ -82,7 +79,6 @@
 
           modules = [
             ./nixos/${hostname}-configuration.nix
-            niri-flake.nixosModules.niri
           ];
         };
 
@@ -108,8 +104,6 @@
             homePath
             stylix.homeModules.stylix
             nixvim.homeModules.nixvim
-            niri-flake.homeModules.niri
-            niri-flake.homeModules.stylix
           ];
         };
 

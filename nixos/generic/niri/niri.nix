@@ -10,8 +10,14 @@
     enable = true;
     package = pkgs.niri;
   };
+  systemd.user.services.niri.enableDefaultPath = false;
+  security.polkit.enable = true;
+  services.gnome.gnome-keyring.enable = true;
+  security.pam.services.waylock = { };
   environment.systemPackages = with pkgs; [
     xwayland-satellite
+    swaylock
+    swayidle
   ];
 
   # xdg.portal = {

@@ -1,117 +1,132 @@
-{
-  pkgs,
-  inputs,
-  ...
-}:
-{
-  programs.niri = {
+{ pkgs, ... }: {
+  wayland.windowManager.niri = {
+    package = pkgs.niri;
     enable = true;
-    settings = {
-      prefer-no-csd = true;
-      environment."NIXOS_OZONE_WL" = "1";
-      debug = {
-        honor-xdg-activation-with-invalid-serial = [ ];
-      };
-      window-rules = [
-        {
-          geometry-corner-radius = {
-            top-left = 20.;
-            top-right = 20.;
-            bottom-left = 20.;
-            bottom-right = 20.;
-          };
-          clip-to-geometry = true;
-        }
-        {
-          matches = [ { app-id = "dev.noctalia.Noctalia"; } ];
-          open-floating = true;
-          default-column-width.fixed = 1080;
-          default-window-height.fixed = 920;
-        }
-      ];
-      layer-rules = [
-        {
-          matches = [
-            { namespace = "^noctalia-backdrop"; }
-          ];
 
-          place-within-backdrop = true;
+    extraConfig = ''
+      window-rule {
+        match app-id="dev.noctalia.Noctalia"
+
+        open-floating true
+
+        default-column-width { fixed 1080; }
+        default-window-height { fixed 920; }
+      }
+    '';
+    settings = {
+      prefer-no-csd = { };
+      environment = {
+        "NIXOS_OZONE_WL" = "1";
+      };
+      _children = [
+        {
+          window-rule._children = [
+
+            {
+              geometry-corner-radius = 12;
+              clip-to-geometry = true;
+            }
+          ];
+        }
+
+        {
+          layer-rule._children = [
+            {
+              match._props = {
+                namespace = "^noctalia-backdrop";
+              };
+            }
+            {
+              place-within-backdrop = true;
+            }
+          ];
+        }
+
+        {
+          output = {
+            _args = [ "HDMI-A-1" ];
+            mode = "1920x1080@120.0";
+            position._props = {
+              x = 1920;
+              y = 0;
+            };
+          };
+        }
+        {
+          output = {
+            _args = [ "DP-1" ];
+            mode = "1920x1080@120.0";
+            position._props = {
+              x = 0;
+              y = 0;
+            };
+          };
         }
       ];
-      outputs = {
-        "HDMI-A-1" = {
-          mode = {
-            refresh = 120.0;
-            width = 1920;
-            height = 1080;
-          };
-          position = {
-            x = 1920;
-            y = 0;
-          };
-        };
-        "DP-1" = {
-          mode = {
-            refresh = 120.0;
-            width = 1920;
-            height = 1080;
-          };
-          position = {
-            x = 0;
-            y = 0;
-          };
+
+      input = {
+        keyboard = {
+          xkb.layout = "us,ru";
+          track-layout = "global";
         };
       };
-      input.keyboard.xkb.layout = "us,ru";
-      input.keyboard.track-layout = "global";
+
       layout = {
-        preset-column-widths = [
+        preset-column-widths._children = [
           { proportion = 0.33333; }
           { proportion = 0.5; }
           { proportion = 0.66667; }
         ];
         gaps = 14;
-        border.enable = false;
+        border.off = { };
         focus-ring.width = 1;
       };
+
       binds = {
-        "Mod+O".action.toggle-overview = { };
+        "Mod+O".toggle-overview = { };
 
-        "Ctrl+Shift+L".action.switch-layout = "next";
+        "Ctrl+Shift+L".switch-layout = "next";
 
-        "Ctrl+Alt+A".action.focus-column-or-monitor-left = { };
-        "Ctrl+Alt+S".action.focus-window-or-workspace-down = { };
-        "Ctrl+Alt+W".action.focus-window-or-workspace-up = { };
-        "Ctrl+Alt+D".action.focus-column-or-monitor-right = { };
+        "Ctrl+Alt+A".focus-column-or-monitor-left = { };
+        "Ctrl+Alt+S".focus-window-or-workspace-down = { };
+        "Ctrl+Alt+W".focus-window-or-workspace-up = { };
+        "Ctrl+Alt+D".focus-column-or-monitor-right = { };
 
-        "Mod+Shift+H".action.show-hotkey-overlay = { };
-        "Mod+Shift+E".action.quit.skip-confirmation = false;
+        "Mod+Shift+H".show-hotkey-overlay = { };
 
-        "Mod+N".action.focus-monitor-right = { };
-        "Mod+Shift+N".action.focus-monitor-left = { };
+        "Mod+Shift+E".quit._props = {
+          skip-confirmation = false;
+        };
 
-        "Mod+Shift+Q".action.close-window = { };
+        "Mod+N".focus-monitor-right = { };
+        "Mod+Shift+N".focus-monitor-left = { };
 
-        "Alt+Shift+A".action.move-column-left-or-to-monitor-left = { };
-        "Alt+Shift+D".action.move-column-right-or-to-monitor-right = { };
-        "Alt+Shift+W".action.move-column-to-workspace-up = { };
-        "Alt+Shift+S".action.move-column-to-workspace-down = { };
+        "Mod+Shift+Q".close-window = { };
 
-        "Alt+Shift+C".action.switch-preset-column-width = { };
-        "Mod+Ctrl+M".action.maximize-column = { };
+        "Alt+Shift+A".move-column-left-or-to-monitor-left = { };
+        "Alt+Shift+D".move-column-right-or-to-monitor-right = { };
+        "Alt+Shift+W".move-column-to-workspace-up = { };
+        "Alt+Shift+S".move-column-to-workspace-down = { };
 
-        "Mod+Escape".action.toggle-keyboard-shortcuts-inhibit = { };
+        "Alt+Shift+C".switch-preset-column-width = { };
+        "Mod+Ctrl+M".maximize-column = { };
 
-        "Mod+Shift+M".action.fullscreen-window = { };
+        "Mod+Escape".toggle-keyboard-shortcuts-inhibit = { };
+
+        "Mod+Shift+M".fullscreen-window = { };
 
         "Mod+T" = {
-          repeat = false;
-          action.spawn = "kitty";
+          _props = {
+            repeat = false;
+          };
+          spawn = [ "kitty" ];
         };
 
         "Print" = {
-          repeat = false;
-          action.spawn = [
+          _props = {
+            repeat = false;
+          };
+          spawn = [
             "noctalia"
             "msg"
             "screenshot-region"
@@ -119,58 +134,58 @@
         };
 
         # Core Noctalia binds
-        "F4".action.spawn = [
+        "F4".spawn = [
           "noctalia"
           "msg"
           "panel-toggle"
           "launcher"
         ];
 
-        "Mod+Space".action.spawn = [
+        "Mod+Space".spawn = [
           "noctalia"
           "msg"
           "panel-toggle"
           "launcher"
         ];
 
-        "Mod+Shift+L".action.spawn = [
+        "Mod+Shift+L".spawn = [
           "noctalia"
           "msg"
           "session"
           "lock"
         ];
-        "F3".action.spawn = [
+        "F3".spawn = [
           "noctalia"
           "msg"
           "settings-toggle"
         ];
-        "F5".action.spawn = [
+        "F5".spawn = [
           "noctalia"
           "msg"
           "mic-mute"
         ];
-        "F6".action.spawn = [
+        "F6".spawn = [
           "noctalia"
           "msg"
           "session"
           "lock"
         ];
 
-        "XF86AudioPrev".action.spawn = [
+        "XF86AudioPrev".spawn = [
           "noctalia"
           "msg"
           "media"
           "previous"
         ];
 
-        "XF86AudioPlay".action.spawn = [
+        "XF86AudioPlay".spawn = [
           "noctalia"
           "msg"
           "media"
           "toggle"
         ];
 
-        "XF86AudioNext".action.spawn = [
+        "XF86AudioNext".spawn = [
           "noctalia"
           "msg"
           "media"
@@ -178,39 +193,34 @@
         ];
 
         # Audio & Brightness
-        "XF86AudioRaiseVolume".action.spawn = [
+        "XF86AudioRaiseVolume".spawn = [
           "noctalia"
           "msg"
           "volume-up"
         ];
-        "XF86AudioLowerVolume".action.spawn = [
+        "XF86AudioLowerVolume".spawn = [
           "noctalia"
           "msg"
           "volume-down"
         ];
-        "XF86AudioMute".action.spawn = [
+        "XF86AudioMute".spawn = [
           "noctalia"
           "msg"
           "volume-mute"
         ];
-        "XF86MonBrightnessUp".action.spawn = [
+        "XF86MonBrightnessUp".spawn = [
           "noctalia"
           "msg"
           "brightness-up"
         ];
-        "XF86MonBrightnessDown".action.spawn = [
+        "XF86MonBrightnessDown".spawn = [
           "noctalia"
           "msg"
           "brightness-down"
         ];
       };
-      spawn-at-startup = [
-        {
-          argv = [
-            "noctalia"
-          ];
-        }
-      ];
+      spawn-at-startup = "noctalia";
     };
   };
+
 }
