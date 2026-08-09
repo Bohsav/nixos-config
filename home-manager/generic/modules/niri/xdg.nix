@@ -2,6 +2,7 @@
 {
   xdg.portal = {
     enable = true;
+    configPackages = lib.mkForce [ ];
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
       xdg-desktop-portal-gnome

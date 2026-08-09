@@ -2,6 +2,7 @@
   wayland.windowManager.niri = {
     package = pkgs.niri;
     enable = true;
+    portalPackage = null;
 
     extraConfig = ''
       window-rule {

@@ -10,6 +10,11 @@
     enable = true;
     package = pkgs.niri;
   };
+  xdg.portal = {
+    enable = false;
+    config = lib.mkForce { };
+    extraPortals = lib.mkForce [ ];
+  };
   systemd.user.services.niri.enableDefaultPath = false;
   security.polkit.enable = true;
   services.gnome.gnome-keyring.enable = true;
