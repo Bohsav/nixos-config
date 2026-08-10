@@ -26,7 +26,6 @@
       kitty.enable = false;
       nvf.enable = false;
       nixvim.enable = false;
-      niri.enable = false;
       noctalia-shell.enable = false;
       noctalia.enable = false;
       spicetify.enable = false;
