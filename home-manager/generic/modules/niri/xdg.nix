@@ -1,15 +1,14 @@
 { pkgs, lib, ... }:
 {
-  xdg.portal = {
+  xdg.portal = lib.mkForce {
     enable = true;
-    configPackages = lib.mkForce [ ];
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
       xdg-desktop-portal-gnome
       xdg-desktop-portal-wlr
     ];
 
-    config = lib.mkForce {
+    config = {
       niri = {
         default = [
           "gtk"
