@@ -1,26 +1,30 @@
 { pkgs, lib, ... }:
 {
-  xdg.portal = lib.mkForce {
+  xdg = {
     enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-gnome
-      xdg-desktop-portal-wlr
-    ];
 
-    config = {
-      niri = {
-        default = [
-          "gtk"
-          "gnome"
-          "wlr"
-        ];
-        "org.freedesktop.impl.portal.ScreenCast" = "gnome";
-        "org.freedekstop.impl.portal.Screenshot" = "wlr";
-        "org.freedesktop.impl.portal.Access" = "gtk";
-        "org.freedesktop.impl.portal.Notification" = "gtk";
-        "org.freedesktop.impl.portal.Secret" = "gnome-keyring";
-        "org.freedesktop.impl.portal.FileChooser" = "gtk";
+    portal = lib.mkForce {
+      enable = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-gtk
+        xdg-desktop-portal-gnome
+        xdg-desktop-portal-wlr
+      ];
+
+      config = {
+        niri = {
+          default = [
+            "gtk"
+            "gnome"
+            "wlr"
+          ];
+          "org.freedesktop.impl.portal.ScreenCast" = "gnome";
+          "org.freedekstop.impl.portal.Screenshot" = "wlr";
+          "org.freedesktop.impl.portal.Access" = "gtk";
+          "org.freedesktop.impl.portal.Notification" = "gtk";
+          "org.freedesktop.impl.portal.Secret" = "gnome-keyring";
+          "org.freedesktop.impl.portal.FileChooser" = "gtk";
+        };
       };
     };
   };
