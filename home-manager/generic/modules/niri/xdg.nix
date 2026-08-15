@@ -19,7 +19,7 @@
             "wlr"
           ];
           "org.freedesktop.impl.portal.ScreenCast" = "gnome";
-          "org.freedekstop.impl.portal.Screenshot" = "wlr";
+          "org.freedesktop.impl.portal.Screenshot" = "wlr";
           "org.freedesktop.impl.portal.Access" = "gtk";
           "org.freedesktop.impl.portal.Notification" = "gtk";
           "org.freedesktop.impl.portal.Secret" = "gnome-keyring";
