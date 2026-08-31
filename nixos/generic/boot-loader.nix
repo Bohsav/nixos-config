@@ -9,7 +9,7 @@
         theme-pkg = pkgs.catppuccin-grub.override { flavor = "frappe"; };
       in
       {
-        configurationLimit = 5;
+        configurationLimit = 10;
         enable = true;
         useOSProber = true;
         copyKernels = true;
