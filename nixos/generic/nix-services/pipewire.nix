@@ -7,6 +7,8 @@
       alsa.support32Bit = true;
       pulse.enable = true;
 
+      socketActivation = true;
+
       wireplumber = {
         enable = true;
         # configPackages = [
