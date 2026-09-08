@@ -53,7 +53,7 @@ in
   plugins = {
     blink-cmp = {
       enable = true;
-      callSetup = null;
+      callSetup = true;
       setupLspCapabilities = true;
 
       settings = {
