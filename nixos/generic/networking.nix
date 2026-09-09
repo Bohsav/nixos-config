@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+  networking.dhcpcd.enable = true;
 
   networking.networkmanager = {
     enable = true;
