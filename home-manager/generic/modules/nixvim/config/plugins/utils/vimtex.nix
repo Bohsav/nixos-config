@@ -28,8 +28,9 @@
     enable = true;
     settings.sources.providers = {
       latex-symbols = {
-        module = "blink-cmp-latex";
-        name = "Latex";
+        score_offset = 100;
+        module = "blink.compat.source";
+        name = "vimtex";
         opts = {
           # set to true to insert the latex command instead of the symbol
           insert_command = false;
@@ -41,14 +42,15 @@
     ];
   };
 
-  plugins.blink-cmp-latex = {
+  plugins.cmp-vimtex = {
     enable = true;
   };
 
-  # plugins.cmp-vimtex = {
-  #   enable = true;
-  # };
-  #
+  plugins.blink-compat = {
+    enable = true;
+  };
+
+  # TODO: Addapt at some point
   # plugins.cmp = {
   #   settings.sources = [
   #     { name = "vimtex"; }
