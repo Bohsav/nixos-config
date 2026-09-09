@@ -24,15 +24,36 @@
     };
   };
 
-  plugins.cmp-vimtex = {
+  plugins.blink-cmp = {
+    enable = true;
+    settings.sources.providers = {
+      latex-symbols = {
+        module = "blink-cmp-latex";
+        name = "Latex";
+        opts = {
+          # set to true to insert the latex command instead of the symbol
+          insert_command = false;
+        };
+      };
+    };
+    settings.sources.default = [
+      "latex-symbols"
+    ];
+  };
+
+  plugins.blink-cmp-latex = {
     enable = true;
   };
 
-  plugins.cmp = {
-    settings.sources = [
-      { name = "vimtex"; }
-    ];
-  };
+  # plugins.cmp-vimtex = {
+  #   enable = true;
+  # };
+  #
+  # plugins.cmp = {
+  #   settings.sources = [
+  #     { name = "vimtex"; }
+  #   ];
+  # };
 
   plugins.treesitter.highlight.disable = [ "latex" ];
   plugins.treesitter.settings.highlight = {

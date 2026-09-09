@@ -48,5 +48,6 @@ _: {
     ./plugins/utils/mini.nix
     ./plugins/utils/markdown-preview.nix
     ./plugins/utils/web-devicons.nix
+    ./plugins/utils/vimtex.nix
   ];
 }
