@@ -12,6 +12,7 @@ let
         xurl
         enumitem
         ifoddpage
+        relsize
       ]
     )
   );
