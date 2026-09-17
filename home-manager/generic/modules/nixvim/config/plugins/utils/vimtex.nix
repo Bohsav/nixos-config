@@ -13,6 +13,7 @@ let
         enumitem
         ifoddpage
         relsize
+        algorithm2e
       ]
     )
   );
