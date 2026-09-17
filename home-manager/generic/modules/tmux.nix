@@ -17,8 +17,8 @@
       bind-key C-a send-prefix
 
       # split panes using | and -
-      bind | split-window -h "#{pane_current_path}"
-      bind - split-window -v "#{pane_current_path}"
+      bind | split-window -h -c "#{pane_current_path}"
+      bind - split-window -v -c "#{pane_current_path}"
       unbind '"'
       unbind %
 
