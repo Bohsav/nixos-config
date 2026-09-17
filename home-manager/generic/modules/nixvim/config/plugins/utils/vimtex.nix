@@ -11,6 +11,7 @@ let
         biblatex-ieee
         xurl
         enumitem
+        ifoddpage
       ]
     )
   );
