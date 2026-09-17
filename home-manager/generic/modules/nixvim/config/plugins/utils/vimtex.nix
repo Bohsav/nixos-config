@@ -1,18 +1,23 @@
 { pkgs, ... }:
-{
-  plugins.vimtex = {
-    enable = true;
-
-    texlivePackage = pkgs.texlive.combine {
-      inherit (pkgs.texlive)
+let
+  tex = (
+    pkgs.texliveBasic.withPackages (
+      ps: with ps; [
         scheme-tetex
         biblatex
         biber
         latexmk
         titlesec
         biblatex-ieee
-        ;
-    };
+      ]
+    )
+  );
+in
+{
+  plugins.vimtex = {
+    enable = true;
+
+    texlivePackage = tex;
 
     # base example from nixvim wiki
     settings = {
