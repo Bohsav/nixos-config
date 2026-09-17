@@ -10,6 +10,7 @@ let
         titlesec
         biblatex-ieee
         xurl
+        enumitem
       ]
     )
   );
