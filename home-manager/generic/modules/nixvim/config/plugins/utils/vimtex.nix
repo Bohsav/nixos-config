@@ -9,6 +9,7 @@ let
         latexmk
         titlesec
         biblatex-ieee
+        xurl
       ]
     )
   );
