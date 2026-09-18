@@ -29,6 +29,7 @@
     ./generic/nix-services/pipewire.nix
     ./generic/nix-services/tlp.nix
     ./generic/docker.nix
+    ./generic/wireshark.nix
   ];
 
   powerManagement.enable = true;
