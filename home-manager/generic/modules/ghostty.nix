@@ -1,0 +1,13 @@
+{ pkgs, ... }: {
+  home.packages = with pkgs; [
+    nerd-fonts.fira-code
+  ];
+  programs.ghostty = {
+    enable = true;
+
+    settings = {
+      font-family = "FiraCode Nerd Font";
+      theme = "TokyoNight Storm";
+    };
+  };
+}

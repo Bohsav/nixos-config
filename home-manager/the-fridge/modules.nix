@@ -15,6 +15,7 @@
     ../generic/modules/spicetify.nix
 
     ./stylix.nix
+    ../generic/modules/ghostty.nix
   ];
 
   programs.kitty.font.size = 12;

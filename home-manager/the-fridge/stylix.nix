@@ -28,6 +28,7 @@
       nixvim.enable = false;
       noctalia-shell.enable = false;
       spicetify.enable = false;
+      ghostty.enable = false;
     };
 
     cursor = {
