@@ -15,6 +15,7 @@
     ../generic/modules/easyeffects
 
     ./stylix.nix
+    ../generic/modules/ghostty.nix
   ];
 
   programs.kitty.font.size = 14;
