@@ -11,6 +11,13 @@
     ];
 
     extraConfig = ''
+      set -g default-terminal "tmux-256color"
+      set -ga terminal-overrides ",*256col*:Tc"
+
+      set -g allow-passthrough on
+
+      set -s extended-keys on
+
       # remap from 'C-b' to 'C-a'
       unbind C-b
       set-option -g prefix C-a
