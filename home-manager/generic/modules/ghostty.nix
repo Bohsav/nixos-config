@@ -5,6 +5,7 @@
   programs.ghostty = {
     enable = true;
 
+    enableZshIntegration = true;
     settings = {
       font-family = "FiraCode Nerd Font";
       theme = "TokyoNight Storm";
