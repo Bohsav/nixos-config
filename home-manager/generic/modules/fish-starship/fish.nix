@@ -22,6 +22,8 @@
 
     shellInitLast = "enable_transience";
   };
-
+  systemd.user.settings.Manager.DefaultEnvironment = {
+    SHELL = "fish";
+  };
   home.shell.enableFishIntegration = true;
 }
