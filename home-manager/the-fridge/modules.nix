@@ -8,7 +8,7 @@
     ../generic/modules/lazygit.nix
     ../generic/modules/tmux.nix
 
-    ../generic/modules/zsh
+    ../generic/modules/fish-starship
     ../generic/modules/nixvim
     ../generic/modules/easyeffects
     ../generic/modules/niri
