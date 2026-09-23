@@ -5,7 +5,6 @@
     dejavu_fonts
     noto-fonts
     noto-fonts-lgc-plus
-    texlivePackages.hebrew-fonts
     font-awesome
     powerline-fonts
     powerline-symbols
