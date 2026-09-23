@@ -32,5 +32,7 @@
         p = "preview-tui";
       };
     };
+
+    quitcd = true;
   };
 }
