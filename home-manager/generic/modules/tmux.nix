@@ -3,7 +3,6 @@
   programs.tmux = {
     enable = true;
     mouse = true;
-    shell = "${pkgs.zsh}/bin/zsh";
     keyMode = "vi";
     terminal = "xterm-256color";
     plugins = with pkgs; [

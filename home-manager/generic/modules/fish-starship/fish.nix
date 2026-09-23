@@ -22,8 +22,6 @@
 
     shellInitLast = "enable_transience";
   };
-  systemd.user.settings.Manager.DefaultEnvironment = {
-    SHELL = "fish";
-  };
+  programs.tmux.shell = "${pkgs.fish}/bin/fish";
   home.shell.enableFishIntegration = true;
 }
