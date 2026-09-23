@@ -50,5 +50,7 @@ in
 
     openconnect
     openfortivpn-webview
+
+    telegram-desktop
   ];
 }
