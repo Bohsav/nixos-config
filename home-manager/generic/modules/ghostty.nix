@@ -8,7 +8,7 @@
     enableZshIntegration = true;
     settings = {
       font-family = "FiraCode Nerd Font";
-      theme = "TokyoNight Storm";
+      theme = "Catppuccin Macchiato";
     };
   };
 }
