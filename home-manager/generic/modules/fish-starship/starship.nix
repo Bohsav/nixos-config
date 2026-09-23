@@ -37,29 +37,30 @@ let
       style = "bg:red fg:crust"
 
       [os.symbols]
-      Windows = ""
-      Ubuntu = "󰕈"
-      SUSE = ""
-      Raspbian = "󰐿"
-      Mint = "󰣭"
-      Macos = "󰀵"
-      Manjaro = ""
-      Linux = "󰌽"
-      Gentoo = "󰣨"
-      Fedora = "󰣛"
-      Alpine = ""
-      Amazon = ""
+      Windows = " "
+      Ubuntu = "󰕈 "
+      SUSE = " "
+      Raspbian = "󰐿 "
+      Mint = "󰣭 "
+      Macos = "󰀵 "
+      Manjaro = " "
+      Linux = "󰌽 "
+      Gentoo = "󰣨 "
+      Fedora = "󰣛 "
+      Alpine = " "
+      Amazon = " "
       Android = ""
-      AOSC = ""
-      Arch = "󰣇"
-      Artix = "󰣇"
-      CentOS = ""
-      Debian = "󰣚"
-      Redhat = "󱄛"
-      RedHatEnterprise = "󱄛"
+      AOSC = " "
+      Arch = "󰣇 "
+      Artix = "󰣇 "
+      CentOS = " "
+      Debian = "󰣚 "
+      Redhat = "󱄛 "
+      RedHatEnterprise = "󱄛 "
+      NixOS = " "
 
       [username]
-      show_always = true
+      show_always = false
       style_user = "bg:red fg:crust"
       style_root = "bg:red fg:crust"
       format = '[ $user]($style)'
@@ -166,12 +167,12 @@ let
       vimcmd_visual_symbol = '[❮](bold fg:yellow)'
 
       [cmd_duration]
-      show_milliseconds = true
+      show_milliseconds = false
       format = " in $duration "
       style = "bg:lavender"
       disabled = false
-      show_notifications = true
-      min_time_to_notify = 45000
+      show_notifications = false
+      min_time_to_notify = 45_000
 
       [palettes.catppuccin_mocha]
       rosewater = "#f5e0dc"
