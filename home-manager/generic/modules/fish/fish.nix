@@ -18,6 +18,7 @@
 
     shellInit = ''
       export EDITOR=nvim
+      fish_vi_key_bindings
     '';
   };
   programs.tmux.shell = "${pkgs.fish}/bin/fish";
