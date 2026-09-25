@@ -10,7 +10,7 @@
 
     ../generic/modules/niri
     ../generic/modules/spicetify.nix
-    ../generic/modules/fish-starship
+    ../generic/modules/fish
     ../generic/modules/nixvim
     ../generic/modules/easyeffects
 

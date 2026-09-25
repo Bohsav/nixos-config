@@ -19,9 +19,8 @@
     shellInit = ''
       export EDITOR=nvim
     '';
-
-    shellInitLast = "enable_transience";
   };
   programs.tmux.shell = "${pkgs.fish}/bin/fish";
   home.shell.enableFishIntegration = true;
+
 }
