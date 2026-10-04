@@ -85,6 +85,9 @@
             "html"
           ];
         };
+        ccls = {
+          enable = true;
+        };
         omnisharp = {
           enable = true;
         };
