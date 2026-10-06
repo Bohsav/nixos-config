@@ -21,7 +21,7 @@ _: {
     ./plugins/editor/treesitter.nix
     ./plugins/editor/undotree.nix
     ./plugins/editor/illuminate.nix
-    ./plugins/editor/blink-indent.nix
+    ./plugins/editor/indent-blankline.nix
     ./plugins/editor/todo-comments.nix
     ./plugins/editor/smartcolumn.nix
     ./plugins/editor/cursorline.nix
