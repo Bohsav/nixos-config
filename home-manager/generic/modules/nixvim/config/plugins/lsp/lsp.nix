@@ -45,7 +45,7 @@
       enable = true;
     };
     lsp-format = {
-      enable = false;
+      enable = true;
     };
     helm = {
       enable = true;
