@@ -24,11 +24,12 @@
     ./generic/hardware/bluetooth.nix
     ./generic/hardware/laptop-A2000.nix
 
+    ./generic/incus.nix
+
     # services
     ./generic/nix-services/printing.nix
     ./generic/nix-services/pipewire.nix
     ./generic/nix-services/tlp.nix
-    ./generic/docker.nix
     ./generic/wireshark.nix
   ];
 
