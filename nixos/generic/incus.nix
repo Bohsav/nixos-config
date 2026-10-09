@@ -2,6 +2,8 @@
   virtualisation.incus = {
     enable = true;
 
+    ui.enable = true;
+
     preseed = {
       networks = [
         {
