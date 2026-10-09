@@ -23,7 +23,7 @@
     ./generic/hardware/bluetooth.nix
     ./generic/hardware/nvidia-3060.nix
 
-    ./generic/docker.nix
+    ./generic/incus.nix
 
     # services
     ./generic/nix-services/printing.nix
