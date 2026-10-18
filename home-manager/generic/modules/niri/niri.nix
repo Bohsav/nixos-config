@@ -130,7 +130,7 @@
           spawn = [
             "noctalia"
             "msg"
-            "screenshot-region"
+            "screenshot-annotate"
           ];
         };
 
