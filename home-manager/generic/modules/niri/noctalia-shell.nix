@@ -1,14 +1,9 @@
 {
   pkgs,
-  inputs,
   config,
   ...
 }:
 {
-  imports = [
-    inputs.noctalia.homeModules.default
-  ];
-
   home.packages = with pkgs; [
     dejavu_fonts
   ];
@@ -24,6 +19,7 @@
   programs.noctalia = {
     enable = true;
     systemd.enable = true;
+    checkConfig = true;
 
     settings = {
       shell.niri_overview_type_to_launch_enabled = true;
