@@ -24,7 +24,7 @@
     ./generic/hardware/bluetooth.nix
     ./generic/hardware/laptop-A2000.nix
 
-    ./generic/virtualization/incus.nix
+    ./generic/virtualization/virtualbox.nix
 
     # services
     ./generic/nix-services/printing.nix

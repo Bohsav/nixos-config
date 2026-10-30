@@ -23,7 +23,7 @@
     ./generic/hardware/bluetooth.nix
     ./generic/hardware/nvidia-3060.nix
 
-    ./generic/virtualization/incus.nix
+    ./generic/virtualization/virtualbox.nix
 
     # services
     ./generic/nix-services/printing.nix
