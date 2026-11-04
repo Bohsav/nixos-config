@@ -31,6 +31,7 @@
     ./generic/nix-services/pipewire.nix
     ./generic/nix-services/tlp.nix
     ./generic/wireshark.nix
+    ./generic/firewall.nix
   ];
 
   powerManagement.enable = true;

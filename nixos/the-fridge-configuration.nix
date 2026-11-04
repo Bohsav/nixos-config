@@ -27,6 +27,7 @@
 
     # services
     ./generic/nix-services/printing.nix
+    ./generic/firewall.nix
     ./generic/nix-services/pipewire.nix
   ];
 
